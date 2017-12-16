@@ -26,7 +26,7 @@ class Detail extends Component {
     const { params } = this.props.navigation.state;
     let url = 'https://cnodejs.org/api/v1/topic/' + params.topicId // mdrender
     // url = url + "?page=" + '1' + "&tab=" + this.props.name;
-    url = url + '?mdrender=false'
+    // url = url + '?mdrender=false'
     fetch(url, {
       method: 'get',
     }).then((response) => response.json())
@@ -58,7 +58,7 @@ class Detail extends Component {
         return (<Topic data={this.state.dataSource} />)
       } else if (index == 1) {
         return (
-          <Text>{this.state.dataSource.reply_count + ' 回复'}</Text>
+          <Text >{this.state.dataSource.reply_count + ' 回复'}</Text>
         )
       } else {
         return (
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     // backgroundColor: '#2c3e50',
   },
   listItem: {
-    backgroundColor: 'green'
+    // backgroundColor: 'green'
   },
 });
 

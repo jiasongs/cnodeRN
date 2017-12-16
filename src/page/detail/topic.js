@@ -5,9 +5,14 @@ import {
   Text,
   StyleSheet,
   Image,
+  Dimensions,
 } from 'react-native';
+import HTMLView from "react-native-htmlview";
 import { moment } from '../../utils/tools';
 import TopicType from '../../components/topicType'
+
+const { width } = Dimensions.get('window')
+const defaultMaxImageWidth = width - 30 - 20
 // create a component
 class Topic extends Component {
   constructor(props) {
@@ -21,6 +26,12 @@ class Topic extends Component {
     var author = this.props.data.author;
     if (typeof (author) == "undefined") {
       author = { avatar_url: ' ', loginname: ' ' }
+    }
+    var content = this.props.data.content;
+    if (typeof (content) == "undefined") {
+      content = '<div></div>'
+    } else {
+      console.log(content)
     }
     var _renderItemComponent = () => {
       var tab = ''
@@ -74,7 +85,13 @@ class Topic extends Component {
           </View>
         </View>
         <View style={styles.contentBack}>
-          <Text style={styles.content}>{this.props.data.content}</Text>
+          <HTMLView
+            value={content}
+            onLinkPress={(url) => console.log('navigating to: ', url)}
+            stylesheet={styles}
+            nodeComponentProps={{ selectable: true }}
+          />
+          {/* <Text style={styles.content}>{this.props.data.content}</Text> */}
         </View>
       </View>
     );
@@ -136,10 +153,37 @@ const styles = StyleSheet.create({
   },
   browserCount: {
     marginTop: 5,
+    fontSize: 12,
   },
   contentBack: {
     margin: 10,
   },
+  content: {
+    fontSize: 17,
+    lineHeight: 40,
+  },
+  a: {
+    color: '#4078c0',
+  },
+  p: {
+    fontSize: 15,
+    lineHeight: 24,
+  },
+  h1: {
+    fontSize: 20,
+  },
+
+  h2: {
+    fontSize: 18,
+  },
+
+  h3: {
+    fontSize: 16,
+  },
+
+  img: {
+    width: defaultMaxImageWidth
+  }
 });
 
 //make this component available to the app

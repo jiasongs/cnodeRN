@@ -45,7 +45,7 @@ class Essence extends Component {
     const { navigate } = this.props.screenProps;
     return (
       <View style={styles.container}>
-        <List name='good' />
+        <List name='good' navigate={navigate} />
       </View>
     );
   }
@@ -72,7 +72,7 @@ class Ask extends Component {
 }
 class Test extends Component {
   render() {
-    const { navigate } = this.props.navigation;
+    const { navigate } = this.props.screenProps;
     return (
       <View style={styles.container}>
         <List name='dev' navigate={navigate} />
