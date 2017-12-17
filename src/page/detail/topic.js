@@ -6,13 +6,17 @@ import {
   StyleSheet,
   Image,
   Dimensions,
+  WebView,
+  TouchableOpacity,
 } from 'react-native';
+import HTML from 'react-native-render-html';
 import HTMLView from "react-native-htmlview";
 import { moment } from '../../utils/tools';
 import TopicType from '../../components/topicType'
 
 const { width } = Dimensions.get('window')
 const defaultMaxImageWidth = width - 30 - 20
+
 // create a component
 class Topic extends Component {
   constructor(props) {
@@ -22,47 +26,36 @@ class Topic extends Component {
   componentDidMount() {
 
   }
+  _renderNode(node) {
+    if (node.name == 'img') {
+      var src = 'http:' + node.attribs.src
+      console.log(src)
+      return
+      <Image
+        resizeMode='contain'
+        style={{ width: defaultMaxImageWidth, height: 100, }}
+        source={{ uri: src }}
+      />
+      // <Text style={{ width: 100, height: 100, }} >{src}</Text>
+      // <TouchableOpacity
+      //   onPress={() => alert('点击了图片')}
+      // >
+
+      // </TouchableOpacity>
+    }
+  }
   render() {
     var author = this.props.data.author;
     if (typeof (author) == "undefined") {
       author = { avatar_url: ' ', loginname: ' ' }
+    } else {
+      console.log(author.avatar_url)
     }
     var content = this.props.data.content;
     if (typeof (content) == "undefined") {
       content = '<div></div>'
     } else {
-      console.log(content)
-    }
-    var _renderItemComponent = () => {
-      var tab = ''
-      switch (this.props.data.tab) {
-        case 'share':
-          tab = '分享';
-          break;
-        case 'ask':
-          tab = '问答';
-          break;
-        case 'good':
-          tab = '精华';
-          break;
-        case 'dev':
-          tab = '测试';
-          break;
-        case 'job':
-          tab = '招聘';
-          break;
-        default:
-          break;
-      }
-      if (this.props.data.good) {
-        if (this.props.data.top) {
-          return (<View style={styles.typeBack}><Text style={styles.type}>置顶</Text></View>)
-        } else {
-          return (<View style={styles.typeBack}><Text style={styles.type}>精华</Text></View>)
-        }
-      } else {
-        return (<View style={styles.typeBack}><Text style={styles.type}>{tab}</Text></View>)
-      }
+
     }
     return (
       <View style={styles.container}>
@@ -85,13 +78,43 @@ class Topic extends Component {
           </View>
         </View>
         <View style={styles.contentBack}>
-          <HTMLView
+          <HTML
+            html={content}
+            // selectable={true}
+            tagsStyles={htmlStyles}
+            // classesStyles={htmlStyles}
+            imagesMaxWidth={Dimensions.get('window').width}
+            onLinkPress={() => alert('点击了连接')}
+            renderers={{
+              img: (htmlAttribs) =>
+                <TouchableOpacity
+                  onPress={() => alert('点击了图片')}
+                >
+                  <Image
+                    resizeMode='contain'
+                    style={{ width: defaultMaxImageWidth, height: 100, }}
+                    source={{ uri: 'http:' + htmlAttribs.src }}
+                  />
+                </TouchableOpacity>
+            }}
+          />
+          {/* <HTMLView
             value={content}
             onLinkPress={(url) => console.log('navigating to: ', url)}
-            stylesheet={styles}
+            stylesheet={htmlStyles}
             nodeComponentProps={{ selectable: true }}
-          />
-          {/* <Text style={styles.content}>{this.props.data.content}</Text> */}
+            renderNode={(node) => this._renderNode(node)}
+          /> */}
+          {/* <WebView
+            ref={'webview'}
+            // style={{ height: 100 }}
+            source={{ html: content }}
+            javaScriptEnabled={true}
+            domStorageEnabled={true}
+            decelerationRate="normal"
+            mixedContentMode='always'
+          /> */}
+
         </View>
       </View>
     );
@@ -104,7 +127,7 @@ const styles = StyleSheet.create({
     flex: 1,
     // justifyContent: 'center',
     // alignItems: 'center',
-    // backgroundColor: '#2c3e50',
+    backgroundColor: '#fff',
   },
   titleBack: {
     padding: 5,
@@ -156,35 +179,158 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   contentBack: {
-    margin: 10,
+    margin: 15,
   },
   content: {
     fontSize: 17,
     lineHeight: 40,
   },
-  a: {
-    color: '#4078c0',
+});
+const fontSize = 14
+const titleMargin = 5
+const htmlStyles = {
+  // p: { // 解析失败
+  //   // lineHeight: fontSize * 1.4,
+  //   fontSize: fontSize,
+  //   color: 'red'
+  // },
+  pwrapper: {
+    marginTop: 5,
+    marginBottom: 5
   },
-  p: {
-    fontSize: 15,
-    lineHeight: 24,
+  a: {
+    color: '#3498DB',
+    fontSize: fontSize,
+    paddingLeft: 4,
+    paddingRight: 4,
+    marginRight: 10,
+    marginLeft: 10
   },
   h1: {
-    fontSize: 20,
+    fontSize: fontSize * 1.6,
+    fontWeight: 'bold',
+    color: 'rgba(0,0,0,0.8)'
   },
-
+  h1wrapper: {
+    marginTop: titleMargin,
+    marginBottom: titleMargin
+  },
   h2: {
-    fontSize: 18,
+    fontSize: fontSize * 1.5,
+    fontWeight: 'bold',
+    color: 'rgba(0,0,0,0.85)'
   },
-
+  h2wrapper: {
+    marginBottom: titleMargin,
+    marginTop: titleMargin
+  },
   h3: {
-    fontSize: 16,
+    fontWeight: 'bold',
+    fontSize: fontSize * 1.4,
+    color: 'rgba(0,0,0,0.8)'
   },
-
+  h3wrapper: {
+    marginBottom: titleMargin - 2,
+    marginTop: titleMargin - 2
+  },
+  h4: {
+    fontSize: fontSize * 1.3,
+    color: 'rgba(0,0,0,0.7)',
+    fontWeight: 'bold'
+  },
+  h4wrapper: {
+    marginBottom: titleMargin - 2,
+    marginTop: titleMargin - 2
+  },
+  h5: {
+    fontSize: fontSize * 1.2,
+    color: 'rgba(0,0,0,0.7)',
+    fontWeight: 'bold'
+  },
+  h5wrapper: {
+    marginBottom: titleMargin - 3,
+    marginTop: titleMargin - 3
+  },
+  h6: {
+    fontSize: fontSize * 1.1,
+    color: 'rgba(0,0,0,0.7)',
+    fontWeight: 'bold'
+  },
+  h6wrapper: {
+    marginBottom: titleMargin - 3,
+    marginTop: titleMargin - 3
+  },
+  // li: {
+  //   fontSize: fontSize * 0.9,
+  //   color: 'rgba(0,0,0,0.7)'
+  // }, // 解析失败
+  liwrapper: {
+    paddingLeft: 20,
+    marginBottom: 10
+  },
+  strong: {
+    fontWeight: 'bold'
+  },
+  em: {
+    fontStyle: 'italic'
+  },
+  codeScrollView: {
+    backgroundColor: '#333',
+    flexDirection: 'column',
+    marginBottom: 15
+  },
+  codeRow: {
+    flex: 1,
+    flexDirection: 'row',
+    height: 25,
+    alignItems: 'center'
+  },
+  codeFirstRow: {
+    paddingTop: 20,
+    height: 25 + 20
+  },
+  codeLastRow: {
+    paddingBottom: 20,
+    height: 25 + 20
+  },
+  codeFirstAndLastRow: {
+    paddingBottom: 20,
+    height: 25 + 40,
+    paddingTop: 20
+  },
+  lineNum: {
+    width: 55,
+    color: 'rgba(255,255,255,0.5)'
+  },
+  lineNumWrapper: {
+    width: 55,
+    height: 25,
+    backgroundColor: 'rgba(0,0,0,0.1)',
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingLeft: 20
+  },
+  codeWrapper: {
+    flexDirection: 'column'
+  },
+  codeLineWrapper: {
+    height: 25,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingLeft: 20,
+    paddingRight: 20
+  },
+  blockquotewrapper: {
+    paddingLeft: 20,
+    borderLeftColor: '#3498DB',
+    borderLeftWidth: 3
+  },
   img: {
-    width: defaultMaxImageWidth
+    width: width - 80 - 20,
+    height: width - 80 - 20,
+    resizeMode: Image.resizeMode.contain,
+    margin: 10
   }
-});
-
+};
 //make this component available to the app
 export default Topic;

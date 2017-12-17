@@ -147,7 +147,7 @@ class Home extends Component {
       tabBarIcon: ({ focused, tintColor }) => {
         <Image
           source={require('../../resource/images/1@2x.jpg')}
-          style={{ height: 26, width: 26 }}
+        // style={{ height: 26, width: 26 }}
         />
       },
       //是否允许右滑返回，在iOS上默认为true，在Android上默认为false

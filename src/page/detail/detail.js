@@ -8,11 +8,12 @@ import {
 } from 'react-native';
 import Separator from '../../components/separator'
 import Topic from '../detail/topic'
+import CommentList from '../../components/commentList';
 // create a component
 class Detail extends Component {
   constructor(props) {
     super(props);
-    this.state = { dataSource: [], refreshing: false };
+    this.state = { dataSource: {}, refreshing: true };
   }
 
   static navigationOptions = ({ navigation }) => {
@@ -31,7 +32,6 @@ class Detail extends Component {
       method: 'get',
     }).then((response) => response.json())
       .then((responseJson) => {
-        // console.log(responseJson.data)
         this.setState({ dataSource: responseJson.data, refreshing: false })
       })
       .catch((error) => {
@@ -49,38 +49,36 @@ class Detail extends Component {
     // }
   }
   componentDidMount() {
+    this.setState({ refreshing: true })
     this.getDataSourceFromApiAsync()
   }
-  render() {
-    var _keyExtractor = (item, index) => item.key;
-    var _detail = (item, index) => {
-      if (index == 0) {
-        return (<Topic data={this.state.dataSource} />)
-      } else if (index == 1) {
-        return (
-          <Text >{this.state.dataSource.reply_count + ' 回复'}</Text>
-        )
-      } else {
-        return (
-          <Text>评论</Text>
-        )
-      }
+  _detail(index) {
+    if (index == 0) {
+      var topic = this.state.dataSource.id ? (<Topic data={this.state.dataSource} />) : null
+      return topic
+    } else if (index == 1) {
+      var replay = this.state.dataSource.id ? <Text style={styles.replyCount}>{this.state.dataSource.reply_count + ' 回复'}</Text> : null
+      return replay
+    } else {
+      var comment = this.state.dataSource.id ? <CommentList data={this.state.dataSource.replies} /> : null
+      return comment
     }
+  }
+  render() {
     return (
       <View style={styles.container}>
         <FlatList
-          data={[{ key: 'a' }, { key: 'b' }]}
-          keyExtractor={_keyExtractor}
-          ItemSeparatorComponent={Separator}
-          // refreshing={this.state.refreshing}
-          // onRefresh={() => this._onRefresh()}
+          data={[{ key: '详情' }, { key: '回复数' }, { key: '评论' }]}
+          keyExtractor={(item, index) => item.key}
+          ItemSeparatorComponent={this.state.dataSource.id ? Separator : null}
+          refreshing={this.state.refreshing}
           //onEndReachedThreshold={0.1}
           //onEndReached={(info) => {
           //  this._onEndReached()
           // }}
           renderItem={({ item, index }) =>
             <View style={styles.listItem}>
-              {_detail(item, index)}
+              {this._detail(index)}
             </View>
           }
         />
@@ -95,11 +93,17 @@ const styles = StyleSheet.create({
     flex: 1,
     // justifyContent: 'center',
     // alignItems: 'center',
-    // backgroundColor: '#2c3e50',
+    backgroundColor: '#fff',
   },
   listItem: {
     // backgroundColor: 'green'
   },
+  replyCount: {
+    fontSize: 15,
+    height: 40,
+    marginLeft: 15,
+    lineHeight: 40,
+  }
 });
 
 //make this component available to the app
