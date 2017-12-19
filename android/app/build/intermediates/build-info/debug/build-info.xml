@@ -6,40 +6,31 @@
     density="560dpi"
     format="10"
     plugin-version="3.0.0"
-    timestamp="1513410956659"
+    timestamp="1513601746755"
     token="-5323283536831681542"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="10960" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="172" />
+        duration="1367" />
     <task
         name="verifier"
-        duration="0" />
+        duration="360" />
 
-    <artifact
-        location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-        type="SPLIT" />
     <artifact
         location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
     <artifact
         location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
@@ -48,13 +39,22 @@
         location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
         type="SPLIT" />
     <artifact
+        location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        type="SPLIT" />
+    <artifact
         location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+        location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
         type="SPLIT" />
     <artifact
         location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+        type="SPLIT" />
+    <artifact
+        location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
         type="SPLIT" />
     <artifact
         location="/Users/mac/Desktop/cnodeRN/android/app/build/outputs/apk/debug/app-debug.apk"
@@ -62,25 +62,16 @@
 
     <build
         build-mode="FULL"
-        timestamp="1513410956659"
+        timestamp="1513601746755"
         verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
-            type="SPLIT" />
         <artifact
             location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
             location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
@@ -89,13 +80,22 @@
             location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
             location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
             location="/Users/mac/Desktop/cnodeRN/android/app/build/outputs/apk/debug/app-debug.apk"

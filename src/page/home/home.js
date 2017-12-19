@@ -140,21 +140,9 @@ const TabNavs = TabNavigator({
     tabBarComponent: TabBarTop,
   });
 class Home extends Component {
-  static navigationOptions = ({ navigation }) => {
-    return {
-      //标题
-      title: '首页',
-      tabBarIcon: ({ focused, tintColor }) => {
-        <Image
-          source={require('../../resource/images/1@2x.jpg')}
-        // style={{ height: 26, width: 26 }}
-        />
-      },
-      //是否允许右滑返回，在iOS上默认为true，在Android上默认为false
-      cardStack: {
-        gesturesEnabled: true,
-      },
-    };
+  constructor(props) {
+    super(props)
+    this.state = {}
   }
   render() {
     const { navigate } = this.props.navigation;

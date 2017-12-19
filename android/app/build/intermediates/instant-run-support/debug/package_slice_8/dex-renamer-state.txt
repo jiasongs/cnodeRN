@@ -1,4 +1,4 @@
-#Sat Dec 16 15:54:59 CST 2017
-base.0=/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/dexMerger/debug/8
+#Mon Dec 18 20:57:11 CST 2017
+base.0=/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/dexMerger/debug/9
 renamed.0=classes.dex
-file.0=/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/dexMerger/debug/8/classes.dex
+file.0=/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/dexMerger/debug/9/classes.dex

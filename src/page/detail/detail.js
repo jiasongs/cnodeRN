@@ -5,6 +5,7 @@ import {
   StyleSheet,
   FlatList,
   Text,
+  RefreshControl,
 } from 'react-native';
 import Separator from '../../components/separator'
 import Topic from '../detail/topic'
@@ -33,6 +34,7 @@ class Detail extends Component {
     }).then((response) => response.json())
       .then((responseJson) => {
         this.setState({ dataSource: responseJson.data, refreshing: false })
+        console.log(responseJson.data)
       })
       .catch((error) => {
         this.setState({ refreshing: false })
@@ -40,6 +42,7 @@ class Detail extends Component {
       });
   }
   _onRefresh() {
+    this.setState({ refreshing: false })
     // this.setState({ refreshing: true })
     // this.getDataSourceFromApiAsync();
   }
@@ -57,7 +60,7 @@ class Detail extends Component {
       var topic = this.state.dataSource.id ? (<Topic data={this.state.dataSource} />) : null
       return topic
     } else if (index == 1) {
-      var replay = this.state.dataSource.id ? <Text style={styles.replyCount}>{this.state.dataSource.reply_count + ' 回复'}</Text> : null
+      var replay = this.state.dataSource.id ? <View style={styles.replyCountBack}><Text style={styles.replyCount}>{this.state.dataSource.reply_count + ' 回复'}</Text></View> : null
       return replay
     } else {
       var comment = this.state.dataSource.id ? <CommentList data={this.state.dataSource.replies} /> : null
@@ -72,6 +75,18 @@ class Detail extends Component {
           keyExtractor={(item, index) => item.key}
           ItemSeparatorComponent={this.state.dataSource.id ? Separator : null}
           refreshing={this.state.refreshing}
+          onRefresh={this._onRefresh.bind(this)}
+          // refreshControl={
+          //   <RefreshControl
+          //     refreshing={this.state.refreshing}
+          //     onRefresh={this._onRefresh.bind(this)}
+          //     tintColor="#ff0000"
+          //     title="Loading..."
+          //     titleColor="#00ff00"
+          //     colors={['#ff0000', '#00ff00', '#0000ff']}
+          //     progressBackgroundColor="#ffff00"
+          //   />
+          // }
           //onEndReachedThreshold={0.1}
           //onEndReached={(info) => {
           //  this._onEndReached()
@@ -98,11 +113,13 @@ const styles = StyleSheet.create({
   listItem: {
     // backgroundColor: 'green'
   },
+  replyCountBack: {
+    justifyContent: 'center',
+    marginLeft: 15,
+    height: 40,
+  },
   replyCount: {
     fontSize: 15,
-    height: 40,
-    marginLeft: 15,
-    lineHeight: 40,
   }
 });
 

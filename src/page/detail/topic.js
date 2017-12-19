@@ -13,7 +13,7 @@ import HTML from 'react-native-render-html';
 import HTMLView from "react-native-htmlview";
 import { moment } from '../../utils/tools';
 import TopicType from '../../components/topicType'
-
+import CustomImage from "../../components/customImage";
 const { width } = Dimensions.get('window')
 const defaultMaxImageWidth = width - 30 - 20
 
@@ -31,17 +31,15 @@ class Topic extends Component {
       var src = 'http:' + node.attribs.src
       console.log(src)
       return
-      <Image
-        resizeMode='contain'
-        style={{ width: defaultMaxImageWidth, height: 100, }}
-        source={{ uri: src }}
-      />
-      // <Text style={{ width: 100, height: 100, }} >{src}</Text>
-      // <TouchableOpacity
-      //   onPress={() => alert('点击了图片')}
-      // >
-
-      // </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => alert('点击了图片')}
+      >
+        <Image
+          resizeMode='contain'
+          style={{ width: defaultMaxImageWidth, height: 100, }}
+          source={{ uri: 'http:' + node.attribs.src }}
+        />
+      </TouchableOpacity>
     }
   }
   render() {
@@ -89,12 +87,22 @@ class Topic extends Component {
               img: (htmlAttribs) =>
                 <TouchableOpacity
                   onPress={() => alert('点击了图片')}
+                  style={{ marginTop: 10, marginBottom: 10 }}
                 >
-                  <Image
+                  <CustomImage
+                    uri={'http:' + htmlAttribs.src}
+                    // style={imgStyle}
+                    defaultSize={{
+                      height: 300,
+                      width: defaultMaxImageWidth
+                    }}
+                    maxImageWidth={defaultMaxImageWidth}
+                  />
+                  {/* <Image
                     resizeMode='contain'
                     style={{ width: defaultMaxImageWidth, height: 100, }}
                     source={{ uri: 'http:' + htmlAttribs.src }}
-                  />
+                  /> */}
                 </TouchableOpacity>
             }}
           />
@@ -189,11 +197,12 @@ const styles = StyleSheet.create({
 const fontSize = 14
 const titleMargin = 5
 const htmlStyles = {
-  // p: { // 解析失败
-  //   // lineHeight: fontSize * 1.4,
-  //   fontSize: fontSize,
-  //   color: 'red'
-  // },
+  p: { // 解析失败
+    // lineHeight: fontSize * 1.4,
+    // fontSize: 14,
+    // color: 'red'
+
+  },
   pwrapper: {
     marginTop: 5,
     marginBottom: 5
@@ -216,6 +225,8 @@ const htmlStyles = {
     marginBottom: titleMargin
   },
   h2: {
+    marginTop: 10,
+    marginBottom: 10,
     fontSize: fontSize * 1.5,
     fontWeight: 'bold',
     color: 'rgba(0,0,0,0.85)'

@@ -42,6 +42,7 @@ class list extends Component {
   _onEndReached() {
     if (this.state.dataSource.length > 0) {
       console.log('底部')
+      this.setState({ refreshing: false })
     }
   }
   componentDidMount() {

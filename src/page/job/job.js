@@ -13,26 +13,15 @@ import {
 class Job extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
-      //标题
-      title: '招聘',
-      tabBarIcon: ({ focused, tintColor }) => {
-        // <Image
-        //   resizeMode="contain"
-        //   style={[styles.iconBtn, { tintColor: tintColor }]}
-        //   source={!focused ? require('../../assets/images/zone0.png') : require('../../assets/images/zone1.png')}
-        // />
-      },
-      //是否允许右滑返回，在iOS上默认为true，在Android上默认为false
-      cardStack: {
-        gesturesEnabled: true,
-      },
+
     };
   }
   render() {
+    const { navigate } = this.props.navigation
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
-        <List name='job' />
+        <List name='job' navigate={navigate} />
       </View>
     );
   }

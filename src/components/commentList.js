@@ -13,6 +13,7 @@ import {
 import Separator from "./separator";
 import { moment } from '../utils/tools';
 import HTML from 'react-native-render-html';
+import CustomImage from '../components/customImage';
 const { width } = Dimensions.get('window')
 const defaultMaxImageWidth = width - 30 - 20
 // create a component
@@ -48,11 +49,15 @@ class CommentList extends Component {
                   <Text style={styles.createAt}>{moment(item.create_at).startOf('minute').fromNow()}</Text>
                 </View>
                 <View style={styles.praiseBack}>
-                  <Text style={styles.praiseCount}>456</Text>
-                  <Image
-                    style={styles.praiseImage}
-                    source={require('../resource/images/1@2x.jpg')}
-                  />
+                  <View style={styles.praiseCountBack}>
+                    <Text style={styles.praiseCount}>456</Text>
+                  </View>
+                  <View style={styles.praiseImageBack}>
+                    <Image
+                      style={styles.praiseImage}
+                      source={require('../resource/images/praise_normal.png')}
+                    />
+                  </View>
                 </View>
               </View>
               <View style={styles.contentBack}>
@@ -67,11 +72,16 @@ class CommentList extends Component {
                     img: (htmlAttribs) =>
                       <TouchableOpacity
                         onPress={() => alert('点击了图片')}
+                        style={{ marginTop: 10, marginBottom: 10 }}
                       >
-                        <Image
-                          resizeMode='contain'
-                          style={{ width: defaultMaxImageWidth, height: 100, }}
-                          source={{ uri: 'http:' + htmlAttribs.src }}
+                        <CustomImage
+                          uri={'http:' + htmlAttribs.src}
+                          // style={imgStyle}
+                          defaultSize={{
+                            height: 300,
+                            width: defaultMaxImageWidth
+                          }}
+                          maxImageWidth={defaultMaxImageWidth}
                         />
                       </TouchableOpacity>
                   }}
@@ -114,15 +124,21 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 20,
   },
+  praiseCountBack: {
+    justifyContent: 'center',
+  },
   praiseCount: {
-    textAlign: 'center',
-    lineHeight: 55
+
+  },
+  praiseImageBack: {
+    justifyContent: 'center',
+    // alignItems: 'center',
+    marginLeft: 5,
+    // marginTop: 12,
   },
   praiseImage: {
     width: 23,
     height: 23,
-    marginLeft: 10,
-    marginTop: 15,
   },
   head: {
     width: 40,
