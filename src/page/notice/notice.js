@@ -85,6 +85,7 @@ class Notice extends Component {
           renderSectionHeader={this._renderSection.bind(this)}
           // renderItem={this._renderItem.bind(this)}
           sections={sections}
+
         />
       </View>
     );
