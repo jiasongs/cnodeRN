@@ -18,6 +18,7 @@ class Mine extends Component {
     };
   }
   _onPressItem() {
+
     alert('待开发')
   }
   _renderSection(info) {
@@ -74,7 +75,7 @@ class Mine extends Component {
         <View style={styles.headerImageBack}>
           <Image
             style={styles.headerImage}
-          // source={{ uri: require('../../resource/images/message.png') }}
+            source={require('../../resource/images/no_login.png')}
           />
         </View>
         <View style={styles.headerTextBack}>
@@ -126,14 +127,13 @@ const styles = StyleSheet.create({
 
   },
   headerImageBack: {
-    backgroundColor: 'red',
     width: 45,
     height: 45,
     marginLeft: 30,
   },
   headerImage: {
-    width: 30,
-    height: 30,
+    width: 45,
+    height: 45,
   },
   headerTextBack: {
     marginLeft: 25
@@ -151,8 +151,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     // backgroundColor: 'red',
-    // width: 26,
-    // height: 26,
+    width: 45,
+    height: 45,
     marginLeft: 20,
   },
   itemImage: {

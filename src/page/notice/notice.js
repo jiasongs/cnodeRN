@@ -10,6 +10,7 @@ import {
   TouchableHighlight,
 } from 'react-native';
 import { Separator } from "../../components/separator";
+
 // create a component
 class Notice extends Component {
   static navigationOptions = ({ navigation }) => {

@@ -8,7 +8,8 @@ import {
   Image,
   Button,
   Dimensions,
-  TouchableOpacity
+  TouchableOpacity,
+  Linking
 } from 'react-native';
 import Separator from "./separator";
 import { moment } from '../utils/tools';
@@ -67,14 +68,38 @@ class CommentList extends Component {
                   // classesStyles={htmlStyles}
                   tagsStyles={htmlStyles}
                   imagesMaxWidth={Dimensions.get('window').width}
-                  onLinkPress={() => alert('点击了连接')}
+                  onLinkPress={(info) => Linking.canOpenURL(url)
+                    .then((supported) => {
+                      if (!supported) {
+                        console.log('Can\'t handle url: ' + url);
+                        Alert.alert(
+                          '提示',
+                          'Can\'t handle url: ' + url,
+                          [
+                            { text: 'OK', onPress: () => { } }
+                          ]
+                        );
+                      } else {
+                        return Linking.openURL(url);
+                      }
+                    })
+                    .catch((err) => {
+                      console.log('An error occurred', err);
+                      Alert.alert(
+                        '提示',
+                        'An error occurred: ' + err,
+                        [
+                          { text: 'OK', onPress: () => { } }
+                        ]
+                      );
+                    })}
                   renderers={{
                     img: (htmlAttribs) =>
                       <TouchableOpacity
                         onPress={() => alert('点击了图片')}
                         style={{ marginTop: 10, marginBottom: 10 }}
                       >
-                        <CustomImage
+                        {/* <CustomImage
                           uri={'http:' + htmlAttribs.src}
                           // style={imgStyle}
                           defaultSize={{
@@ -82,7 +107,7 @@ class CommentList extends Component {
                             width: defaultMaxImageWidth
                           }}
                           maxImageWidth={defaultMaxImageWidth}
-                        />
+                        /> */}
                       </TouchableOpacity>
                   }}
                 />

@@ -89,7 +89,7 @@ android {
     defaultConfig {
         applicationId "com.cnodern"
         minSdkVersion 16
-        targetSdkVersion 22
+        targetSdkVersion 18
         versionCode 1
         versionName "1.0"
         ndk {

@@ -82,7 +82,7 @@ class Topic extends Component {
             tagsStyles={htmlStyles}
             // classesStyles={htmlStyles}
             imagesMaxWidth={Dimensions.get('window').width}
-            onLinkPress={() => alert('点击了连接')}
+            onLinkPress={(url) => console.log(url)}
             renderers={{
               img: (htmlAttribs) =>
                 <TouchableOpacity

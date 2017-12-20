@@ -40,7 +40,10 @@ export default class CustomImage extends Component {
   _loadImg(uri, maxImageWidth) {
     if (!uri) { return }
     const startTime = new Date().getTime()
+    console.log('a' + uri)
     Image.getSize(uri, (w, h) => {
+      console.log('w:' + w)
+      console.log('h:' + h)
       if (w >= maxImageWidth) {
         h = (maxImageWidth / w) * h
         w = maxImageWidth

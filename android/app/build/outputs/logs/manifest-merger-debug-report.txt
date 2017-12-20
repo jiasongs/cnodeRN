@@ -1,24 +1,6 @@
 -- Merging decision tree log ---
 manifest
 ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:1:1-32:12
-INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:1:1-32:12
-INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:1:1-32:12
-INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:1:1-32:12
-MERGED from [com.facebook.react:react-native:0.44.3] /Users/mac/.gradle/caches/transforms-1/files-1.1/react-native-0.44.3.aar/5fdc6fc54f4062266be7b8e4ebc5f7e2/AndroidManifest.xml:2:1-15:12
-MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/27d061662b21526c9803889144fa52ad/AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:support-v4:23.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/95e91c2ee6917a96b5938b18a5855a4b/AndroidManifest.xml:17:1-24:12
-MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/586fd42f72d994dc3fa7aea8bc6644e9/AndroidManifest.xml:10:1-18:12
-MERGED from [com.facebook.fresco:fresco:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/fresco-1.0.1.aar/03e80253a5fd93058aa1b16bccc7a77d/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.0.1.aar/0b6ffe0b0e0cb8926c5098b7abb3ed1f/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/e02baf3ea19962cd404b6d518c3a3f36/AndroidManifest.xml:1:1-4:12
-MERGED from [org.webkit:android-jsc:r174650] /Users/mac/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/63fa9e2e51ba9e766d1d07ef64876550/AndroidManifest.xml:1:1-3:12
-MERGED from [com.facebook.fresco:drawee:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/drawee-1.0.1.aar/7fb1e622bc2db6d3b04f0736b7587010/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.0.1.aar/5c9dbbbbfaeddfdf7737a3da43c6b299/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-base:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.0.1.aar/529fb90d8b24822b72772555ddb1985f/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:fbcore:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/fbcore-1.0.1.aar/3276ace99fee4369aa8f6070d2b95ba0/AndroidManifest.xml:2:1-9:12
-INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:1:1-32:12
-INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:1:1-32:12
-INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:1:1-32:12
 	package
 		ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:2:5-26
 		INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml
@@ -27,50 +9,34 @@ INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xm
 		ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:4:5-30
 		INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml
-	xmlns:android
-		ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:1:11-69
 	android:versionCode
 		ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:3:5-28
 		INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
 ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:6:5-67
 	android:name
 		ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:6:22-64
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
 ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:7:5-77
-MERGED from [com.facebook.react:react-native:0.44.3] /Users/mac/.gradle/caches/transforms-1/files-1.1/react-native-0.44.3.aar/5fdc6fc54f4062266be7b8e4ebc5f7e2/AndroidManifest.xml:11:5-78
-MERGED from [com.facebook.react:react-native:0.44.3] /Users/mac/.gradle/caches/transforms-1/files-1.1/react-native-0.44.3.aar/5fdc6fc54f4062266be7b8e4ebc5f7e2/AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.44.3] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.3/AndroidManifest.xml:11:5-78
 	android:name
 		ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:7:22-75
 uses-sdk
 ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:9:5-11:41
-INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:9:5-11:41
-INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:9:5-11:41
-MERGED from [com.facebook.react:react-native:0.44.3] /Users/mac/.gradle/caches/transforms-1/files-1.1/react-native-0.44.3.aar/5fdc6fc54f4062266be7b8e4ebc5f7e2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.44.3] /Users/mac/.gradle/caches/transforms-1/files-1.1/react-native-0.44.3.aar/5fdc6fc54f4062266be7b8e4ebc5f7e2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/27d061662b21526c9803889144fa52ad/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/27d061662b21526c9803889144fa52ad/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/95e91c2ee6917a96b5938b18a5855a4b/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/95e91c2ee6917a96b5938b18a5855a4b/AndroidManifest.xml:20:5-43
-MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/586fd42f72d994dc3fa7aea8bc6644e9/AndroidManifest.xml:14:5-16:41
-MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/586fd42f72d994dc3fa7aea8bc6644e9/AndroidManifest.xml:14:5-16:41
-MERGED from [com.facebook.fresco:fresco:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/fresco-1.0.1.aar/03e80253a5fd93058aa1b16bccc7a77d/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/fresco-1.0.1.aar/03e80253a5fd93058aa1b16bccc7a77d/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.0.1.aar/0b6ffe0b0e0cb8926c5098b7abb3ed1f/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.0.1.aar/0b6ffe0b0e0cb8926c5098b7abb3ed1f/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/e02baf3ea19962cd404b6d518c3a3f36/AndroidManifest.xml:2:3-70
-MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/e02baf3ea19962cd404b6d518c3a3f36/AndroidManifest.xml:2:3-70
-MERGED from [com.facebook.fresco:drawee:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/drawee-1.0.1.aar/7fb1e622bc2db6d3b04f0736b7587010/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/drawee-1.0.1.aar/7fb1e622bc2db6d3b04f0736b7587010/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.0.1.aar/5c9dbbbbfaeddfdf7737a3da43c6b299/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.0.1.aar/5c9dbbbbfaeddfdf7737a3da43c6b299/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.0.1.aar/529fb90d8b24822b72772555ddb1985f/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.0.1.aar/529fb90d8b24822b72772555ddb1985f/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/fbcore-1.0.1.aar/3276ace99fee4369aa8f6070d2b95ba0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:1.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/fbcore-1.0.1.aar/3276ace99fee4369aa8f6070d2b95ba0/AndroidManifest.xml:5:5-7:41
-INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:9:5-11:41
-INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:9:5-11:41
+MERGED from [com.facebook.react:react-native:0.44.3] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.0.1] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:20:5-43
+MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/AndroidManifest.xml:14:5-16:41
+MERGED from [com.facebook.fresco:fresco:1.0.1] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.0.1] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.0.1] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.0.1] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.0.1] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.0.1] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/AndroidManifest.xml:2:3-70
 	android:targetSdkVersion
 		ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:11:9-38
 		INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml
@@ -81,22 +47,17 @@ INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xm
 		INJECTED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml
 application
 ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:13:5-30:19
-MERGED from [com.facebook.react:react-native:0.44.3] /Users/mac/.gradle/caches/transforms-1/files-1.1/react-native-0.44.3.aar/5fdc6fc54f4062266be7b8e4ebc5f7e2/AndroidManifest.xml:13:5-20
-MERGED from [com.facebook.react:react-native:0.44.3] /Users/mac/.gradle/caches/transforms-1/files-1.1/react-native-0.44.3.aar/5fdc6fc54f4062266be7b8e4ebc5f7e2/AndroidManifest.xml:13:5-20
-MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/27d061662b21526c9803889144fa52ad/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/27d061662b21526c9803889144fa52ad/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/95e91c2ee6917a96b5938b18a5855a4b/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.0.1] /Users/mac/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/95e91c2ee6917a96b5938b18a5855a4b/AndroidManifest.xml:22:5-20
-MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/e02baf3ea19962cd404b6d518c3a3f36/AndroidManifest.xml:3:3-17
-MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/mac/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/e02baf3ea19962cd404b6d518c3a3f36/AndroidManifest.xml:3:3-17
-MERGED from [org.webkit:android-jsc:r174650] /Users/mac/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/63fa9e2e51ba9e766d1d07ef64876550/AndroidManifest.xml:2:3-17
-MERGED from [org.webkit:android-jsc:r174650] /Users/mac/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/63fa9e2e51ba9e766d1d07ef64876550/AndroidManifest.xml:2:3-17
+MERGED from [com.facebook.react:react-native:0.44.3] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.3/AndroidManifest.xml:13:5-20
+MERGED from [com.android.support:appcompat-v7:23.0.1] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.0.1] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:22:5-20
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/AndroidManifest.xml:3:3-17
+MERGED from [org.webkit:android-jsc:r174650] /Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/org.webkit/android-jsc/r174650/AndroidManifest.xml:2:3-17
 	android:label
 		ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:16:7-39
-	android:icon
-		ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:17:7-41
 	android:allowBackup
 		ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:15:7-33
+	android:icon
+		ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:17:7-41
 	android:theme
 		ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:18:7-38
 	android:name
@@ -125,9 +86,9 @@ activity#com.facebook.react.devsupport.DevSettingsActivity
 ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:29:7-84
 	android:name
 		ADDED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:29:17-81
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+android:uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 IMPLIED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:1:1-32:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
-uses-permission#android.permission.READ_PHONE_STATE
+android:uses-permission#android.permission.READ_PHONE_STATE
 IMPLIED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:1:1-32:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
+android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
 IMPLIED from /Users/mac/Desktop/cnodeRN/android/app/src/main/AndroidManifest.xml:1:1-32:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
