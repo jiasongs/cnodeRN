@@ -201,7 +201,6 @@ const htmlStyles = {
     // lineHeight: fontSize * 1.4,
     // fontSize: 14,
     // color: 'red'
-
   },
   pwrapper: {
     marginTop: 5,
@@ -238,7 +237,9 @@ const htmlStyles = {
   h3: {
     fontWeight: 'bold',
     fontSize: fontSize * 1.4,
-    color: 'rgba(0,0,0,0.8)'
+    color: 'rgba(0,0,0,0.8)',
+    marginBottom: 10,
+    marginTop: 10
   },
   h3wrapper: {
     marginBottom: titleMargin - 2,

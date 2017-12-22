@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import { TabNavigator, TabBarTop } from 'react-navigation';
 import List from '../../components/list';
 import {
@@ -143,6 +144,9 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {}
+  }
+  componentDidMount() {
+
   }
   render() {
     const { navigate } = this.props.navigation;

@@ -1,5 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {
   View,
   StyleSheet,
@@ -10,13 +11,13 @@ import {
 import Separator from '../../components/separator'
 import Topic from '../detail/topic'
 import CommentList from '../../components/commentList';
+import { getTopicById } from '../../actions/detial';
 // create a component
 class Detail extends Component {
   constructor(props) {
     super(props);
-    this.state = { dataSource: {}, refreshing: true };
+    this.state = { dataSource: {}, refreshing: false };
   }
-
   static navigationOptions = ({ navigation }) => {
     const { state, setParams } = navigation;
     const { params } = navigation.state;
@@ -24,57 +25,42 @@ class Detail extends Component {
       headerTitle: '话题',
     };
   };
-  getDataSourceFromApiAsync() {
+
+  componentDidMount() {
     const { params } = this.props.navigation.state;
-    let url = 'https://cnodejs.org/api/v1/topic/' + params.topicId // mdrender
-    // url = url + "?page=" + '1' + "&tab=" + this.props.name;
-    // url = url + '?mdrender=false'
-    fetch(url, {
-      method: 'get',
-    }).then((response) => response.json())
-      .then((responseJson) => {
-        this.setState({ dataSource: responseJson.data, refreshing: false })
-        console.log(responseJson.data)
-      })
-      .catch((error) => {
-        this.setState({ refreshing: false })
-        console.error(error);
-      });
+    this.props.getDetail(params.topicId)
+  }
+  componentWillUnmount() {
+    // 移除数据
   }
   _onRefresh() {
     this.setState({ refreshing: false })
-    // this.setState({ refreshing: true })
-    // this.getDataSourceFromApiAsync();
   }
   _onEndReached() {
-    // if (this.state.dataSource.length > 0) {
-    //   console.log('底部')
-    // }
-  }
-  componentDidMount() {
-    this.setState({ refreshing: true })
-    this.getDataSourceFromApiAsync()
+
   }
   _detail(index) {
+    const { payload, loading } = this.props
     if (index == 0) {
-      var topic = this.state.dataSource.id ? (<Topic data={this.state.dataSource} />) : null
+      var topic = payload.id ? (<Topic data={payload} />) : null
       return topic
     } else if (index == 1) {
-      var replay = this.state.dataSource.id ? <View style={styles.replyCountBack}><Text style={styles.replyCount}>{this.state.dataSource.reply_count + ' 回复'}</Text></View> : null
+      var replay = payload.id ? <View style={styles.replyCountBack}><Text style={styles.replyCount}>{payload.reply_count + ' 回复'}</Text></View> : null
       return replay
     } else {
-      var comment = this.state.dataSource.id ? <CommentList data={this.state.dataSource.replies} /> : null
+      var comment = payload.id ? <CommentList data={payload.replies} /> : null
       return comment
     }
   }
   render() {
+    const { payload, loading } = this.props
     return (
       <View style={styles.container}>
         <FlatList
           data={[{ key: '详情' }, { key: '回复数' }, { key: '评论' }]}
           keyExtractor={(item, index) => item.key}
-          ItemSeparatorComponent={this.state.dataSource.id ? Separator : null}
-          refreshing={this.state.refreshing}
+          ItemSeparatorComponent={payload.id ? Separator : null}
+          refreshing={loading}
           onRefresh={this._onRefresh.bind(this)}
           // refreshControl={
           //   <RefreshControl
@@ -123,5 +109,24 @@ const styles = StyleSheet.create({
   }
 });
 
+const mapStateToProps = (state, ownProps) => {
+  const { getDetail } = state
+  return {
+    payload: getDetail.data,
+    loading: getDetail.loading,
+
+  }
+}
+export const mapDispatchToProps = (dispatch, ownProps) => {
+  const { id } = ownProps
+  return {
+    getDetail: (topicId) => {
+      dispatch(getTopicById(topicId));
+    },
+    // moreTopics: (page) => {
+    //   dispatch(updateTopicsByTab(name, { page: page, limit: 20 }));
+    // },
+  }
+}
 //make this component available to the app
-export default Detail;
+export default connect(mapStateToProps, mapDispatchToProps)(Detail);

@@ -6,22 +6,24 @@ const urlPrefix = DOMAIN + APIPATH
 export const get = (url, params) => {
   url = urlPrefix + url + '?'
   var query = ''
+  console.log('params:' + params)
   if (params) {
     let index = 0
     for (const key in params) {
       if (params.hasOwnProperty(key)) {
-        var m = (index === 0) ? '' : '&';
+        var m = (index == 0) ? '' : '&';
         var value = params[key];
-        query = m + query + '=' + value;
+        query = query + m + key + '=' + value;
       }
       index++;
     }
     url = url + query
   }
-  console.log(url)
+  console.log('url:' + url)
   return fetch(url)
-    .then(response)
-    .then(response.json())
+    .then((response) => response.json())
+    .then((responseJSON) => { return responseJSON })
+    .catch((error) => { return error });
 }
 
 export const post = (url, body) => {

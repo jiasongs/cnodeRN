@@ -7,64 +7,95 @@ import {
   FlatList,
   Image,
   TouchableHighlight,
+  ActivityIndicator
 } from 'react-native';
 import Separator from '../components/separator'
 import TopicType from '../components/topicType'
 import { moment } from '../utils/tools';
 import index from 'react-native-htmlview';
+import { connect } from 'react-redux'
+import { getTopicsByTab, updateTopicsByTab } from '../actions/topic';
+import { get } from '../services/request';
 
-
-class list extends Component {
+class List extends Component {
   constructor(props) {
     super(props);
-    this.state = { dataSource: [], refreshing: true };
-  }
-  getDataSourceFromApiAsync() {
-    console.log(this.props.name)
-    var url = 'https://cnodejs.org/api/v1/topics';
-    url = url + "?page=" + '1' + "&tab=" + this.props.name;
-    fetch(url, {
-      method: 'get',
-    }).then((response) => response.json())
-      .then((responseJson) => {
-        this.setState({ dataSource: responseJson.data, refreshing: false })
-        // console.log(this.state.dataSource)
-      })
-      .catch((error) => {
-        this.setState({ refreshing: false })
-        console.error(error);
-      });
-  }
-  _onRefresh() {
-    this.setState({ refreshing: true })
-    this.getDataSourceFromApiAsync();
-  }
-  _onEndReached() {
-    if (this.state.dataSource.length > 0) {
-      console.log('底部')
-      this.setState({ refreshing: false })
-    }
+    this.state = { footer: false }
+    this.page = 1
   }
   componentDidMount() {
-    this.getDataSourceFromApiAsync();
+    this.props.getTopics()
+  }
+  _onRefresh() {
+    this.setState({ footer: false })
+    const { payload, loading } = this.props;
+    if (loading) {
+      return;
+    }
+    this.props.getTopics()
+    // this.getDataSourceFromApiAsync();
+  }
+  _onEndReached() {
+    const { payload, loading } = this.props;
+    console.log(payload)
+    if (payload.length === 0) {
+      return;
+    }
+    if (loading) {
+      return;
+    }
+    if (payload.length > 0) {
+      console.log('底部')
+      this.setState({ footer: true })
+      this.page += 1
+      this.props.moreTopics(this.page)
+    }
+  }
+  _renderFooter() {
+    if (this.state.footer) {
+      const { payload, loading } = this.props;
+      if (typeof (payload) == 'undefined') {
+        return <View></View>
+      }
+      if (payload.length === 0) {
+        return <View></View>;
+      }
+      if (loading) {
+        // this.refs._flatlist.scrollToEnd()
+        return (
+          <View style={styles.footer}>
+            <ActivityIndicator
+              animating={loading}
+              // color='red'
+              size="small"
+              hidesWhenStopped={true}
+            />
+          </View>)
+      } else {
+        return <View></View>;
+      }
+    } else {
+      return <View></View>;
+    }
   }
   _navToDetail(index) {
-    console.log(this.state.dataSource[index].id)
-    this.props.navigate('Detail', { topicId: this.state.dataSource[index].id });
+    const { payload } = this.props;
+    this.props.navigate('Detail', { topicId: payload[index].id });
   }
   render() {
+    const { payload, loading } = this.props;
     return (
       <View style={styles.container}>
         <FlatList
-          data={this.state.dataSource}
-          keyExtractor={(item, index) => item.id}
+          data={payload}
+          ref='_flatlist'
+          keyExtractor={(item, index) => index}
+          ListFooterComponent={this._renderFooter.bind(this)}
           ItemSeparatorComponent={Separator}
-          refreshing={this.state.refreshing}
-          onRefresh={() => this._onRefresh()}
-          onEndReachedThreshold={0.1}
-          onEndReached={(info) => {
-            this._onEndReached()
-          }}
+          refreshing={loading}
+          onRefresh={this._onRefresh.bind(this)}
+          onEndReachedThreshold={0.0}
+          onEndReached={this._onEndReached.bind(this)}
           renderItem={({ item, index }) =>
             <TouchableHighlight underlayColor='#f0f0f0'
               onPress={() => this._navToDetail(index)}>
@@ -94,7 +125,6 @@ class list extends Component {
           }
         />
       </View>
-
     );
   }
 }
@@ -171,7 +201,33 @@ const styles = StyleSheet.create({
     height: 35,
     borderRadius: 35 / 2,
   },
+  footer: {
+    flexDirection: 'row',
+    height: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 5,
+    marginBottom: 5,
+  },
 });
-
+const mapStateToProps = (state, ownProps) => {
+  const { getTopics } = state
+  const { name } = ownProps
+  return {
+    payload: getTopics[name],
+    loading: getTopics.loading[name]
+  }
+}
+export const mapDispatchToProps = (dispatch, ownProps) => {
+  const { name } = ownProps
+  return {
+    getTopics: () => {
+      dispatch(getTopicsByTab(name));
+    },
+    moreTopics: (page) => {
+      dispatch(updateTopicsByTab(name, { page: page, limit: 20 }));
+    },
+  }
+}
 //make this component available to the app
-export default list;
+export default connect(mapStateToProps, mapDispatchToProps)(List);

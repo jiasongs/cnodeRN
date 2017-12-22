@@ -1,1 +1,5 @@
+export const LOADING = 'LOADING'
+export const HOME_LOADING = 'HOME_LOADING'
 export const GET_TOPICS_BY_TAB = 'GET_TOPICS_BY_TAB'
+export const MORE_TOPICS_BY_TAB = 'MORE_TOPICS_BY_TAB'
+export const GET_TOPIC_BY_ID = 'GET_TOPIC_BY_ID'
