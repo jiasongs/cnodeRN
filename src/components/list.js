@@ -94,7 +94,7 @@ class List extends Component {
           ItemSeparatorComponent={Separator}
           refreshing={loading}
           onRefresh={this._onRefresh.bind(this)}
-          onEndReachedThreshold={0.0}
+          onEndReachedThreshold={0.1}
           onEndReached={this._onEndReached.bind(this)}
           renderItem={({ item, index }) =>
             <TouchableHighlight underlayColor='#f0f0f0'

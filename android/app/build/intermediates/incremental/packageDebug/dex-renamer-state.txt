@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-#Sun Dec 24 17:06:51 CST 2017
-base.0=/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_faeaedb0cd99405d66aa341f9275e1514d01526f
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a8df2e941aec76dde842f35f47f5980a411268b4/classes.dex
-base.1=/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a8df2e941aec76dde842f35f47f5980a411268b4
-file.0=/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_faeaedb0cd99405d66aa341f9275e1514d01526f/classes.dex
-=======
-#Tue Dec 26 18:48:37 CST 2017
-base.0=/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+#Tue Dec 26 21:13:17 CST 2017
+base.0=/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.0=/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
->>>>>>> 8c0c96dfb71687dc18cd02ce2e890e7d2fd684a8
+file.0=/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
