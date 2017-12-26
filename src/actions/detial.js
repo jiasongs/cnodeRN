@@ -13,6 +13,11 @@ export const getTopicById = (id, params) => {
     return dispatch(detailService.getDetailById(id, params))
   }
 }
+export const removeTopic=() => {
+  return {
+    type: types.REMOVE_TOPIC,
+  }
+}
 // export const updateTopicsByTab = (tab, params) => {
 //   return (dispatch) => {
 //     return dispatch(topicService.updateTopicsByTab(tab, params))

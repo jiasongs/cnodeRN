@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     position: 'absolute',
     right: 20,
-    top: -15,
+    top: -10,
     height: 50,
   },
   browserCount: {

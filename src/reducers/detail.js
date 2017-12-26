@@ -14,6 +14,11 @@ const getDetail = (state = initialState, action) => {
         comment: action.payload.replies,
         loading: false
       }
+      case types.REMOVE_TOPIC:
+      return {
+        ...state,
+        data:{}
+      }
     case types.LOADING:
       return {
         ...state,

@@ -11,7 +11,7 @@ import {
 import Separator from '../../components/separator'
 import Topic from '../detail/topic'
 import CommentList from '../../components/commentList';
-import { getTopicById } from '../../actions/detial';
+import { getTopicById ,removeTopic } from '../../actions/detial';
 // create a component
 class Detail extends Component {
   constructor(props) {
@@ -32,9 +32,11 @@ class Detail extends Component {
   }
   componentWillUnmount() {
     // 移除数据
+    this.props.removeDeatil()
   }
   _onRefresh() {
-    this.setState({ refreshing: false })
+    const { params } = this.props.navigation.state;
+    this.props.getDetail(params.topicId)
   }
   _onEndReached() {
 
@@ -123,6 +125,9 @@ export const mapDispatchToProps = (dispatch, ownProps) => {
     getDetail: (topicId) => {
       dispatch(getTopicById(topicId));
     },
+    removeDeatil:()=>{
+      dispatch(removeTopic())
+    }
     // moreTopics: (page) => {
     //   dispatch(updateTopicsByTab(name, { page: page, limit: 20 }));
     // },
