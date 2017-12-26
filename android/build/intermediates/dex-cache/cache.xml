@@ -102,21 +102,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.3/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="af9665a44df26b4098e24c934c1109507845ef5e">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/release/com.facebook.react-react-native-0.44.3_83ff41080c76196b1ce6c2c02546c9ac05b7b5ba.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
         <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/release/com.facebook.fresco-fresco-1.0.1_041eec884fd3e98bd47cb3e38a1156e9100a4456.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.44.3/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="af9665a44df26b4098e24c934c1109507845ef5e">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/release/com.facebook.react-react-native-0.44.3_83ff41080c76196b1ce6c2c02546c9ac05b7b5ba.jar" />
     </item>
     <item
         is-multidex="false"

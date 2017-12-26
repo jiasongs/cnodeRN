@@ -57,6 +57,7 @@ class ImageViewer extends Component {
         <Modal
           animationType='fade'
           visible={this.state.visible}
+          onRequestClose={this._onClose.bind(this)}
         >
           <Gallery
             style={{ width: width, height: height, backgroundColor: 'black' }}
