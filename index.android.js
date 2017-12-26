@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
 import Navigation from './src/navigation/navigation';
+import { Provider } from 'react-redux'
+import configureStore from './src/store/configureStore'
 if (!__DEV__) {
   global.console = {
     info: () => { },
@@ -12,10 +14,13 @@ if (!__DEV__) {
 } else {
   console.log('kaifa')
 }
+const store = configureStore()
 export default class cnodeRN extends Component {
   render() {
     return (
-      <Navigation />
+      <Provider store={store}>
+        <Navigation />
+      </Provider>
     );
   }
 }

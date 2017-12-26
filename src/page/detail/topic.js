@@ -8,12 +8,14 @@ import {
   Dimensions,
   WebView,
   TouchableOpacity,
+  NativeModules
 } from 'react-native';
 import HTML from 'react-native-render-html';
 import HTMLView from "react-native-htmlview";
 import { moment } from '../../utils/tools';
 import TopicType from '../../components/topicType'
 import CustomImage from "../../components/customImage";
+import ImageViewer from '../../components/imageViewer';
 const { width } = Dimensions.get('window')
 const defaultMaxImageWidth = width - 30 - 20
 
@@ -21,26 +23,38 @@ const defaultMaxImageWidth = width - 30 - 20
 class Topic extends Component {
   constructor(props) {
     super(props);
-    this.state = { dataSource: {} }
+    this.state = { dataSource: {}, isDisplayImageViewer: false }
   }
   componentDidMount() {
 
   }
-  _renderNode(node) {
-    if (node.name == 'img') {
-      var src = 'http:' + node.attribs.src
-      console.log(src)
-      return
-      <TouchableOpacity
-        onPress={() => alert('点击了图片')}
-      >
-        <Image
-          resizeMode='contain'
-          style={{ width: defaultMaxImageWidth, height: 100, }}
-          source={{ uri: 'http:' + node.attribs.src }}
-        />
-      </TouchableOpacity>
+  _onLayout(e) { // 相对于父元素
+    console.log(e.nativeEvent)
+  }
+  _onImagePress(e) {
+    this.setState({ isDisplayImageViewer: true })
+    // console.log(e.target)
+    // NativeModules.UIManager.measure(e.target, (x, y, width, height, pageX, pageY) => {
+    //   this.currentPosY = pageY;
+    //   // pageY是组件在当前屏幕上的绝对位置
+    //   console.log(x, y);
+    //   console.log(pageX, pageY);
+    // });
+    // this.refs._touchableOpacity.measure((x, y, width, height, pageX, pageY) => {
+    //   console.log(x, y, width, pageX, pageY, height);
+    // })
+  }
+  _onClose() {
+    this.setState({ isDisplayImageViewer: false })
+  }
+  _renderImageView(htmlAttribs) {
+    if (typeof (htmlAttribs.src) == 'undefined') {
+      return null
     }
+    return (
+      <ImageViewer
+        source={{ uri: 'http:' + htmlAttribs.src }}
+      />)
   }
   render() {
     var author = this.props.data.author;
@@ -84,26 +98,7 @@ class Topic extends Component {
             imagesMaxWidth={Dimensions.get('window').width}
             onLinkPress={(url) => console.log(url)}
             renderers={{
-              img: (htmlAttribs) =>
-                <TouchableOpacity
-                  onPress={() => alert('点击了图片')}
-                  style={{ marginTop: 10, marginBottom: 10 }}
-                >
-                  <CustomImage
-                    uri={'http:' + htmlAttribs.src}
-                    // style={imgStyle}
-                    defaultSize={{
-                      height: 300,
-                      width: defaultMaxImageWidth
-                    }}
-                    maxImageWidth={defaultMaxImageWidth}
-                  />
-                  {/* <Image
-                    resizeMode='contain'
-                    style={{ width: defaultMaxImageWidth, height: 100, }}
-                    source={{ uri: 'http:' + htmlAttribs.src }}
-                  /> */}
-                </TouchableOpacity>
+              img: this._renderImageView.bind(this)
             }}
           />
           {/* <HTMLView
@@ -122,7 +117,6 @@ class Topic extends Component {
             decelerationRate="normal"
             mixedContentMode='always'
           /> */}
-
         </View>
       </View>
     );

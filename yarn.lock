@@ -3414,7 +3414,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10:
+prop-types@^15.5.10, prop-types@^15.6.0:
   version "15.6.0"
   resolved "http://registry.npm.taobao.org/prop-types/download/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -3493,6 +3493,13 @@ react-devtools-core@^2.0.8:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+react-mixin@^3.0.5:
+  version "3.1.1"
+  resolved "http://registry.npm.taobao.org/react-mixin/download/react-mixin-3.1.1.tgz#68749756bfe32699e561372a4aeecb926db72b7f"
+  dependencies:
+    object-assign "^4.0.1"
+    smart-mixin "^2.0.0"
+
 react-native-dismiss-keyboard@1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/react-native-dismiss-keyboard/download/react-native-dismiss-keyboard-1.0.0.tgz#32886242b3f2317e121f3aeb9b0a585e2b879b49"
@@ -3509,12 +3516,28 @@ react-native-drawer-layout@1.3.2:
   dependencies:
     react-native-dismiss-keyboard "1.0.0"
 
+react-native-gesture-responder@0.1.1:
+  version "0.1.1"
+  resolved "http://registry.npm.taobao.org/react-native-gesture-responder/download/react-native-gesture-responder-0.1.1.tgz#802552d8eb7153c0d81a396e98f4b80b404b6798"
+  dependencies:
+    react-timer-mixin "^0.13.3"
+
 react-native-htmlview@^0.12.1:
   version "0.12.1"
   resolved "http://registry.npm.taobao.org/react-native-htmlview/download/react-native-htmlview-0.12.1.tgz#4b987f1f34fae89f7bbd3c478f8f20d601019639"
   dependencies:
     entities "^1.1.1"
     htmlparser2-without-node-native "^3.9.2"
+
+react-native-image-gallery@^2.1.4:
+  version "2.1.4"
+  resolved "http://registry.npm.taobao.org/react-native-image-gallery/download/react-native-image-gallery-2.1.4.tgz#4f208cdf2cada1ddbbde2343fc7197c178133cc7"
+  dependencies:
+    prop-types "^15.6.0"
+    react-mixin "^3.0.5"
+    react-native-gesture-responder "0.1.1"
+    react-native-scroller "0.0.6"
+    react-timer-mixin "^0.13.3"
 
 react-native-render-html@^3.5.2:
   version "3.5.2"
@@ -3526,6 +3549,10 @@ react-native-render-html@^3.5.2:
     htmlparser2 "^3.9.0"
     lodash.isequal "4.5.0"
     stream "0.0.2"
+
+react-native-scroller@0.0.6:
+  version "0.0.6"
+  resolved "http://registry.npm.taobao.org/react-native-scroller/download/react-native-scroller-0.0.6.tgz#dea8c89bd1ca2d2445fbb6b3a90960df6c1767ff"
 
 react-native-tab-view@^0.0.70:
   version "0.0.70"
@@ -3656,7 +3683,7 @@ react-test-renderer@16.0.0-alpha.6:
     fbjs "^0.8.9"
     object-assign "^4.1.0"
 
-react-timer-mixin@^0.13.2:
+react-timer-mixin@^0.13.2, react-timer-mixin@^0.13.3:
   version "0.13.3"
   resolved "http://registry.npm.taobao.org/react-timer-mixin/download/react-timer-mixin-0.13.3.tgz#0da8b9f807ec07dc3e854d082c737c65605b3d22"
 
@@ -4090,6 +4117,10 @@ slash@^1.0.0:
 slide@^1.1.5:
   version "1.1.6"
   resolved "http://registry.npm.taobao.org/slide/download/slide-1.1.6.tgz#56eb027d65b4d2dce6cb2e2d32c4d4afc9e1d707"
+
+smart-mixin@^2.0.0:
+  version "2.0.0"
+  resolved "http://registry.npm.taobao.org/smart-mixin/download/smart-mixin-2.0.0.tgz#a34a1055e32a75b30d2b4e3ca323dc99cb53f437"
 
 sntp@1.x.x:
   version "1.0.9"

@@ -21,7 +21,7 @@ class Job extends Component {
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
-        <List name='job' navigate={navigate} />
+        {/* <List name='job' navigate={navigate} /> */}
       </View>
     );
   }

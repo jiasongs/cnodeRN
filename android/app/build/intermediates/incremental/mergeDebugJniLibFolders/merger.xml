@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <merger version="3"><dataSet config="main"><source path="/Users/jiasong/Desktop/cnodeRN/android/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/jiasong/Desktop/cnodeRN/android/app/src/debug/jniLibs"/></dataSet></merger>
+=======
+<merger version="3"><dataSet config="main"><source path="/Users/mac/Desktop/cnodeRN/android/app/src/main/jniLibs"/></dataSet><dataSet config="debug"><source path="/Users/mac/Desktop/cnodeRN/android/app/src/debug/jniLibs"/></dataSet></merger>
+>>>>>>> 8c0c96dfb71687dc18cd02ce2e890e7d2fd684a8

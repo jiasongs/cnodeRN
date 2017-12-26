@@ -11,6 +11,7 @@
         "react": "16.0.0-alpha.6",
         "react-native": "0.44.3",
         "react-native-htmlview": "^0.12.1",
+        "react-native-image-gallery": "^2.1.4",
         "react-native-render-html": "^3.5.2",
         "react-navigation": "git+https://github.com/react-community/react-navigation.git",
         "react-redux": "^5.0.6",
