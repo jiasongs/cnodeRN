@@ -8,22 +8,23 @@ import {
   Dimensions,
   WebView,
   TouchableOpacity,
-  NativeModules
+  NativeModules,
+  Linking,
+  Alert
 } from 'react-native';
 import HTML from 'react-native-render-html';
 import HTMLView from "react-native-htmlview";
-import { moment } from '../../utils/tools';
-import TopicType from '../../components/topicType'
-import CustomImage from "../../components/customImage";
-import ImageViewer from '../../components/imageViewer';
+import { moment } from '../utils/tools';
+import TopicType from './topicType'
+import ImageViewer from './imageViewer';
 const { width } = Dimensions.get('window')
 const defaultMaxImageWidth = width - 30 - 20
 
 // create a component
-class Topic extends Component {
+class DetailList extends Component {
   constructor(props) {
     super(props);
-    this.state = { dataSource: {}, isDisplayImageViewer: false }
+    this.state = { dataSource: {}, }
   }
   componentDidMount() {
 
@@ -32,20 +33,43 @@ class Topic extends Component {
     console.log(e.nativeEvent)
   }
   _onImagePress(e) {
-    this.setState({ isDisplayImageViewer: true })
-    // console.log(e.target)
-    // NativeModules.UIManager.measure(e.target, (x, y, width, height, pageX, pageY) => {
-    //   this.currentPosY = pageY;
-    //   // pageY是组件在当前屏幕上的绝对位置
-    //   console.log(x, y);
-    //   console.log(pageX, pageY);
-    // });
-    // this.refs._touchableOpacity.measure((x, y, width, height, pageX, pageY) => {
-    //   console.log(x, y, width, pageX, pageY, height);
-    // })
+    console.log(e.target)
+    NativeModules.UIManager.measure(e.target, (x, y, width, height, pageX, pageY) => {
+      this.currentPosY = pageY;
+      // pageY是组件在当前屏幕上的绝对位置
+      console.log(x, y);
+      console.log(pageX, pageY);
+    });
+    this.refs._touchableOpacity.measure((x, y, width, height, pageX, pageY) => {
+      console.log(x, y, width, pageX, pageY, height);
+    })
   }
-  _onClose() {
-    this.setState({ isDisplayImageViewer: false })
+  _onLinkPress(evt, url) {
+    Linking.canOpenURL(url)
+      .then((supported) => {
+        if (!supported) {
+          console.log('Can\'t handle url: ' + url);
+          Alert.alert(
+            '提示',
+            'Can\'t handle url: ' + url,
+            [
+              { text: 'OK', onPress: () => { } }
+            ]
+          );
+        } else {
+          return Linking.openURL(url);
+        }
+      })
+      .catch((err) => {
+        console.log('An error occurred', err);
+        Alert.alert(
+          '提示',
+          'An error occurred: ' + err,
+          [
+            { text: 'OK', onPress: () => { } }
+          ]
+        );
+      })
   }
   _renderImageView(htmlAttribs) {
     if (typeof (htmlAttribs.src) == 'undefined') {
@@ -96,7 +120,7 @@ class Topic extends Component {
             tagsStyles={htmlStyles}
             // classesStyles={htmlStyles}
             imagesMaxWidth={Dimensions.get('window').width}
-            onLinkPress={(url) => console.log(url)}
+            onLinkPress={this._onLinkPress.bind(this)}
             renderers={{
               img: this._renderImageView.bind(this)
             }}
@@ -339,4 +363,4 @@ const htmlStyles = {
   }
 };
 //make this component available to the app
-export default Topic;
+export default DetailList;

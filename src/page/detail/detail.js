@@ -9,9 +9,9 @@ import {
   RefreshControl,
 } from 'react-native';
 import Separator from '../../components/separator'
-import Topic from '../detail/topic'
+import DetailList from '../../components/detailList'
 import CommentList from '../../components/commentList';
-import { getTopicById ,removeTopic } from '../../actions/detial';
+import { getTopicById, removeTopic } from '../../actions/detial';
 // create a component
 class Detail extends Component {
   constructor(props) {
@@ -44,7 +44,7 @@ class Detail extends Component {
   _detail(index) {
     const { payload, loading } = this.props
     if (index == 0) {
-      var topic = payload.id ? (<Topic data={payload} />) : null
+      var topic = payload.id ? (<DetailList data={payload} />) : null
       return topic
     } else if (index == 1) {
       var replay = payload.id ? <View style={styles.replyCountBack}><Text style={styles.replyCount}>{payload.reply_count + ' 回复'}</Text></View> : null
@@ -125,7 +125,7 @@ export const mapDispatchToProps = (dispatch, ownProps) => {
     getDetail: (topicId) => {
       dispatch(getTopicById(topicId));
     },
-    removeDeatil:()=>{
+    removeDeatil: () => {
       dispatch(removeTopic())
     }
     // moreTopics: (page) => {

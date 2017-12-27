@@ -4,7 +4,11 @@ const APIPATH = '/api/v1'
 const urlPrefix = DOMAIN + APIPATH
 
 export const get = (url, params) => {
-  url = urlPrefix + url + '?'
+  if (url.indexOf('http') != -1) {
+    url = url + '?'
+  } else {
+    url = urlPrefix + url + '?'
+  }
   var query = ''
   console.log('params:' + params)
   if (params) {

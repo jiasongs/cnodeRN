@@ -99,6 +99,7 @@ class Mine extends Component {
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
         <SectionList
+          stickySectionHeadersEnabled={false}
           keyExtractor={(item, index) => index}
           ItemSeparatorComponent={Separator}
           renderSectionHeader={this._renderSection.bind(this)}

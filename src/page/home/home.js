@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { TabNavigator, TabBarTop } from 'react-navigation';
-import List from '../../components/list';
+import TopicsList from '../../components/topicsList';
 import {
   View,
   Text,
@@ -36,7 +36,7 @@ class All extends Component {
     const { navigate } = this.props.screenProps;
     return (
       <View style={styles.container}>
-        <List name='all' navigate={navigate} />
+        <TopicsList name='all' navigate={navigate} />
       </View>
     );
   }
@@ -46,7 +46,7 @@ class Essence extends Component {
     const { navigate } = this.props.screenProps;
     return (
       <View style={styles.container}>
-        <List name='good' navigate={navigate} />
+        <TopicsList name='good' navigate={navigate} />
       </View>
     );
   }
@@ -56,7 +56,7 @@ class Share extends Component {
     const { navigate } = this.props.screenProps;
     return (
       <View style={styles.container}>
-        <List name='share' navigate={navigate} />
+        <TopicsList name='share' navigate={navigate} />
       </View>
     );
   }
@@ -66,17 +66,17 @@ class Ask extends Component {
     const { navigate } = this.props.screenProps;
     return (
       <View style={styles.container}>
-        <List name='ask' navigate={navigate} />
+        <TopicsList name='ask' navigate={navigate} />
       </View>
     );
   }
 }
-class Test extends Component {
+class Job extends Component {
   render() {
     const { navigate } = this.props.screenProps;
     return (
       <View style={styles.container}>
-        <List name='dev' navigate={navigate} />
+        <TopicsList name='job' navigate={navigate} />
       </View>
     );
   }
@@ -107,10 +107,10 @@ const TabNavs = TabNavigator({
       tabBarLabel: '问答'
     }
   },
-  Test: {
-    screen: Test,
+  Job: {
+    screen: Job,
     navigationOptions: {
-      title: '测试'
+      tabBarLabel: '招聘'
     }
   },
 }, {
@@ -140,6 +140,7 @@ const TabNavs = TabNavigator({
     tabBarPosition: 'Top',
     tabBarComponent: TabBarTop,
   });
+
 class Home extends Component {
   constructor(props) {
     super(props)

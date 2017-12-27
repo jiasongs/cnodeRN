@@ -2,7 +2,7 @@ import { StackNavigator, TabNavigator, TabBarBottom } from 'react-navigation';
 import CardStackStyleInterpolator from 'react-navigation/src/views/CardStack/CardStackStyleInterpolator';
 import React, { Component } from 'react';
 import Home from '../page/home/home';
-import Job from '../page/job/job';
+import Find from '../page/Find/find';
 import Notice from '../page/notice/notice';
 import Mine from '../page/mine/mine';
 import Detail from '../page/detail/detail'
@@ -33,10 +33,10 @@ const Tabs = TabNavigator({
       ),
     }
   },
-  Job: {
-    screen: Job,
+  Find: {
+    screen: Find,
     navigationOptions: {
-      title: '招聘',
+      tabBarLabel: '发现',
       tabBarIcon: ({ focused, tintColor }) => (
         <Image
           resizeMode="contain"

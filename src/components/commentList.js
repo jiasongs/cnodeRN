@@ -9,23 +9,55 @@ import {
   Button,
   Dimensions,
   TouchableOpacity,
-  Linking
+  Linking,
+  Alert
 } from 'react-native';
 import Separator from "./separator";
 import { moment } from '../utils/tools';
 import HTML from 'react-native-render-html';
-import CustomImage from '../components/customImage';
+import ImageViewer from '../components/imageViewer';
 const { width } = Dimensions.get('window')
 const defaultMaxImageWidth = width - 30 - 20
 // create a component
 class CommentList extends Component {
+
+  _onLinkPress(evt, url) {
+    Linking.canOpenURL(url)
+      .then((supported) => {
+        if (!supported) {
+          console.log('Can\'t handle url: ' + url);
+          Alert.alert(
+            '提示',
+            'Can\'t handle url: ' + url,
+            [
+              { text: 'OK', onPress: () => { } }
+            ]
+          );
+        } else {
+          return Linking.openURL(url);
+        }
+      })
+      .catch((err) => {
+        console.log('An error occurred', err);
+        Alert.alert(
+          '提示',
+          'An error occurred: ' + err,
+          [
+            { text: 'OK', onPress: () => { } }
+          ]
+        );
+      })
+  }
+  _renderImageViewer(htmlAttribs) {
+    if (typeof (htmlAttribs.src) == 'undefined') {
+      return null
+    }
+    return (
+      <ImageViewer
+        source={{ uri: 'http:' + htmlAttribs.src }}
+      />)
+  }
   render() {
-    // var author = this.props.data.author;
-    // if (typeof (author) == "undefined") {
-    //   author = { avatar_url: ' ', loginname: ' ' }
-    // } else {
-    //   console.log(author.avatar_url)
-    // }
     return (
       <View style={styles.container}>
         <FlatList
@@ -68,47 +100,9 @@ class CommentList extends Component {
                   // classesStyles={htmlStyles}
                   tagsStyles={htmlStyles}
                   imagesMaxWidth={Dimensions.get('window').width}
-                  onLinkPress={(info) => Linking.canOpenURL(url)
-                    .then((supported) => {
-                      if (!supported) {
-                        console.log('Can\'t handle url: ' + url);
-                        Alert.alert(
-                          '提示',
-                          'Can\'t handle url: ' + url,
-                          [
-                            { text: 'OK', onPress: () => { } }
-                          ]
-                        );
-                      } else {
-                        return Linking.openURL(url);
-                      }
-                    })
-                    .catch((err) => {
-                      console.log('An error occurred', err);
-                      Alert.alert(
-                        '提示',
-                        'An error occurred: ' + err,
-                        [
-                          { text: 'OK', onPress: () => { } }
-                        ]
-                      );
-                    })}
+                  onLinkPress={this._onLinkPress.bind(this)}
                   renderers={{
-                    img: (htmlAttribs) =>
-                      <TouchableOpacity
-                        onPress={() => alert('点击了图片')}
-                        style={{ marginTop: 10, marginBottom: 10 }}
-                      >
-                        {/* <CustomImage
-                          uri={'http:' + htmlAttribs.src}
-                          // style={imgStyle}
-                          defaultSize={{
-                            height: 300,
-                            width: defaultMaxImageWidth
-                          }}
-                          maxImageWidth={defaultMaxImageWidth}
-                        /> */}
-                      </TouchableOpacity>
+                    img: this._renderImageViewer.bind(this)
                   }}
                 />
                 {/* <Text style={styles.content} numberOfLines={0}>{item.content}</Text> */}

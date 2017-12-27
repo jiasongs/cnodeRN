@@ -12,7 +12,7 @@ const initialState = {
     good: false,
     share: false,
     ask: false,
-    dev: false,
+    job: false,
   }
 }
 console.log(types.GET_TOPICS_BY_TAB)

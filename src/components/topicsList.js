@@ -7,7 +7,8 @@ import {
   FlatList,
   Image,
   TouchableHighlight,
-  ActivityIndicator
+  ActivityIndicator,
+
 } from 'react-native';
 import Separator from '../components/separator'
 import TopicType from '../components/topicType'
@@ -54,26 +55,15 @@ class List extends Component {
   _renderFooter() {
     if (this.state.footer) {
       const { payload, loading } = this.props;
-      if (typeof (payload) == 'undefined') {
-        return <View></View>
-      }
-      if (payload.length === 0) {
-        return <View></View>;
-      }
-      if (loading) {
-        // this.refs._flatlist.scrollToEnd()
-        return (
-          <View style={styles.footer}>
-            <ActivityIndicator
-              animating={loading}
-              // color='red'
-              size="small"
-              hidesWhenStopped={true}
-            />
-          </View>)
-      } else {
-        return <View></View>;
-      }
+      return (
+        <View style={styles.footer}>
+          <ActivityIndicator
+            animating={loading}
+            // color='red'
+            size="small"
+            hidesWhenStopped={true}
+          />
+        </View>)
     } else {
       return <View></View>;
     }
@@ -88,7 +78,7 @@ class List extends Component {
       <View style={styles.container}>
         <FlatList
           data={payload}
-          ref='_flatlist'
+          ref={'_flatlist'}
           keyExtractor={(item, index) => index}
           ListFooterComponent={this._renderFooter.bind(this)}
           ItemSeparatorComponent={Separator}
