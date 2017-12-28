@@ -18,6 +18,12 @@ const getSearchTopics = (state = initialState, action) => {
         ...state,
         loading: action.loading
       }
+    case types.REMOVE_SEARCH_TOPICS:
+      return {
+        ...state,
+        data: [],
+        loading: false
+      }
     default:
       return state;
   }

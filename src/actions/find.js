@@ -14,6 +14,12 @@ export const searchTopics = (payload) => {
     payload,
   }
 }
+export const removeSearchTopics = () => {
+  return {
+    type: types.REMOVE_SEARCH_TOPICS,
+  }
+}
+
 export const getSearchTopics = (params) => {
   return (dispatch) => {
     dispatch(searchService.getSearchTopics(params))

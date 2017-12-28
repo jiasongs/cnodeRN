@@ -11,9 +11,11 @@ import {
   SectionList,
   TouchableOpacity,
   Dimensions,
-  FlatList
+  FlatList,
+  ActivityIndicator,
+  TouchableHighlight,
 } from 'react-native';
-import { getSearchTopics } from '../../actions/find';
+import { getSearchTopics, removeSearchTopics, loading } from '../../actions/find';
 const { width, height } = Dimensions.get('window')
 // create a component
 class Find extends Component {
@@ -32,36 +34,46 @@ class Find extends Component {
     var hosts = info.item.host
     var index = info.index
     console.log(hosts)
-    return (<View style={styles.hots}>
-      <View style={styles.hotsRow}>
-        {
-          hosts.map((item, index) => {
-            return (<TouchableOpacity key={index} style={styles.hotsBtn} onPress={() => console.log('z')}>
-              <Text style={styles.hotsText}>{item}</Text>
-            </TouchableOpacity>)
-          })
-        }
-      </View>
-    </View >)
+    return (
+      <View style={styles.hots}>
+        <View style={styles.hotsRow}>
+          {
+            hosts.map((item, index) => {
+              return (
+                <TouchableOpacity
+                  key={index}
+                  style={styles.hotsBtn}
+                  onPress={this._hotSearchPress.bind(this, item)}
+                >
+                  <Text style={styles.hotsText}>{item}</Text>
+                </TouchableOpacity>)
+            })
+          }
+        </View>
+      </View >)
   }
   _renderSearchResult(info) {
+    const { loading } = this.props
     return (
-      <View key={info.item.id} style={{ width: 375, height: 200 }}>
-        <Text style={{ width: 50, height: 100 }}>{info.item.title}</Text>
+      <View style={styles.searchResultView} key={info.item.id}>
+        <TouchableHighlight
+          underlayColor='#f0f0f0'
+          onPress={this._onPressItem.bind(this, info)}
+        >
+          <View>
+            <Text
+              style={styles.searchResultTitle}
+              numberOfLines={1}>
+              {info.item.title}
+            </Text>
+            <Text
+              numberOfLines={3}
+              style={styles.searchResultContent} >
+              {info.item.content}
+            </Text>
+          </View>
+        </TouchableHighlight>
       </View>
-
-      // <View>
-      //   <FlatList
-      //     data={info.item}
-      //     keyExtractor={(item, index) => item.id}
-      //     renderItem={(item, index) => {
-      //       <View style={{ width: 375, height: 200 }}>
-      //         <Text style={{ width: 50, height: 100 }}>{'/asdasdasd'}</Text>
-      //       </View>
-
-      //     }}
-      //   />
-      // </View>
     )
   }
   _renderSection(info) {
@@ -71,21 +83,45 @@ class Find extends Component {
       </View>
     )
   }
+  _onPressItem(info) {
+    const { payload } = this.props;
+    console.log(this.props)
+    this.props.navigation.navigate('Detail', { topicId: payload[info.index].id });
+  }
+  _hotSearchPress(text) {
+    if (typeof (text) == 'undefined') {
+      return
+    }
+    this.setState({ text: text })
+    var params = { pn: 10, usm: 1, word: 'site%3Acnodejs.org+' + text }
+    this.props.getSearchTopics(params)
+  }
+  _onSubmitSearch(text) {
+    if (typeof (text) == 'undefined') {
+      return
+    }
+    var params = { pn: 10, usm: 1, word: 'site%3Acnodejs.org+' + text }
+    this.props.getSearchTopics(params)
+  }
+  _onCancelPress() {
+    console.log('z')
+    this.setState({ text: '' })
+    this.props.removeSearchTopics()
+  }
   render() {
     const { navigate } = this.props.navigation
-    const { payload } = this.props
-    console.log(payload)
+    const { payload, loading } = this.props
     const hosts = ['NodeJs', 'Web', 'ReactJs', 'Vuejs', 'Mysql', 'JavaScript', 'Express', 'ES6']
     var sections = [
       {
         key: "热门搜索",
         data: [{ host: hosts }],
-        renderItem: (info) => this._renderHotSearch(info)
+        renderItem: this._renderHotSearch.bind(this)  // (info) => this._renderHotSearch(info)
       },
       {
-        key: "无人回复的话题",
+        key: payload.length > 0 ? '搜索结果' : '',
         data: payload,
-        renderItem: (info) => this._renderSearchResult(info)
+        renderItem: this._renderSearchResult.bind(this)//(info) => this._renderSearchResult(info)
       },
     ];
     return (
@@ -93,16 +129,20 @@ class Find extends Component {
         <StatusBar barStyle="light-content" />
         <View style={styles.searchBarView}>
           <SearchBar
-            onSubmitSearch={(text) => {
-              if (typeof (text) == 'undefined') {
-                return
-              }
-              var params = { pn: 10, usm: 1, word: 'site%3Acnodejs.org+' + text }
-              this.props.getSearchTopics(params)
-              // dispatch(find.getSearchTopics(params))
-            }}
+            value={this.state.text}
+            onCancelPress={this._onCancelPress.bind(this)}
+            onSubmitSearch={this._onSubmitSearch.bind(this)}
           />
         </View>
+        {
+          loading ? <ActivityIndicator
+            style={{ top: 200, width: width, position: 'absolute', zIndex: 1000 }}
+            animating={loading}
+            // color='red'
+            size="large"
+            hidesWhenStopped={true}
+          /> : null
+        }
         <SectionList
           keyExtractor={(item, index) => item.id}
           stickySectionHeadersEnabled={false}
@@ -166,6 +206,22 @@ const styles = StyleSheet.create({
   },
   section: {
     color: '#a2a2a2'
+  },
+  searchResultView: {
+    backgroundColor: '#ffffff',
+    margin: 8,
+    borderRadius: 3,
+  },
+  searchResultTitle: {
+    padding: 10,
+    fontSize: 15,
+    // color: '#a3a3a3'
+  },
+  searchResultContent: {
+    padding: 10,
+    fontSize: 14,
+    // color: '#a3a3a3',
+    lineHeight: 20,
   }
 });
 const mapStateToProps = (state, ownProps) => {
@@ -181,6 +237,9 @@ export const mapDispatchToProps = (dispatch, ownProps) => {
     getSearchTopics: (param) => {
       dispatch(getSearchTopics(param));
     },
+    removeSearchTopics: () => {
+      dispatch(removeSearchTopics());
+    }
   }
 }
 //make this component available to the app

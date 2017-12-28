@@ -16,7 +16,9 @@ const defalutInputH = 27
 // create a component
 class SearchBar extends Component {
   static propTypes = {
+    value: PropTypes.string,
     onSubmitSearch: PropTypes.func,
+    onCancelPress: PropTypes.func,
     containerStyle: PropTypes.object,
     InputViewStyle: PropTypes.object,
     leftComponent: PropTypes.func,
@@ -27,7 +29,10 @@ class SearchBar extends Component {
   };
   constructor(props) {
     super(props);
-    this.state = { text: '123' }
+    this.state = { text: '' }
+  }
+  componentWillMount() {
+
   }
   _renderLeftComponent() {
     if (this.props.leftComponent && this.props.leftComponent()) {
@@ -42,21 +47,25 @@ class SearchBar extends Component {
     }
   }
   _renderRightComponent() {
+
     if (this.props.rightComponent && this.props.rightComponent()) {
       return this.props.rightComponent
     } else {
       return (
         <TouchableOpacity
-          onPress={this._searchPress.bind(this)}
+          onPress={this._cancelPress.bind(this)}
         >
           <Text style={styles.rightText}>取消</Text>
         </TouchableOpacity>
       )
     }
   }
-  _searchPress() {
-    console.log('_onSubmitEditing')
+  _cancelPress() {
+    console.log('_cancelPress')
     this.refs['_textInput'].blur()
+    const { onCancelPress } = this.props
+    onCancelPress();
+    this.setState({ text: '' })
   }
   _onSubmitSearch() {
     // console.log(this.props.onSubmitSearch())
@@ -64,6 +73,8 @@ class SearchBar extends Component {
     console.log(onSubmitSearch(this.state.text))
   }
   render() {
+    console.log('this.state.text')
+    console.log(this.state.text)
     return (
       <View style={styles.containerStyle}>
         <View style={styles.leftViewStyle}>
@@ -82,6 +93,7 @@ class SearchBar extends Component {
             placeholder='搜索文章'
             placeholderTextColor='#ccccce'
             editable={true}
+            value={this.props.value}
             underlineColorAndroid="transparent"
             onSubmitEditing={this._onSubmitSearch.bind(this)}
             onChangeText={(text) => this.setState({ text: text })}

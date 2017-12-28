@@ -6,6 +6,8 @@ import Find from '../page/Find/find';
 import Notice from '../page/notice/notice';
 import Mine from '../page/mine/mine';
 import Detail from '../page/detail/detail'
+import Login from '../page/login/login';
+import QRCode from '../page/login/qrcode';
 import {
   AppRegistry,
   StyleSheet,
@@ -40,8 +42,8 @@ const Tabs = TabNavigator({
       tabBarIcon: ({ focused, tintColor }) => (
         <Image
           resizeMode="contain"
-          style={{ height: 26, width: 26 }}
-          source={!focused ? require('../resource/images/job_normal.png') : require('../resource/images/job_selected.png')}
+          style={{ height: 28, width: 28 }}
+          source={!focused ? require('../resource/images/find_normal.png') : require('../resource/images/find_selected.png')}
         />
       ),
     }
@@ -72,7 +74,8 @@ const Tabs = TabNavigator({
       ),
     }
   },
-}, {
+},
+  {
     tabBarOptions: {
       indicatorStyle: { height: 0 },
       activeTintColor: '#0085da',
@@ -90,11 +93,20 @@ const Tabs = TabNavigator({
 const Navigation = StackNavigator({
   Tabs: { screen: Tabs },
   Detail: { screen: Detail },
+  Login: { screen: Login },
+  QRCode: {
+    screen: QRCode, navigationOptions: {
+      mode: 'modal'
+    }
+  }
 }, {
     initialRouteName: 'Tabs',
     navigationOptions: {
       headerStyle: {
         backgroundColor: '#2D2D2D',
+      },
+      headerTitleStyle: {
+        alignSelf: 'center'
       },
       // headerBackTitle: null,
       headerTintColor: '#FFFFFF',
@@ -102,7 +114,13 @@ const Navigation = StackNavigator({
     },
     headerMode: 'screen',
     transitionConfig: () => ({
-      screenInterpolator: CardStackStyleInterpolator.forHorizontal,
+      screenInterpolator: (sceneProps) => {
+        const { scene } = sceneProps;
+        const { route } = scene;
+        const params = route.params || {};
+        const transition = params.transition || 'forHorizontal';
+        return CardStackStyleInterpolator[transition](sceneProps);
+      },
     })
   });
 export default Navigation;

@@ -1,5 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import {
   View,
   Text,
@@ -10,16 +11,13 @@ import {
   TouchableHighlight,
 } from 'react-native';
 import { Separator } from "../../components/separator";
+import { sendLogin } from '../../actions/mine';
 // create a component
 class Mine extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
 
     };
-  }
-  _onPressItem() {
-
-    alert('待开发')
   }
   _renderSection(info) {
     return (
@@ -70,19 +68,40 @@ class Mine extends Component {
     )
   }
   _renderListHeader(info) {
+    const { user, isLogin } = this.props
     return (
-      <View style={styles.headerBack}>
-        <View style={styles.headerImageBack}>
-          <Image
-            style={styles.headerImage}
-            source={require('../../resource/images/no_login.png')}
-          />
+      <TouchableHighlight
+        underlayColor='#f0f0f0'
+        onPress={this._onLoginPress.bind(this, info)}
+      >
+        <View style={styles.headerBack}>
+          <View style={styles.headerImageBack}>
+            {
+              isLogin ? (
+                <Image
+                  style={styles.headerImage}
+                  source={{ uri: user.avatar_url }}
+                />) : (
+                  <Image
+                    style={styles.headerImage}
+                    source={require('../../resource/images/no_login.png')}
+                  />)
+            }
+          </View>
+          <View style={styles.headerTextBack}>
+            <Text style={styles.headerText}>{isLogin ? user.loginname : '未登录'}</Text>
+          </View>
         </View>
-        <View style={styles.headerTextBack}>
-          <Text style={styles.headerText}>{'未登录'}</Text>
-        </View>
-      </View>
+      </TouchableHighlight>
     )
+  }
+  _onLoginPress(info) {
+    this.props.navigation.navigate('Login', {
+      gotoLogin: this.props.gotoLogin, loading: this.props.loading
+    })
+  }
+  _onPressItem() {
+    alert('待开发')
   }
   render() {
     var sections = [
@@ -175,5 +194,12 @@ const styles = StyleSheet.create({
   }
 });
 
+const mapStateToProps = (state, ownProps) => {
+  const { mineState } = state
+  return {
+    user: mineState.user,
+    isLogin: mineState.isLogin
+  }
+}
 //make this component available to the app
-export default Mine;
+export default connect(mapStateToProps)(Mine);

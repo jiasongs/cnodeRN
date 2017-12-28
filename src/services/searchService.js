@@ -11,50 +11,21 @@ export const getSearchTopics = (params = {
 }) => {
   return (dispatch) => {
     dispatch(find.loading(true))
-    get(url, {
+    requestService.getHTML(url, {
       ...params
     }).then((data) => {
-      console.log('searchTopics')
-      console.log(data)
-      dispatch(find.searchTopics(data))
+      // console.log('searchTopics')
+      // console.log(data)
+      dispatch(find.searchTopics(parseSearch(data)))
     }).catch((error) => {
     }) // 
   }
 }
-const get = (url, params) => {
-  if (url.indexOf('http') != -1) {
-    url = url + '?'
-  } else {
-    url = urlPrefix + url + '?'
-  }
-  var query = ''
-  console.log('params:' + params)
-  if (params) {
-    let index = 0
-    for (const key in params) {
-      if (params.hasOwnProperty(key)) {
-        var m = (index == 0) ? '' : '&';
-        var value = params[key];
-        query = query + m + key + '=' + value;
-      }
-      index++;
-    }
-    url = url + query
-  }
-  console.log('url:' + url)
-  return fetch(url, {
-    'Accept': 'text/html,application/xhtml+xm…plication/xml;q=0.9,*/*;q=0.8'
-  })
-    .then((response) => response.text())
-    .then((data) => { return parseSearch(data) })
-    .catch((error) => { return error });
-}
-
 const parseSearch = (data) => {
   const $ = cheerio.load(data);
   var lists = [];
   const results = $('#results .c-result')
-  console.log(results)
+  // console.log(results)
   results.each(function (i, elem) {
     const dataLog = $(this).attr('data-log').replace(/'/g, '"')
     const id = JSON.parse(dataLog).mu.replace(/.*?topic\/(.*?)$/, '$1')

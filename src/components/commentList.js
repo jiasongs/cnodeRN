@@ -83,7 +83,7 @@ class CommentList extends Component {
                 </View>
                 <View style={styles.praiseBack}>
                   <View style={styles.praiseCountBack}>
-                    <Text style={styles.praiseCount}>456</Text>
+                    <Text style={styles.praiseCount}>{item.ups.length}</Text>
                   </View>
                   <View style={styles.praiseImageBack}>
                     <Image
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   praiseCount: {
-
+    color: '#cdcdcd'
   },
   praiseImageBack: {
     justifyContent: 'center',
