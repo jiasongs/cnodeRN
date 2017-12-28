@@ -26,7 +26,7 @@ class Login extends Component {
       headerRight: (
         <View style={{ width: 30, height: 30 }}>
           <TouchableOpacity
-            onPress={() => navigate('QRCode', { transition: 'solidUp' })}
+            onPress={() => navigate('QRCode', { transition: 'forVertical' })}
           >
             <Text style={{ color: '#fff' }}>扫码</Text>
           </TouchableOpacity>

@@ -43,7 +43,7 @@ class ImageViewer extends Component {
     console.log(this.props.source.uri)
     return (
       <View>
-        <TouchableOpacity
+             <TouchableOpacity
           // onLayout={this._onLayout.bind(this)}
           onPress={this._onOpen.bind(this)}
           style={{ marginTop: 10, marginBottom: 10 }} >
