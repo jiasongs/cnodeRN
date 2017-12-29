@@ -3,6 +3,44 @@
 
     <item
         is-multidex="false"
+        jar="/Users/jiasong/.android/build-cache/11ce87f40d369f52c821fab89a876e5d9b232f43/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/classes_a12142010eaee2f2d44a6e288c2cfdb71df01a13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.1/2287494d4f5f9f3a9a2bb6980e3f32053721b315/core-3.2.1.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/19.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.android/build-cache/d33d3584ddd350d595eaf3c41d0cd6e6bf7be08a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/classes_216162b716b8bf6cf8fc512191a55c4b7d910e58.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/jiasong/.android/build-cache/768ac79f680a112ff540e534e1422604e2ba110d/output/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -12,12 +50,22 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jiasong/.android/build-cache/1ef625834de38e8f8a8aaa72a271129731b2d846/output/jars/classes.jar"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
         jumboMode="false"
         optimize="true"
         revision="27.0.3"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/classes_550531d13eae32c526c4267852a36ae3557b19cc.jar" />
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1_18ab5c5d8dfb4f60b15eab8f8f9774a35d451813.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/transforms-1/files-1.1/fbcore-1.0.1.aar/bcc4ffa4aeba569c84179579fa40418a/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/25.jar" />
     </item>
     <item
         is-multidex="false"
@@ -39,129 +87,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="/Users/jiasong/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_1f92e532be9bd23e5e0c9f8aa6b035dd97543c21.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jiasong/.android/build-cache/b4ca6dc40a4dbca684f949045ca570de1e5bdf77/output/jars/libs/infer-annotations-1.5.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
-        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5_29fe211151ec5b364b508d8ca92fdec7371f8812.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jiasong/.android/build-cache/11ce87f40d369f52c821fab89a876e5d9b232f43/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/classes_a12142010eaee2f2d44a6e288c2cfdb71df01a13.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jiasong/.android/build-cache/bc9fbed44481cf2d67a58b5e9e9f5f0e3d58f4e7/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
-        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/classes_65fbaa0d0202d240b4ba9605e75b023433761f83.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_bcb1a56b33bec8d644b6c84af445e35ae4b68d8f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jiasong/.android/build-cache/d33d3584ddd350d595eaf3c41d0cd6e6bf7be08a/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
-        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/classes_216162b716b8bf6cf8fc512191a55c4b7d910e58.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_02924cd26f50fe873f5761399cad84190b98aff3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jiasong/.android/build-cache/b27388794571b6da69483e407c7a67b6ce4f36b3/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/classes_089dc0efa47b3fa8bb4916ff59339763f34c5cf0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jiasong/.android/build-cache/b4ca6dc40a4dbca684f949045ca570de1e5bdf77/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="af9665a44df26b4098e24c934c1109507845ef5e">
-        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/classes_33c67f97b63390de3562961d3edf3e1cf201109a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
-        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_2e2e06300d9446c9a714372963d7e85925bbc0e1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
-        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1_18ab5c5d8dfb4f60b15eab8f8f9774a35d451813.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="63994437f62bc861bc20c605d12962f7246116d1">
-        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1_eddccab0a0a566ddecf0147fd46739cb15fcf3a0.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/Users/jiasong/.android/build-cache/b27388794571b6da69483e407c7a67b6ce4f36b3/output/jars/libs/internal_impl-23.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="27.0.3"
         sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
         <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_42c7e17b499cd60debc2743374559a516209d7ae.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_4037d1fcb8b87a049a5ded36c04204b398e28fc4.jar" />
     </item>
     <item
         is-multidex="false"
@@ -183,12 +114,82 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/46da4f941517305f0fa3fda9a2dbbf6f/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/Desktop/cnodeRN/node_modules/react-native-camera/android/build/intermediates/intermediate-jars/release/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="eee33548e822015a4b2517b6fe4ac0cbd3d3bc4e">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/27.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
         jumboMode="false"
+        min-sdk-version="16"
         optimize="true"
         revision="27.0.3"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_be59882b67a477ad1bc7a7aeea722bf8e331c3c5.jar" />
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/26.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/f566943f41e842508b41682397a65a24/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.android/build-cache/bc9fbed44481cf2d67a58b5e9e9f5f0e3d58f4e7/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/classes_65fbaa0d0202d240b4ba9605e75b023433761f83.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/46da4f941517305f0fa3fda9a2dbbf6f/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/7.jar" />
     </item>
     <item
         is-multidex="false"
@@ -198,6 +199,265 @@
         revision="27.0.3"
         sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
         <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/classes_2756dba5cf1585b770a165c00f3fedf936031b3c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/transforms-1/files-1.1/fresco-1.0.1.aar/e179ef28afec9477c320768e707ff4c0/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/12.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/transforms-1/files-1.1/react-native-0.44.3.aar/de2c70ab495241c77acd14c67bc08d47/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="af9665a44df26b4098e24c934c1109507845ef5e">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_4037d1fcb8b87a049a5ded36c04204b398e28fc4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/transforms-1/files-1.1/drawee-1.0.1.aar/645d43e060711895df575c4011d15099/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/22.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_1f92e532be9bd23e5e0c9f8aa6b035dd97543c21.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.0.1.aar/888f64fc7d2d13d02d6cfdb75fc4d1f9/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/21.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1_eddccab0a0a566ddecf0147fd46739cb15fcf3a0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.drewnoakes/metadata-extractor/2.9.1/53fdf22be10c9d426ec63431c7342895bc642261/metadata-extractor-2.9.1.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="53fdf22be10c9d426ec63431c7342895bc642261">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/transforms-1/files-1.1/react-native-0.44.3.aar/de2c70ab495241c77acd14c67bc08d47/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.0.1.aar/17c746df5edd46c46727b5a336de5668/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/23.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/06ddca3d6cc99d01adbd01fdb90866c1/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.adobe.xmp/xmpcore/5.1.2/55615fa2582424e38705487d1d3969af8554f637/xmpcore-5.1.2.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="55615fa2582424e38705487d1d3969af8554f637">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.android/build-cache/1ef625834de38e8f8a8aaa72a271129731b2d846/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/classes_550531d13eae32c526c4267852a36ae3557b19cc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/087e07f5833b97ed5560fa6bafc02662/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/11.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_2e2e06300d9446c9a714372963d7e85925bbc0e1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.android/build-cache/b4ca6dc40a4dbca684f949045ca570de1e5bdf77/output/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5_29fe211151ec5b364b508d8ca92fdec7371f8812.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.0.1.aar/082667944618ba4d4de9f9c6ef9a0ba5/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/24.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_be59882b67a477ad1bc7a7aeea722bf8e331c3c5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.android/build-cache/b4ca6dc40a4dbca684f949045ca570de1e5bdf77/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="af9665a44df26b4098e24c934c1109507845ef5e">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/classes_33c67f97b63390de3562961d3edf3e1cf201109a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_02924cd26f50fe873f5761399cad84190b98aff3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.android/build-cache/b27388794571b6da69483e407c7a67b6ce4f36b3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/classes_089dc0efa47b3fa8bb4916ff59339763f34c5cf0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="27.0.3"
+        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/17.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/jiasong/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_bcb1a56b33bec8d644b6c84af445e35ae4b68d8f.jar" />
     </item>
 
 </items>
