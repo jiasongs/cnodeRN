@@ -111,17 +111,17 @@ class Find extends Component {
   render() {
     const { navigate } = this.props.navigation
     const { payload, loading } = this.props
-    const hosts = ['NodeJs', 'Web', 'ReactJs', 'Vuejs', 'Mysql', 'JavaScript', 'Express', 'ES6']
+    const hosts = ['Node.Js', 'Web', 'React.Js', 'Vue.js', 'Mysql', 'JavaScript', 'Express', 'ES6']
     var sections = [
       {
         key: "热门搜索",
         data: [{ host: hosts }],
-        renderItem: this._renderHotSearch.bind(this)  // (info) => this._renderHotSearch(info)
+        renderItem: this._renderHotSearch.bind(this)
       },
       {
         key: payload.length > 0 ? '搜索结果' : '',
         data: payload,
-        renderItem: this._renderSearchResult.bind(this)//(info) => this._renderSearchResult(info)
+        renderItem: this._renderSearchResult.bind(this)
       },
     ];
     return (

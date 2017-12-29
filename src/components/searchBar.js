@@ -34,6 +34,9 @@ class SearchBar extends Component {
   componentWillMount() {
 
   }
+  componentWillReceiveProps(nextProps) {
+    this.setState({ text: nextProps.value })
+  }
   _renderLeftComponent() {
     if (this.props.leftComponent && this.props.leftComponent()) {
       return this.props.leftComponent
@@ -93,7 +96,7 @@ class SearchBar extends Component {
             placeholder='搜索文章'
             placeholderTextColor='#ccccce'
             editable={true}
-            value={this.props.value}
+            value={this.state.text}
             underlineColorAndroid="transparent"
             onSubmitEditing={this._onSubmitSearch.bind(this)}
             onChangeText={(text) => this.setState({ text: text })}

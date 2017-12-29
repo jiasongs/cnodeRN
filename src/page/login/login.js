@@ -9,7 +9,8 @@ import {
   ActivityIndicator,
   StatusBar,
   TextInput,
-  Dimensions
+  Dimensions,
+  Image
 } from 'react-native';
 import { sendLogin } from '../../actions/mine';
 import QRCode from './qrcode';
@@ -21,14 +22,17 @@ class Login extends Component {
   static navigationOptions = ({ navigation }) => {
     const { state, setParams, navigate } = navigation;
     const { params } = navigation.state;
+    console.log(state.key)
     return {
       headerTitle: '登录',
       headerRight: (
-        <View style={{ width: 30, height: 30 }}>
+        <View style={{ width: 30, height: 30, marginRight: 10, marginTop: 5 }}>
           <TouchableOpacity
-            onPress={() => navigate('QRCode', { transition: 'forVertical' })}
+            onPress={() => navigate('QRCode', { navKey: state.key })}
           >
-            <Text style={{ color: '#fff' }}>扫码</Text>
+            <Image style={{ width: 26, height: 26 }}
+              source={require('../../resource/images/qrcode.png')}
+            />
           </TouchableOpacity>
         </View>
       )
@@ -41,8 +45,13 @@ class Login extends Component {
   componentWillMount() {
 
   }
-  _onPress() {
-    this.props.gotoLogin({ accesstoken: 'e2028045-5fa8-4a16-b75e-3d5d9b6ee714' })
+  _onPress(text) {
+    this.props.gotoLogin({ accesstoken: 'e2028045-5fa8-4a16-b75e-3d5d9b6ee714' }, (success) => {
+      if (success) {
+        this.props.navigation.goBack()
+      }
+    })
+
   }
   render() {
     // const { state, setParams } = this.props.navigation;
@@ -52,14 +61,16 @@ class Login extends Component {
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
         <View style={styles.logoView}>
-          {/* <Image style={styles.logo} source={require('../../../assets/images/logo.png')} resizeMode='contain' /> */}
+          <Image style={styles.logo}
+            source={require('../../resource/images/cnode_logo.png')}
+            resizeMode='contain' />
         </View>
         <View style={styles.inputView}>
           <TextInput style={styles.input}
             ref={'_textInput'}
             clearButtonMode='while-editing'
             returnKeyType='done'
-            placeholder='请输入accesstoken或者点击右上角扫码登录'
+            placeholder='建议点击右上角扫码登录或者输入accesstoken'
             placeholderTextColor='#ccccce'
             editable={true}
             value={this.props.value}
@@ -68,7 +79,7 @@ class Login extends Component {
             onChangeText={(text) => this.setState({ text: text })}
           />
         </View>
-        <TouchableOpacity style={styles.loginBtn} onPress={() => { this._onLogin(this.state.text) }}>
+        <TouchableOpacity style={styles.loginBtn} onPress={() => { this._onPress(this.state.text) }}>
           <Text style={styles.login}>登录</Text>
         </TouchableOpacity>
       </View>
@@ -97,7 +108,7 @@ const styles = StyleSheet.create({
     margin: 15,
     marginBottom: 0,
     borderRadius: 5,
-    backgroundColor: '#282828',
+    backgroundColor: '#2d2d2d',
   },
 
   logo: {
@@ -149,8 +160,8 @@ const mapStateToProps = (state, ownProps) => {
 export const mapDispatchToProps = (dispatch, ownProps) => {
   const { id } = ownProps
   return {
-    gotoLogin: (body) => {
-      dispatch(sendLogin(body));
+    gotoLogin: (body, func) => {
+      dispatch(sendLogin(body, func));
     },
     // removeDeatil: () => {
     //   dispatch(removeTopic())

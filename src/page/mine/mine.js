@@ -15,6 +15,9 @@ import { sendLogin } from '../../actions/mine';
 // create a component
 class Mine extends Component {
   static navigationOptions = ({ navigation }) => {
+    const { state, setParams, navigate } = navigation;
+    const { params } = navigation.state;
+    console.log(state.key)
     return {
 
     };
@@ -96,9 +99,12 @@ class Mine extends Component {
     )
   }
   _onLoginPress(info) {
-    this.props.navigation.navigate('Login', {
-      gotoLogin: this.props.gotoLogin, loading: this.props.loading
-    })
+    const { user, isLogin } = this.props
+    if (isLogin) {
+      this.props.navigation.navigate('UserInfo')
+    } else {
+      this.props.navigation.navigate('Login')
+    }
   }
   _onPressItem() {
     alert('待开发')

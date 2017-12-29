@@ -13,14 +13,18 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* cnodeRNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* cnodeRNTests.m */; };
-		044D41631FE7F0CB001FD7EF /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 044D41621FE7F0CB001FD7EF /* main.jsbundle */; };
-		044D41641FE7F0CB001FD7EF /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 044D41621FE7F0CB001FD7EF /* main.jsbundle */; };
-		044D41651FE7F0CB001FD7EF /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 044D41621FE7F0CB001FD7EF /* main.jsbundle */; };
-		044D41661FE7F0CB001FD7EF /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 044D41621FE7F0CB001FD7EF /* main.jsbundle */; };
-		044D41681FE7F0D2001FD7EF /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 044D41671FE7F0D2001FD7EF /* assets */; };
-		044D41691FE7F0D2001FD7EF /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 044D41671FE7F0D2001FD7EF /* assets */; };
-		044D416A1FE7F0D2001FD7EF /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 044D41671FE7F0D2001FD7EF /* assets */; };
-		044D416B1FE7F0D2001FD7EF /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 044D41671FE7F0D2001FD7EF /* assets */; };
+		0498629D1FF6385500798754 /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0498629A1FF6385500798754 /* index.ios.jsbundle */; };
+		0498629E1FF6385500798754 /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0498629A1FF6385500798754 /* index.ios.jsbundle */; };
+		0498629F1FF6385500798754 /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0498629A1FF6385500798754 /* index.ios.jsbundle */; };
+		049862A01FF6385500798754 /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0498629A1FF6385500798754 /* index.ios.jsbundle */; };
+		049862A11FF6385500798754 /* index.ios.jsbundle.meta in Resources */ = {isa = PBXBuildFile; fileRef = 0498629B1FF6385500798754 /* index.ios.jsbundle.meta */; };
+		049862A21FF6385500798754 /* index.ios.jsbundle.meta in Resources */ = {isa = PBXBuildFile; fileRef = 0498629B1FF6385500798754 /* index.ios.jsbundle.meta */; };
+		049862A31FF6385500798754 /* index.ios.jsbundle.meta in Resources */ = {isa = PBXBuildFile; fileRef = 0498629B1FF6385500798754 /* index.ios.jsbundle.meta */; };
+		049862A41FF6385500798754 /* index.ios.jsbundle.meta in Resources */ = {isa = PBXBuildFile; fileRef = 0498629B1FF6385500798754 /* index.ios.jsbundle.meta */; };
+		049862A51FF6385500798754 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 0498629C1FF6385500798754 /* assets */; };
+		049862A61FF6385500798754 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 0498629C1FF6385500798754 /* assets */; };
+		049862A71FF6385500798754 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 0498629C1FF6385500798754 /* assets */; };
+		049862A81FF6385500798754 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 0498629C1FF6385500798754 /* assets */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -255,8 +259,9 @@
 		00E356EE1AD99517003FC87E /* cnodeRNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cnodeRNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* cnodeRNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cnodeRNTests.m; sourceTree = "<group>"; };
-		044D41621FE7F0CB001FD7EF /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = ../release_ios/main.jsbundle; sourceTree = "<group>"; };
-		044D41671FE7F0D2001FD7EF /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../release_ios/assets; sourceTree = "<group>"; };
+		0498629A1FF6385500798754 /* index.ios.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.ios.jsbundle; sourceTree = "<group>"; };
+		0498629B1FF6385500798754 /* index.ios.jsbundle.meta */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.ios.jsbundle.meta; sourceTree = "<group>"; };
+		0498629C1FF6385500798754 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* cnodeRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cnodeRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -425,8 +430,9 @@
 		13B07FAE1A68108700A75B9A /* cnodeRN */ = {
 			isa = PBXGroup;
 			children = (
-				044D41671FE7F0D2001FD7EF /* assets */,
-				044D41621FE7F0CB001FD7EF /* main.jsbundle */,
+				0498629C1FF6385500798754 /* assets */,
+				0498629A1FF6385500798754 /* index.ios.jsbundle */,
+				0498629B1FF6385500798754 /* index.ios.jsbundle.meta */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -613,6 +619,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 97KM67C9WB;
+						ProvisioningStyle = Manual;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -887,8 +894,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044D41641FE7F0CB001FD7EF /* main.jsbundle in Resources */,
-				044D41691FE7F0D2001FD7EF /* assets in Resources */,
+				049862A61FF6385500798754 /* assets in Resources */,
+				049862A21FF6385500798754 /* index.ios.jsbundle.meta in Resources */,
+				0498629E1FF6385500798754 /* index.ios.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,9 +904,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044D41631FE7F0CB001FD7EF /* main.jsbundle in Resources */,
-				044D41681FE7F0D2001FD7EF /* assets in Resources */,
+				049862A51FF6385500798754 /* assets in Resources */,
+				0498629D1FF6385500798754 /* index.ios.jsbundle in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				049862A11FF6385500798754 /* index.ios.jsbundle.meta in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -907,9 +916,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044D416A1FE7F0D2001FD7EF /* assets in Resources */,
+				0498629F1FF6385500798754 /* index.ios.jsbundle in Resources */,
+				049862A71FF6385500798754 /* assets in Resources */,
+				049862A31FF6385500798754 /* index.ios.jsbundle.meta in Resources */,
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
-				044D41651FE7F0CB001FD7EF /* main.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -917,8 +927,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044D41661FE7F0CB001FD7EF /* main.jsbundle in Resources */,
-				044D416B1FE7F0D2001FD7EF /* assets in Resources */,
+				049862A81FF6385500798754 /* assets in Resources */,
+				049862A41FF6385500798754 /* index.ios.jsbundle.meta in Resources */,
+				049862A01FF6385500798754 /* index.ios.jsbundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1077,6 +1088,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 97KM67C9WB;
@@ -1091,8 +1104,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.cnodeRN;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiasongs.cnodeRN;
 				PRODUCT_NAME = cnodeRN;
+				PROVISIONING_PROFILE = "1bae844a-d653-48f6-a94c-fc9b5b139d21";
+				PROVISIONING_PROFILE_SPECIFIER = cnodeRNDistributionAdHoc;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1101,6 +1116,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 97KM67C9WB;
 				HEADER_SEARCH_PATHS = (
@@ -1114,8 +1131,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.cnodeRN;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiasongs.cnodeRN;
 				PRODUCT_NAME = cnodeRN;
+				PROVISIONING_PROFILE = "1bae844a-d653-48f6-a94c-fc9b5b139d21";
+				PROVISIONING_PROFILE_SPECIFIER = cnodeRNDistributionAdHoc;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

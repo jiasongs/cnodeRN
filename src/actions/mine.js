@@ -7,10 +7,11 @@ export const loading = (loading) => {
     loading
   }
 }
-export const gotoLogin = (data) => {
+export const gotoLogin = (data, func) => {
   return {
     type: types.GO_TO_LOGIN,
-    data
+    data,
+    func
   }
 }
 export const exitLogin = (data) => {
@@ -19,8 +20,8 @@ export const exitLogin = (data) => {
     data
   }
 }
-export const sendLogin = (body) => {
+export const sendLogin = (body, func) => {
   return (dispatch) => {
-    dispatch(loginService.sendLogin(body))//登录接口
+    dispatch(loginService.sendLogin(body, func))//登录接口
   }
 }

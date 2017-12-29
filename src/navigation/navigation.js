@@ -8,6 +8,7 @@ import Mine from "../page/mine/mine";
 import Detail from "../page/detail/detail";
 import Login from "../page/login/login";
 import QRCode from "../page/login/qrcode";
+import UserInfo from "../page/mine/userInfo";
 import {
   AppRegistry,
   StyleSheet,
@@ -95,12 +96,15 @@ const Tabs = TabNavigator(
   },
   {
     tabBarOptions: {
+      showIcon: true,
       indicatorStyle: { height: 0 },
       activeTintColor: "#0085da",
       style: {
         backgroundColor: "#fff"
       },
-      showIcon: true
+      tabStyle: {
+        margin: 2
+      }
     },
     lazy: true, //懒加载
     swipeEnabled: false,
@@ -116,7 +120,8 @@ const Navigation = StackNavigator(
     Login: { screen: Login },
     QRCode: {
       screen: QRCode
-    }
+    },
+    UserInfo: { screen: UserInfo }
   },
   {
     // mode:'modal',
@@ -139,22 +144,25 @@ const Navigation = StackNavigator(
         const { index, route } = scene;
         const params = route.params || {};
         const transition = params.transition || "forHorizontal";
-        console.log(layout);
-        if (params.transition === "forVertical") {
-          // 垂直 模态
-          const height = layout.initHeight;
-          const translateY = position.interpolate({
-            inputRange: [index - 1, index, index + 1],
-            outputRange: [height, 0, 0]
-          });
-          const opacity = position.interpolate({
-            inputRange: [index - 1, index - 0.99, index],
-            outputRange: [0, 1, 1]
-          });
-          return { opacity, transform: [{ translateY }] };
-        } else {
-          return CardStackStyleInterpolator[transition](sceneProps);
-        }
+        console.log(route.key);
+        // if (route.routeName === "Login" || "QRCode") {
+        //   // 垂直 模态
+        //   const height = layout.initHeight;
+        //   const translateY = position.interpolate({
+        //     inputRange: [index - 1, index, index + 1],
+        //     outputRange: [height, 0, 0]
+        //   });
+        //   const opacity = position.interpolate({
+        //     inputRange: [index - 1, index - 0.99, index],
+        //     outputRange: [0, 1, 1]
+        //   });
+        //   const translateX = 0
+        //   return {
+        //     opacity, transform: [{ translateX }, { translateY }],
+        //   };
+        // } else {
+        return CardStackStyleInterpolator[transition](sceneProps);
+        // }
         // const { scene } = sceneProps;
         // const { route } = scene;
         // const params = route.params || {};

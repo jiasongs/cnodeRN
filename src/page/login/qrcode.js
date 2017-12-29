@@ -1,18 +1,37 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {
   AppRegistry,
   Dimensions,
   StyleSheet,
   Text,
   TouchableHighlight,
-  View
+  View,
+  TouchableOpacity,
+  TextInput
 } from 'react-native';
 import Camera from 'react-native-camera';
+import { sendLogin } from '../../actions/mine';
 const { height, width } = Dimensions.get('window')
 const cameraSize = 250
 const borderColor = 'rgba(255,255,255,0.6)'
 const borderBoxSize = 35
-class BadInstagramCloneApp extends Component {
+
+class QRCode extends Component {
+  static navigationOptions = ({ navigation }) => {
+    const { state, setParams, navigate } = navigation;
+    const { params } = navigation.state;
+    console.log(params)
+    return {
+      headerTitle: '扫码',
+      // headerRight: (<TouchableOpacity onPress={() => navigation.goBack(params.navKey)} ><Text>234234</Text></TouchableOpacity>)
+    };
+  };
+  constructor(props) {
+    super(props);
+    this.state = { first: true }
+  }
+
   render() {
     return (
       <Camera
@@ -32,12 +51,35 @@ class BadInstagramCloneApp extends Component {
       </Camera>
     );
   }
-
   onBarCodeRead(e) {
+    if (!this.state.first) {
+      return
+    }
+    if (this.props.loading) {
+      return
+    }
     console.log(
       "Barcode Found!",
       "Type: " + e.type + "\nData: " + e.data
     );
+    const { state, setParams, navigate } = this.props.navigation;
+    const { params } = this.props.navigation.state;
+    console.log(e.data)
+    this.camera.stopCapture()
+    if (e.data) {
+      this.props.gotoLogin({ accesstoken: e.data }, (sucess) => {
+        console.log(sucess)
+        if (sucess) {
+          this.setState({ first: false })
+          this.props.navigation.goBack(params.navKey)
+        } else {
+          this.camera.capture({})
+        }
+      })
+    }
+
+    // const { navigate } = 
+    // console.log(navigate)
   }
   takePicture() {
     const options = {};
@@ -123,5 +165,27 @@ const styles = StyleSheet.create({
     width: 45
   },
 });
-
-export default BadInstagramCloneApp
+const mapStateToProps = (state, ownProps) => {
+  const { mineState } = state
+  console.log(mineState)
+  return {
+    user: mineState.user,
+    loading: mineState.loading,
+  }
+}
+export const mapDispatchToProps = (dispatch, ownProps) => {
+  const { id } = ownProps
+  return {
+    gotoLogin: (body, func) => {
+      dispatch(sendLogin(body, func));
+    },
+    // removeDeatil: () => {
+    //   dispatch(removeTopic())
+    // }
+    // moreTopics: (page) => {
+    //   dispatch(updateTopicsByTab(name, { page: page, limit: 20 }));
+    // },
+  }
+}
+//make this component available to the app
+export default connect(mapStateToProps, mapDispatchToProps)(QRCode)
