@@ -10,8 +10,10 @@ import {
   SectionList,
   TouchableHighlight
 } from "react-native";
-import { Separator } from "../../components/separator";
-import { sendLogin } from "../../actions/mine";
+import Separator from "../../components/separator";
+import * as types from '../../constants/actionTypes'
+import { sendLogin, exitLogin } from "../../actions/login";
+import { getUserRecently, getUserFavorites } from "../../actions/user";
 // create a component
 class Mine extends Component {
   static navigationOptions = ({ navigation }) => {
@@ -20,20 +22,64 @@ class Mine extends Component {
     console.log(state.key);
     return {};
   };
+  componentWillMount() {
+
+  }
+  _onLoginPress(info) {
+    const { user, isLogin } = this.props;
+    console.log(user.loginname)
+    if (isLogin) {
+      this.props.navigation.navigate("UserInfo", { userName: user.loginname });
+    } else {
+      this.props.navigation.navigate("Login");
+    }
+  }
+  _onPressItem(info) {
+    const { recently, isLogin, favorites } = this.props;
+    console.log('favorites')
+    console.log(favorites)
+    if (!isLogin) {
+      alert('请先登录！')
+      return;
+    }
+    switch (info.item.name) {
+      case "最近回复":
+        this.props.navigation.navigate("Recently", { recently: recently.recent_replies, type: '最近回复' });
+        break;
+      case "最新发布":
+        this.props.navigation.navigate("Recently", { recently: recently.recent_topics, type: '最新发布' });
+        break;
+      case "话题收藏":
+        this.props.navigation.navigate("Recently", { recently: favorites, type: '话题收藏' });
+        break;
+      case "设置":
+        console.log('设置')
+        this.props.exitLogin()
+        break;
+      default:
+        break;
+    }
+  }
   _renderSection(info) {
     return <Text>{""}</Text>;
   }
   _renderItem(info) {
     var image = "";
     var style = {};
+    var conunt = ''
+    const { recently, isLogin } = this.props;
+    console.log('recently')
+    console.log(recently)
     switch (info.item.name) {
       case "最近回复":
         image = require("../../resource/images/mine_message.png");
         style = { width: 35, height: 35 };
+        conunt = recently.recent_replies.length
         break;
       case "最新发布":
         image = require("../../resource/images/mine_release.png");
         style = { width: 25, height: 25 };
+        conunt = recently.recent_topics.length
         break;
       case "话题收藏":
         image = require("../../resource/images/mine_collection.png");
@@ -49,7 +95,7 @@ class Mine extends Component {
     return (
       <TouchableHighlight
         underlayColor="#f0f0f0"
-        onPress={this._onPressItem.bind(this)}
+        onPress={this._onPressItem.bind(this, info)}
       >
         <View style={styles.itemBack}>
           <View style={styles.itemImageBack}>
@@ -61,7 +107,7 @@ class Mine extends Component {
           <View style={styles.itemCountBack}>
             <Text style={styles.itemCount}>
               {info.item.name != "设置" && info.item.name != "话题收藏"
-                ? 0
+                ? conunt
                 : ""}
             </Text>
           </View>
@@ -84,11 +130,11 @@ class Mine extends Component {
                 source={{ uri: user.avatar_url }}
               />
             ) : (
-              <Image
-                style={styles.headerImage}
-                source={require("../../resource/images/no_login.png")}
-              />
-            )}
+                <Image
+                  style={styles.headerImage}
+                  source={require("../../resource/images/no_login.png")}
+                />
+              )}
           </View>
           <View style={styles.headerTextBack}>
             <Text style={styles.headerText}>
@@ -98,17 +144,6 @@ class Mine extends Component {
         </View>
       </TouchableHighlight>
     );
-  }
-  _onLoginPress(info) {
-    const { user, isLogin } = this.props;
-    if (isLogin) {
-      this.props.navigation.navigate("UserInfo");
-    } else {
-      this.props.navigation.navigate("Login");
-    }
-  }
-  _onPressItem() {
-    alert("待开发");
   }
   render() {
     var sections = [
@@ -202,11 +237,31 @@ const styles = StyleSheet.create({
 });
 
 const mapStateToProps = (state, ownProps) => {
-  const { mineState } = state;
+  console.log(state)
+  const { loginState, userInfo } = state;
   return {
-    user: mineState.user,
-    isLogin: mineState.isLogin
+    user: loginState.user,
+    isLogin: loginState.isLogin,
+    recently: userInfo.recently,
+    favorites: userInfo.favorites
   };
 };
+export const mapDispatchToProps = (dispatch, ownProps) => {
+  const { id } = ownProps
+  return {
+    gotoLogin: (body, func) => {
+      dispatch(sendLogin(body, func));
+    },
+    exitLogin: () => {
+      dispatch(exitLogin());
+    },
+    getUserRecently: (query) => {
+      dispatch(getUserRecently(query));
+    },
+    getUserFavorites: (query) => {
+      dispatch(getUserFavorites(query))
+    }
+  }
+}
 //make this component available to the app
-export default connect(mapStateToProps)(Mine);
+export default connect(mapStateToProps, mapDispatchToProps)(Mine);

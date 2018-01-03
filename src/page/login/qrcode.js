@@ -11,7 +11,8 @@ import {
   TextInput
 } from 'react-native';
 import Camera from 'react-native-camera';
-import { sendLogin } from '../../actions/mine';
+import { sendLogin } from '../../actions/login';
+import { getUserRecently, getUserFavorites } from "../../actions/user";
 const { height, width } = Dimensions.get('window')
 const cameraSize = 250
 const borderColor = 'rgba(255,255,255,0.6)'
@@ -67,10 +68,12 @@ class QRCode extends Component {
     console.log(e.data)
     this.camera.stopCapture()
     if (e.data) {
-      this.props.gotoLogin({ accesstoken: e.data }, (sucess) => {
+      this.props.gotoLogin({ accesstoken: e.data }, (sucess, data) => {
         console.log(sucess)
         if (sucess) {
           this.setState({ first: false })
+          this.props.getUserRecently(data.loginname)
+          this.props.getUserFavorites(data.loginname)
           this.props.navigation.goBack(params.navKey)
         } else {
           this.camera.capture({})
@@ -166,11 +169,11 @@ const styles = StyleSheet.create({
   },
 });
 const mapStateToProps = (state, ownProps) => {
-  const { mineState } = state
-  console.log(mineState)
+  const { loginState } = state
+  console.log(loginState)
   return {
-    user: mineState.user,
-    loading: mineState.loading,
+    user: loginState.user,
+    loading: loginState.loading,
   }
 }
 export const mapDispatchToProps = (dispatch, ownProps) => {
@@ -179,12 +182,12 @@ export const mapDispatchToProps = (dispatch, ownProps) => {
     gotoLogin: (body, func) => {
       dispatch(sendLogin(body, func));
     },
-    // removeDeatil: () => {
-    //   dispatch(removeTopic())
-    // }
-    // moreTopics: (page) => {
-    //   dispatch(updateTopicsByTab(name, { page: page, limit: 20 }));
-    // },
+    getUserRecently: (query) => {
+      dispatch(getUserRecently(query));
+    },
+    getUserFavorites: (query) => {
+      dispatch(getUserFavorites(query))
+    }
   }
 }
 //make this component available to the app

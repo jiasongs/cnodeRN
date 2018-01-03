@@ -3,7 +3,7 @@ import * as types from '../constants/actionTypes'
 const initStatus = {
   loadStatus: false
 }
-const changeLoadStatus = (state = { initStatus }, action) => {
+const changeLoadStatus = (state = initStatus, action) => {
   switch (action.type) {
     case types.LOADING:
       return {

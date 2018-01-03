@@ -1,5 +1,6 @@
 //import liraries
 import React, { Component } from "react";
+import { connect } from 'react-redux'
 import {
   View,
   Text,
@@ -22,8 +23,13 @@ class Notice extends Component {
       refreshing: true
     };
   }
-  _onPressItem() {
-    alert("待开发");
+  _onPressItem(info) {
+    // alert(info.item);
+    if (!this.props.isLogin) {
+      alert('请先登录')
+      return;
+    }
+    this.props.navigation.navigate('SysMessage')
   }
   _renderContactItem(info) {
     if (typeof info.item.name == "undefined") {
@@ -39,7 +45,7 @@ class Notice extends Component {
     return (
       <TouchableHighlight
         underlayColor="#f0f0f0"
-        onPress={this._onPressItem.bind(this)}
+        onPress={this._onPressItem.bind(this, info)}
       >
         <View style={styles.sysBack}>
           <View style={styles.sysImageBack}>
@@ -136,6 +142,12 @@ const styles = StyleSheet.create({
     color: "#a4a4a4"
   }
 });
-
+const mapStateToProps = (state, ownProps) => {
+  const { loginState } = state
+  console.log(loginState)
+  return {
+    isLogin: loginState.isLogin,
+  }
+}
 //make this component available to the app
-export default Notice;
+export default connect(mapStateToProps)(Notice);

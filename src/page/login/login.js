@@ -12,11 +12,12 @@ import {
   Dimensions,
   Image
 } from 'react-native';
-import { sendLogin } from '../../actions/mine';
+import { sendLogin } from '../../actions/login';
 import QRCode from './qrcode';
+import { getUserRecently, getUserFavorites } from "../../actions/user";
 const { width } = Dimensions.get('window')
 const defalutInputW = width - 35
-const defalutInputH = 30
+const defalutInputH = 44
 // create a component
 class Login extends Component {
   static navigationOptions = ({ navigation }) => {
@@ -46,17 +47,17 @@ class Login extends Component {
 
   }
   _onPress(text) {
-    this.props.gotoLogin({ accesstoken: 'e2028045-5fa8-4a16-b75e-3d5d9b6ee714' }, (success) => {
+    this.props.gotoLogin({ accesstoken: 'e2028045-5fa8-4a16-b75e-3d5d9b6ee714' }, (success, data) => {
       if (success) {
+        console.log(data)
+        this.props.getUserRecently(data.loginname)
+        this.props.getUserFavorites(data.loginname)
         this.props.navigation.goBack()
       }
     })
 
   }
   render() {
-    // const { state, setParams } = this.props.navigation;
-    // console.log('state.params.loading')
-    // console.log(state.params.loading)
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
@@ -150,11 +151,11 @@ const styles = StyleSheet.create({
   }
 });
 const mapStateToProps = (state, ownProps) => {
-  const { mineState } = state
-  console.log(mineState)
+  const { loginState } = state
+  console.log(loginState)
   return {
-    user: mineState.user,
-    loading: mineState.loading,
+    user: loginState.user,
+    loading: loginState.loading,
   }
 }
 export const mapDispatchToProps = (dispatch, ownProps) => {
@@ -163,12 +164,12 @@ export const mapDispatchToProps = (dispatch, ownProps) => {
     gotoLogin: (body, func) => {
       dispatch(sendLogin(body, func));
     },
-    // removeDeatil: () => {
-    //   dispatch(removeTopic())
-    // }
-    // moreTopics: (page) => {
-    //   dispatch(updateTopicsByTab(name, { page: page, limit: 20 }));
-    // },
+    getUserRecently: (query) => {
+      dispatch(getUserRecently(query));
+    },
+    getUserFavorites: (query) => {
+      dispatch(getUserFavorites(query))
+    }
   }
 }
 //make this component available to the app

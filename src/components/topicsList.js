@@ -124,9 +124,7 @@ class List extends Component {
                       {item.reply_count + " / " + item.visit_count}
                     </Text>
                     <Text style={styles.lastReplyAt}>
-                      {moment(item.last_reply_at)
-                        .startOf("minute")
-                        .fromNow()}
+                      {moment(item.last_reply_at).startOf("minute").fromNow()}
                     </Text>
                   </View>
                 </View>

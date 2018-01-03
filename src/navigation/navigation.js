@@ -9,6 +9,8 @@ import Detail from "../page/detail/detail";
 import Login from "../page/login/login";
 import QRCode from "../page/login/qrcode";
 import UserInfo from "../page/mine/userInfo";
+import Recently from '../page/mine/recently';
+import SysMessage from '../page/notice/sysMessage';
 import {
   AppRegistry,
   StyleSheet,
@@ -118,10 +120,10 @@ const Navigation = StackNavigator(
     Tabs: { screen: Tabs },
     Detail: { screen: Detail },
     Login: { screen: Login },
-    QRCode: {
-      screen: QRCode
-    },
-    UserInfo: { screen: UserInfo }
+    QRCode: { screen: QRCode },
+    UserInfo: { screen: UserInfo },
+    Recently: { screen: Recently },
+    SysMessage: { screen: SysMessage }
   },
   {
     // mode:'modal',
@@ -132,47 +134,47 @@ const Navigation = StackNavigator(
         backgroundColor: "#2D2D2D"
       },
       headerTitleStyle: {
-        alignSelf: "center"
+        // alignSelf: "center"
       },
       // headerBackTitle: null,
       headerTintColor: "#FFFFFF",
       gesturesEnabled: true
     },
-    transitionConfig: () => ({
-      screenInterpolator: CardStackStyleInterpolator.forHorizontal
-      // () => {
-      // const { layout, position, scene } = sceneProps;
-      // const { index, route } = scene;
-      // const params = route.params || {};
-      // const transition = params.transition || "forHorizontal";
-      // console.log(route.key);
-      // if (route.routeName === "Login" || "QRCode") {
-      //   // 垂直 模态
-      //   const height = layout.initHeight;
-      //   const translateY = position.interpolate({
-      //     inputRange: [index - 1, index, index + 1],
-      //     outputRange: [height, 0, 0]
-      //   });
-      //   const opacity = position.interpolate({
-      //     inputRange: [index - 1, index - 0.99, index],
-      //     outputRange: [0, 1, 1]
-      //   });
-      //   const translateX = 0
-      //   return {
-      //     opacity, transform: [{ translateX }, { translateY }],
-      //   };
-      // } else {
+    // transitionConfig: () => ({
+    // screenInterpolator: CardStackStyleInterpolator.forHorizontal
+    // () => {
+    // const { layout, position, scene } = sceneProps;
+    // const { index, route } = scene;
+    // const params = route.params || {};
+    // const transition = params.transition || "forHorizontal";
+    // console.log(route.key);
+    // if (route.routeName === "Login" || "QRCode") {
+    //   // 垂直 模态
+    //   const height = layout.initHeight;
+    //   const translateY = position.interpolate({
+    //     inputRange: [index - 1, index, index + 1],
+    //     outputRange: [height, 0, 0]
+    //   });
+    //   const opacity = position.interpolate({
+    //     inputRange: [index - 1, index - 0.99, index],
+    //     outputRange: [0, 1, 1]
+    //   });
+    //   const translateX = 0
+    //   return {
+    //     opacity, transform: [{ translateX }, { translateY }],
+    //   };
+    // } else {
 
-      // }
-      // const { scene } = sceneProps;
-      // const { route } = scene;
-      // const params = route.params || {};
-      // const transition = params.transition || "forHorizontal";
-      // console.log(transition);
-      //
-      // return CardStackStyleInterpolator[transition](sceneProps);
-      // }
-    })
+    // }
+    // const { scene } = sceneProps;
+    // const { route } = scene;
+    // const params = route.params || {};
+    // const transition = params.transition || "forHorizontal";
+    // console.log(transition);
+    //
+    // return CardStackStyleInterpolator[transition](sceneProps);
+    // }
+    // })
   }
 );
 export default Navigation;

@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { TabNavigator, TabBarTop } from 'react-navigation';
 import TopicsList from '../../components/topicsList';
+import * as types from '../../constants/actionTypes'
+import { sendLogin, exitLogin } from "../../actions/login";
+import { getUserRecently, getUserFavorites } from "../../actions/user";
 import {
   View,
   Text,
@@ -135,6 +138,7 @@ const TabNavs = TabNavigator({
         height: 40
       },
     },
+    lazy: true,
     swipeEnabled: true,
     animationEnabled: false,
     tabBarPosition: 'Top',
@@ -146,8 +150,33 @@ class Home extends Component {
     super(props)
     this.state = {}
   }
-  componentDidMount() {
-
+  componentWillMount() {
+    global.storage.load({
+      key: types.LOGIN_STATE,
+      autoSync: true,
+      syncInBackground: true,
+    }).then(ret => {
+      console.log('ret');
+      console.log(ret);
+      if (ret.token.length > 0) {
+        this.props.gotoLogin({ accesstoken: ret.token }, (success, data) => {
+          if (success) {
+            this.props.getUserRecently(data.loginname)
+            this.props.getUserFavorites(data.loginname)
+          }
+        })
+      }
+    }).catch(err => {
+      console.warn(err.message);
+      switch (err.name) {
+        case 'NotFoundError':
+          // TODO;
+          break;
+        case 'ExpiredError':
+          // TODO
+          break;
+      }
+    })
   }
   render() {
     const { navigate } = this.props.navigation;
@@ -159,5 +188,31 @@ class Home extends Component {
     );
   }
 }
-
-export default Home;
+const mapStateToProps = (state, ownProps) => {
+  console.log(state)
+  const { loginState, userInfo } = state;
+  return {
+    user: loginState.user,
+    isLogin: loginState.isLogin,
+    recently: userInfo.recently,
+    favorites: userInfo.favorites
+  };
+};
+export const mapDispatchToProps = (dispatch, ownProps) => {
+  const { id } = ownProps
+  return {
+    gotoLogin: (body, func) => {
+      dispatch(sendLogin(body, func));
+    },
+    exitLogin: () => {
+      dispatch(exitLogin());
+    },
+    getUserRecently: (query) => {
+      dispatch(getUserRecently(query));
+    },
+    getUserFavorites: (query) => {
+      dispatch(getUserFavorites(query))
+    }
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

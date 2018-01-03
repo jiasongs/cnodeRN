@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="com.android.support:support-v4-23.0.1">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/46da4f941517305f0fa3fda9a2dbbf6f/jars/libs/internal_impl-23.0.1.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/46da4f941517305f0fa3fda9a2dbbf6f/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/46da4f941517305f0fa3fda9a2dbbf6f/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/95e91c2ee6917a96b5938b18a5855a4b/jars/libs/internal_impl-23.0.1.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/95e91c2ee6917a96b5938b18a5855a4b/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/95e91c2ee6917a96b5938b18a5855a4b/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/23.0.1/support-v4-23.0.1-javadoc.jar!/" />

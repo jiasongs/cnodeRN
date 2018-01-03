@@ -1,13 +1,14 @@
 import * as requestService from "./request";
-import * as mine from "../actions/mine";
+import * as login from "../actions/login";
 
 export const sendLogin = (body, func) => {
   return dispatch => {
-    dispatch(mine.loading(true));
+    dispatch(login.loading(true));
     requestService
       .post("/accesstoken", body)
       .then(data => {
-        dispatch(mine.gotoLogin(data, func));
+        console.log(data)
+        dispatch(login.gotoLogin(data, body, func));
       })
       .catch(err => {
         console.log(err);

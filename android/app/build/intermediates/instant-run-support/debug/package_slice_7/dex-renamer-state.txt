@@ -1,4 +1,4 @@
-#Sun Dec 24 12:51:33 CST 2017
-base.0=/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7
+#Wed Jan 03 18:15:29 CST 2018
+base.0=/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/dexMerger/debug/26
 renamed.0=classes.dex
-file.0=/Users/jiasong/Desktop/cnodeRN/android/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex
+file.0=/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/dexMerger/debug/26/classes.dex

@@ -8,16 +8,21 @@ const initialState = {
 const getDetail = (state = initialState, action) => {
   switch (action.type) {
     case types.GET_TOPIC_BY_ID:
+      if (action.payload) {
+        action.func(true)
+      } else {
+        action.func(false)
+      }
       return {
         ...state,
         data: action.payload,
         comment: action.payload.replies,
         loading: false
       }
-      case types.REMOVE_TOPIC:
+    case types.REMOVE_TOPIC:
       return {
         ...state,
-        data:{}
+        data: {}
       }
     case types.LOADING:
       return {

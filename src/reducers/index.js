@@ -2,10 +2,14 @@ import { combineReducers } from 'redux'
 import getTopics from './topic';
 import getDetail from './detail';
 import getSearchTopics from './find';
-import mineState from './mine';
+import loginState from './login';
+import userInfo from './user';
+import messageState from './message';
 export default combineReducers({
   getTopics,
   getDetail,
   getSearchTopics,
-  mineState
+  loginState,
+  userInfo,
+  messageState
 }) 

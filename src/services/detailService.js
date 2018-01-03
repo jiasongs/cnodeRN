@@ -4,14 +4,14 @@ import * as status from '../actions/status';
 
 export const getDetailById = (id, params = {
   accesstoken: '',
-}) => {
+}, func) => {
   return (dispatch) => {
     dispatch(status.loading(true))
     var url = '/topic/' + id
     requestService.get(url, {
       ...params
     }).then((data) => {
-      dispatch(detail.topicById(data.data))
+      dispatch(detail.topicById(data.data, func))
     }).catch((error) => {
     }) // 
   }

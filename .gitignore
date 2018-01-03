@@ -2,3 +2,4 @@ node_modules/
 *.vscode
 dist/
 android/
+android/.gradle/

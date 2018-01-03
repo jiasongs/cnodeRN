@@ -58,22 +58,21 @@ class Find extends Component {
   }
   _renderSearchResult(info) {
     const { loading } = this.props;
+    console.log(info)
     return (
-      <View style={styles.searchResultView} key={info.item.id}>
-        <TouchableHighlight
-          underlayColor="#f0f0f0"
-          onPress={this._onPressItem.bind(this, info)}
-        >
-          <View>
-            <Text style={styles.searchResultTitle} numberOfLines={1}>
-              {info.item.title}
-            </Text>
-            <Text numberOfLines={3} style={styles.searchResultContent}>
-              {info.item.content}
-            </Text>
-          </View>
-        </TouchableHighlight>
-      </View>
+      <Text style={{ flex: 1, width: 100, height: 100 }}>1231231231asdad</Text>
+      // <TouchableHighlight
+      //   underlayColor="#f0f0f0"
+      //   onPress={this._onPressItem.bind(this, info)} >
+      //   <View style={styles.searchResultView} key={info.item.id}>
+      //     <Text style={styles.searchResultTitle} numberOfLines={1}>
+      //       {info.item.title}
+      //     </Text>
+      //     <Text numberOfLines={3} style={styles.searchResultContent}>
+      //       {info.item.content}
+      //     </Text>
+      //   </View>
+      // </TouchableHighlight>
     );
   }
   _renderSection(info) {
@@ -110,6 +109,9 @@ class Find extends Component {
     this.setState({ text: "" });
     this.props.removeSearchTopics();
   }
+  componentWillReceiveProps(nextProps) {
+
+  }
   render() {
     const { navigate } = this.props.navigation;
     const { payload, loading } = this.props;
@@ -135,6 +137,8 @@ class Find extends Component {
         renderItem: this._renderSearchResult.bind(this)
       }
     ];
+    console.log('sections')
+    console.log(sections)
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
@@ -161,12 +165,11 @@ class Find extends Component {
         ) : null}
         <SectionList
           // removeClippedSubviews={false}
-          keyExtractor={(item, index) => item.id}
+          keyExtractor={(item, index) => index}
           stickySectionHeadersEnabled={false}
           //  ItemSeparatorComponent={Separator}
           renderSectionHeader={this._renderSection.bind(this)}
           sections={sections}
-          // renderItem={() => <Text>2323</Text>}
         />
       </View>
     );
