@@ -18,6 +18,7 @@ class UserInfo extends Component {
     const { params } = state;
     return {
       headerTitle: '个人资料',
+      headerRight: <View />
     };
   };
   componentWillMount() {

@@ -15,13 +15,38 @@ import { Separator } from "../../components/separator";
 // create a component
 class Notice extends Component {
   static navigationOptions = ({ navigation }) => {
-    return {};
+    const { state, setParams, navigate } = navigation;
+    const { params } = navigation.state;
+    console.log(params)
+    return {
+      tabBarOnPress: (params) => {
+        const { previousScene, scene, jumpToIndex } = params
+        console.log(params)
+        jumpToIndex(scene.index)
+        // StatusBar.setBarStyle('default', false)
+        // if (navigation.state.params) {
+        // navigation.state.params.onPress()
+
+        // }
+      }
+    };
   };
   constructor(props) {
     super(props);
     this.state = {
       refreshing: true
     };
+  }
+  componentWillMount() {
+
+  }
+  componentDidMount() {
+    console.log('componentDidMount')
+    this.props.navigation.setParams({ onPress: this._onPress.bind(this) })
+  }
+  _onPress() {
+    console.log(this._statusBar)
+    StatusBar.setBarStyle('light-content')
   }
   _onPressItem(info) {
     // alert(info.item);

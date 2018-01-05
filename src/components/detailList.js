@@ -85,7 +85,7 @@ class DetailList extends Component {
     if (typeof (author) == "undefined") {
       author = { avatar_url: ' ', loginname: ' ' }
     } else {
-      console.log(author.avatar_url)
+      // console.log(author.avatar_url)
     }
     var content = this.props.data.content;
     if (typeof (content) == "undefined") {

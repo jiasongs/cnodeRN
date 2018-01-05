@@ -25,6 +25,7 @@ class QRCode extends Component {
     console.log(params)
     return {
       headerTitle: '扫码',
+      headerRight: <View />,
       // headerRight: (<TouchableOpacity onPress={() => navigation.goBack(params.navKey)} ><Text>234234</Text></TouchableOpacity>)
     };
   };
@@ -42,11 +43,11 @@ class QRCode extends Component {
         onBarCodeRead={this.onBarCodeRead.bind(this)}
         style={styles.preview}
         aspect={Camera.constants.Aspect.fill}
-        barcodeFinderVisible={true}
-        barcodeFinderWidth={220}
-        barcodeFinderHeight={220}
-        barcodeFinderBorderColor="red"
-        barcodeFinderBorderWidth={2}
+      // barcodeFinderVisible={true}
+      // barcodeFinderWidth={220}
+      // barcodeFinderHeight={220}
+      // barcodeFinderBorderColor="red"
+      // barcodeFinderBorderWidth={2}
       >
         {/* <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text> */}
       </Camera>

@@ -21,6 +21,7 @@ class Recently extends Component {
     console.log(state.key);
     return {
       headerTitle: params.type,
+      headerRight: <View />,
       // headerLeft: null
     };
   };

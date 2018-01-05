@@ -7,7 +7,7 @@ import {
   FlatList,
   Image,
   TouchableHighlight,
-  ActivityIndicator
+  ActivityIndicator,
 } from "react-native";
 import Separator from "../components/separator";
 import TopicType from "../components/topicType";
@@ -65,7 +65,7 @@ class List extends Component {
         </View>
       );
     } else {
-      return <View />;
+      return <View />
     }
   }
   _navToDetail(index) {
@@ -83,7 +83,7 @@ class List extends Component {
           keyExtractor={(item, index) => index}
           ListFooterComponent={this._renderFooter.bind(this)}
           ItemSeparatorComponent={Separator}
-          refreshing={loading}
+          refreshing={loading && (this.state.footer === false)}
           onRefresh={this._onRefresh.bind(this)}
           onEndReachedThreshold={0.1}
           onEndReached={this._onEndReached.bind(this)}

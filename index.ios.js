@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { AppRegistry } from "react-native";
+import { AppRegistry, View } from "react-native";
 import Navigation from "./src/navigation/navigation";
 import { Provider } from "react-redux";
 import configureStore from "./src/store/configureStore";
 import storage from './src/utils/asyncStorage';
+
 if (!__DEV__) {
   global.console = {
     info: () => { },

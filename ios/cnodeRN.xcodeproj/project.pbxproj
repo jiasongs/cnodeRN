@@ -1088,7 +1088,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
@@ -1106,8 +1106,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiasongs.cnodeRN;
 				PRODUCT_NAME = cnodeRN;
-				PROVISIONING_PROFILE = "1bae844a-d653-48f6-a94c-fc9b5b139d21";
-				PROVISIONING_PROFILE_SPECIFIER = cnodeRNDistributionAdHoc;
+				PROVISIONING_PROFILE = "3833c169-b554-4d40-84f1-447344654a7d";
+				PROVISIONING_PROFILE_SPECIFIER = cnodeRNDevelopment;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1116,7 +1116,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 97KM67C9WB;
@@ -1133,8 +1133,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiasongs.cnodeRN;
 				PRODUCT_NAME = cnodeRN;
-				PROVISIONING_PROFILE = "1bae844a-d653-48f6-a94c-fc9b5b139d21";
-				PROVISIONING_PROFILE_SPECIFIER = cnodeRNDistributionAdHoc;
+				PROVISIONING_PROFILE = "3833c169-b554-4d40-84f1-447344654a7d";
+				PROVISIONING_PROFILE_SPECIFIER = cnodeRNDevelopment;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

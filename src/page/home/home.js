@@ -32,9 +32,6 @@ const styles = StyleSheet.create({
 });
 // create a component
 class All extends Component {
-  static navigationOptions = ({ navigation, screenProps }) => ({
-
-  });
   render() {
     const { navigate } = this.props.screenProps;
     return (
@@ -150,6 +147,14 @@ class Home extends Component {
     super(props)
     this.state = {}
   }
+  static navigationOptions = ({ navigation }) => {
+    const { state, setParams } = navigation;
+    const { params } = navigation.state;
+    return {
+      headerTitle: '话题',
+      headerRight: <Text onPress={() => navigation.navigate('ToastExample')}>测试</Text>
+    };
+  };
   componentWillMount() {
     global.storage.load({
       key: types.LOGIN_STATE,

@@ -11,8 +11,10 @@ import {
   TouchableOpacity,
   Alert,
   Dimensions,
-  Image
+  Image,
+  TouchableWithoutFeedback
 } from 'react-native';
+
 import Separator from '../../components/separator'
 import DetailList from '../../components/detailList'
 import { getTopicById, removeTopic } from '../../actions/detial';
@@ -34,6 +36,7 @@ class Detail extends Component {
     const { params } = navigation.state;
     return {
       headerTitle: '话题',
+      headerRight: <View />
     };
   };
   componentWillMount() {
@@ -52,7 +55,7 @@ class Detail extends Component {
                 this._flatList.scrollToIndex({ animated: false, viewPosition: 1, index: this.replyIndex })
               }
             }
-          }, 2000);
+          }, 1000);
         }
       }
     })

@@ -6,10 +6,13 @@ import {
   Modal,
   Dimensions,
   TouchableOpacity,
-  propTypes
+  propTypes,
+  NativeModules,
+  Image
 } from 'react-native';
 import PropTypes from 'prop-types';
-import Gallery from 'react-native-image-gallery';
+// import Gallery from 'react-native-image-gallery';
+import { Overlay, AlbumView } from 'teaset';
 import CustomImage from "./customImage";
 
 const { width, height } = Dimensions.get('window')
@@ -30,42 +33,47 @@ class ImageViewer extends Component {
   };
   constructor(props) {
     super(props);
-    this.state = { visible: false }
   }
-  _onOpen() {
-    this.setState({ visible: true })
+  _show(e) {
+    console.log(e)
+    NativeModules.UIManager.measure(e.target, (x, y, width, height, pageX, pageY) => {
+      // pageY是组件在当前屏幕上的绝对位置
+      console.log(pageX, pageY, height);
+      let overlayView = (
+        <Overlay.PopView
+          containerStyle={{ flex: 1 }}
+          overlayOpacity={1}
+          type='custom'
+          customBounds={{ x: pageX, y: pageY, width, height }}
+          ref={v => this.fullImageView = v}
+        >
+          <AlbumView
+            style={{ flex: 1 }}
+            control={false}
+            images={[{ uri: this.props.source.uri }]}
+            defaultIndex={0}
+            onPress={() => this.fullImageView && this.fullImageView.close()}
+          />
+        </Overlay.PopView>
+      );
+      Overlay.show(overlayView);
+    });
   }
-  _onClose() {
-    console.log('zzz')
-    this.setState({ visible: false })
-  }
+
   render() {
     console.log(this.props.source.uri)
     return (
       <View>
-             <TouchableOpacity
-          // onLayout={this._onLayout.bind(this)}
-          onPress={this._onOpen.bind(this)}
+        <TouchableOpacity
+          onPress={this._show.bind(this)}
           style={{ marginTop: 10, marginBottom: 10 }} >
           <CustomImage
+            ref={view => this.imgView = view}
             uri={this.props.source.uri}
-            // style={imgStyle}
             defaultSize={this.props.defaultSize}
             maxImageWidth={this.props.maxImageWidth}
           />
         </TouchableOpacity>
-        <Modal
-          animationType='fade'
-          visible={this.state.visible}
-          onRequestClose={this._onClose.bind(this)}
-        >
-          <Gallery
-            style={{ width: width, height: height, backgroundColor: 'black' }}
-            images={[{ source: { uri: this.props.source.uri } }]}
-            // onOpenImageViewer={this._onOpen.bind(this)}
-            onSingleTapConfirmed={this._onClose.bind(this)}
-          />
-        </Modal>
       </View>
     );
   }

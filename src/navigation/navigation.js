@@ -11,6 +11,7 @@ import QRCode from "../page/login/qrcode";
 import UserInfo from "../page/mine/userInfo";
 import Recently from '../page/mine/recently';
 import SysMessage from '../page/notice/sysMessage';
+import ToastExample from '../page/ToastExample';
 import {
   AppRegistry,
   StyleSheet,
@@ -123,7 +124,8 @@ const Navigation = StackNavigator(
     QRCode: { screen: QRCode },
     UserInfo: { screen: UserInfo },
     Recently: { screen: Recently },
-    SysMessage: { screen: SysMessage }
+    SysMessage: { screen: SysMessage },
+    ToastExample: { screen: ToastExample }
   },
   {
     // mode:'modal',
@@ -131,10 +133,10 @@ const Navigation = StackNavigator(
     headerMode: "screen",
     navigationOptions: {
       headerStyle: {
-        backgroundColor: "#2D2D2D"
+        backgroundColor: "#2D2D2D",
       },
       headerTitleStyle: {
-        // alignSelf: "center"
+        alignSelf: "center",
       },
       // headerBackTitle: null,
       headerTintColor: "#FFFFFF",

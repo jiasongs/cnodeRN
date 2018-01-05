@@ -77,8 +77,9 @@ const TabNavs = TabNavigator({
 class SysMessage extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
-      headerTitle: '系统通知'
-    }
+      headerTitle: '系统通知',
+      headerRight: <View />,
+    };
   }
   componentWillMount() {
     this.props.getMessage({ 'accesstoken': 'e2028045-5fa8-4a16-b75e-3d5d9b6ee714', 'mdrender': false })

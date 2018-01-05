@@ -13,7 +13,8 @@ import {
   Dimensions,
   FlatList,
   ActivityIndicator,
-  TouchableHighlight
+  TouchableHighlight,
+  Platform
 } from "react-native";
 import {
   getSearchTopics,
@@ -60,19 +61,18 @@ class Find extends Component {
     const { loading } = this.props;
     console.log(info)
     return (
-      <Text style={{ flex: 1, width: 100, height: 100 }}>1231231231asdad</Text>
-      // <TouchableHighlight
-      //   underlayColor="#f0f0f0"
-      //   onPress={this._onPressItem.bind(this, info)} >
-      //   <View style={styles.searchResultView} key={info.item.id}>
-      //     <Text style={styles.searchResultTitle} numberOfLines={1}>
-      //       {info.item.title}
-      //     </Text>
-      //     <Text numberOfLines={3} style={styles.searchResultContent}>
-      //       {info.item.content}
-      //     </Text>
-      //   </View>
-      // </TouchableHighlight>
+      <TouchableHighlight
+        underlayColor="#f0f0f0"
+        onPress={this._onPressItem.bind(this, info)} >
+        <View style={styles.searchResultView} key={info.item.id}>
+          <Text style={styles.searchResultTitle} numberOfLines={1}>
+            {info.item.title}
+          </Text>
+          <Text numberOfLines={3} style={styles.searchResultContent}>
+            {info.item.content}
+          </Text>
+        </View>
+      </TouchableHighlight>
     );
   }
   _renderSection(info) {
@@ -149,20 +149,6 @@ class Find extends Component {
             onSubmitSearch={this._onSubmitSearch.bind(this)}
           />
         </View>
-        {loading ? (
-          <ActivityIndicator
-            style={{
-              top: 200,
-              width: width,
-              position: "absolute",
-              zIndex: 1000
-            }}
-            animating={loading}
-            // color='red'
-            size="large"
-            hidesWhenStopped={true}
-          />
-        ) : null}
         <SectionList
           // removeClippedSubviews={false}
           keyExtractor={(item, index) => index}
@@ -171,11 +157,28 @@ class Find extends Component {
           renderSectionHeader={this._renderSection.bind(this)}
           sections={sections}
         />
+        {loading && <ActivityIndicator
+          style={{
+            top: 200,
+            width: width,
+            height: 30,
+            position: "absolute",
+          }}
+          animating={loading}
+          // color='red'
+          size="large"
+          hidesWhenStopped={true}
+        />}
       </View>
     );
   }
 }
-
+const searchBarHeight = 64
+if (Platform.OS == 'ios') {
+  searchBarHeight = (height == 815 ? 88 : 64)
+} else {
+  searchBarHeight = 54
+}
 // define your styles
 const styles = StyleSheet.create({
   container: {
@@ -186,9 +189,10 @@ const styles = StyleSheet.create({
   },
   searchBarView: {
     backgroundColor: "#2D2D2D",
-    height: height == 815 ? 88 : 64,
-    paddingTop: height == 815 ? 37 : 27,
-    paddingLeft: 15
+    height: searchBarHeight,
+    paddingTop: Platform.OS == 'android' ? 0 : (height == 815 ? 37 : 27),
+    paddingLeft: 15,
+    justifyContent: Platform.OS == 'android' ? 'center' : 'flex-start'
   },
   hots: {
     marginLeft: 15,
