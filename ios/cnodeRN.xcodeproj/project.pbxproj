@@ -25,6 +25,8 @@
 		049862A61FF6385500798754 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 0498629C1FF6385500798754 /* assets */; };
 		049862A71FF6385500798754 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 0498629C1FF6385500798754 /* assets */; };
 		049862A81FF6385500798754 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 0498629C1FF6385500798754 /* assets */; };
+		06E1196D07EB4292A5D8F42C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE47BAE92870413A8837AD1F /* CoreGraphics.framework */; };
+		0722E5E53A3C4C52A673DB21 /* libRCTJCoreModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 927F3954624C4607ADD02F03 /* libRCTJCoreModule.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -46,9 +48,20 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* cnodeRNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* cnodeRNTests.m */; };
+		3E78CCDE2FFD47CDA6B5F7DF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E78AED2FF3F40A48930162C /* CoreTelephony.framework */; };
 		49DA3278BC3E4D6A88806F17 /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A6B4B75A14348A2A0604F17 /* libRCTCamera.a */; };
+		5BC36FC62C5C4AF3973B1EB9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F223D1B1564B0FB0C9534A /* CFNetwork.framework */; };
+		5C41DE87410041EF8DFC5F45 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8054609EA5246A79F4A0562 /* CoreFoundation.framework */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		679F3CCAD9F54E75B13A7AFB /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8711BA672DB74912B6F80ED8 /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		7430E0A222E94076A9374DF2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C15D1D5E36D4671A2EA4B23 /* SystemConfiguration.framework */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		8C02A79F8BD94996BA2E6626 /* libRCTJPushModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DC53ACD5604BF9B0129402 /* libRCTJPushModule.a */; };
+		AA4AC2A15829434188F8CFDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2354BEC4DF4725B7B2F2FA /* Foundation.framework */; };
+		B5222D7E0FE24806848C262B /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DA62C0E8B4A34166A11DAB03 /* libresolv.tbd */; };
+		E7BB62369CDF4799A87CE645 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA789A48C6B46EDBADD0459 /* libz.tbd */; };
+		E87140F51117489493E0C432 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6A56EAD29C45B380065259 /* UIKit.framework */; };
+		FF96BFCC78E549F796106BDA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED90C0C24A5F4305BC783BE7 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +106,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = cnodeRN;
+		};
+		04A664832004983800179875 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 061596624E9942E489714F2F /* RCTJCoreModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6212E9B41F3990DC00BDF51A;
+			remoteInfo = RCTJCoreModule;
+		};
+		04A664862004983800179875 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10CB0883F3A24F269BA89701 /* RCTJPushModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6280980A1CEDC407000D3A81;
+			remoteInfo = RCTJPushModule;
 		};
 		04E620321FF4F2BF008BFFCA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -259,9 +286,13 @@
 		00E356EE1AD99517003FC87E /* cnodeRNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cnodeRNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* cnodeRNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cnodeRNTests.m; sourceTree = "<group>"; };
+		040EE8A12004959E0097949E /* cnodeRN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = cnodeRN.entitlements; path = cnodeRN/cnodeRN.entitlements; sourceTree = "<group>"; };
 		0498629A1FF6385500798754 /* index.ios.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.ios.jsbundle; sourceTree = "<group>"; };
 		0498629B1FF6385500798754 /* index.ios.jsbundle.meta */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = index.ios.jsbundle.meta; sourceTree = "<group>"; };
 		0498629C1FF6385500798754 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		04F223D1B1564B0FB0C9534A /* CFNetwork.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		061596624E9942E489714F2F /* RCTJCoreModule.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTJCoreModule.xcodeproj; path = "../node_modules/jcore-react-native/ios/RCTJCoreModule.xcodeproj"; sourceTree = "<group>"; };
+		10CB0883F3A24F269BA89701 /* RCTJPushModule.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTJPushModule.xcodeproj; path = "../node_modules/jpush-react-native/ios/RCTJPushModule.xcodeproj"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* cnodeRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cnodeRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,11 +304,23 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = cnodeRN/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		1A6B4B75A14348A2A0604F17 /* libRCTCamera.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTCamera.a; sourceTree = "<group>"; };
+		1DA789A48C6B46EDBADD0459 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		2D02E47B1E0B4A5D006451C7 /* cnodeRN-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cnodeRN-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* cnodeRN-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cnodeRN-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D6A56EAD29C45B380065259 /* UIKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5E78AED2FF3F40A48930162C /* CoreTelephony.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		7C15D1D5E36D4671A2EA4B23 /* SystemConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		8711BA672DB74912B6F80ED8 /* UserNotifications.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		927F3954624C4607ADD02F03 /* libRCTJCoreModule.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTJCoreModule.a; sourceTree = "<group>"; };
+		A8054609EA5246A79F4A0562 /* CoreFoundation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		CA2354BEC4DF4725B7B2F2FA /* Foundation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE47BAE92870413A8837AD1F /* CoreGraphics.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DA62C0E8B4A34166A11DAB03 /* libresolv.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		ED90C0C24A5F4305BC783BE7 /* Security.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F5DC53ACD5604BF9B0129402 /* libRCTJPushModule.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTJPushModule.a; sourceTree = "<group>"; };
 		F8AC7ED52C494591BA706FFA /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -306,6 +349,19 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				49DA3278BC3E4D6A88806F17 /* libRCTCamera.a in Frameworks */,
+				0722E5E53A3C4C52A673DB21 /* libRCTJCoreModule.a in Frameworks */,
+				8C02A79F8BD94996BA2E6626 /* libRCTJPushModule.a in Frameworks */,
+				E7BB62369CDF4799A87CE645 /* libz.tbd in Frameworks */,
+				679F3CCAD9F54E75B13A7AFB /* UserNotifications.framework in Frameworks */,
+				3E78CCDE2FFD47CDA6B5F7DF /* CoreTelephony.framework in Frameworks */,
+				FF96BFCC78E549F796106BDA /* Security.framework in Frameworks */,
+				5BC36FC62C5C4AF3973B1EB9 /* CFNetwork.framework in Frameworks */,
+				5C41DE87410041EF8DFC5F45 /* CoreFoundation.framework in Frameworks */,
+				7430E0A222E94076A9374DF2 /* SystemConfiguration.framework in Frameworks */,
+				AA4AC2A15829434188F8CFDA /* Foundation.framework in Frameworks */,
+				E87140F51117489493E0C432 /* UIKit.framework in Frameworks */,
+				B5222D7E0FE24806848C262B /* libresolv.tbd in Frameworks */,
+				06E1196D07EB4292A5D8F42C /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,10 +449,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		04A6647E2004983800179875 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04A664842004983800179875 /* libRCTJCoreModule.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04A664802004983800179875 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04A664872004983800179875 /* libRCTJPushModule.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		04E620151FF4F2BE008BFFCA /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				1A6B4B75A14348A2A0604F17 /* libRCTCamera.a */,
+				927F3954624C4607ADD02F03 /* libRCTJCoreModule.a */,
+				F5DC53ACD5604BF9B0129402 /* libRCTJPushModule.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -430,6 +504,7 @@
 		13B07FAE1A68108700A75B9A /* cnodeRN */ = {
 			isa = PBXGroup;
 			children = (
+				040EE8A12004959E0097949E /* cnodeRN.entitlements */,
 				0498629C1FF6385500798754 /* assets */,
 				0498629A1FF6385500798754 /* index.ios.jsbundle */,
 				0498629B1FF6385500798754 /* index.ios.jsbundle.meta */,
@@ -491,6 +566,8 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				F8AC7ED52C494591BA706FFA /* RCTCamera.xcodeproj */,
+				061596624E9942E489714F2F /* RCTJCoreModule.xcodeproj */,
+				10CB0883F3A24F269BA89701 /* RCTJPushModule.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -512,6 +589,7 @@
 				00E356EF1AD99517003FC87E /* cnodeRNTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				04E620151FF4F2BE008BFFCA /* Recovered References */,
+				CA7BE1CA55A44739917564AF /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -526,6 +604,24 @@
 				2D02E4901E0B4A5D006451C7 /* cnodeRN-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		CA7BE1CA55A44739917564AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DA789A48C6B46EDBADD0459 /* libz.tbd */,
+				8711BA672DB74912B6F80ED8 /* UserNotifications.framework */,
+				5E78AED2FF3F40A48930162C /* CoreTelephony.framework */,
+				ED90C0C24A5F4305BC783BE7 /* Security.framework */,
+				04F223D1B1564B0FB0C9534A /* CFNetwork.framework */,
+				A8054609EA5246A79F4A0562 /* CoreFoundation.framework */,
+				7C15D1D5E36D4671A2EA4B23 /* SystemConfiguration.framework */,
+				CA2354BEC4DF4725B7B2F2FA /* Foundation.framework */,
+				5D6A56EAD29C45B380065259 /* UIKit.framework */,
+				DA62C0E8B4A34166A11DAB03 /* libresolv.tbd */,
+				CE47BAE92870413A8837AD1F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -620,6 +716,11 @@
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 97KM67C9WB;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -664,6 +765,14 @@
 				{
 					ProductGroup = 00C302BC1ABCB91800DB3ED1 /* Products */;
 					ProjectRef = 00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */;
+				},
+				{
+					ProductGroup = 04A6647E2004983800179875 /* Products */;
+					ProjectRef = 061596624E9942E489714F2F /* RCTJCoreModule.xcodeproj */;
+				},
+				{
+					ProductGroup = 04A664802004983800179875 /* Products */;
+					ProjectRef = 10CB0883F3A24F269BA89701 /* RCTJPushModule.xcodeproj */;
 				},
 				{
 					ProductGroup = 78C398B11ACF4ADC00677621 /* Products */;
@@ -738,6 +847,20 @@
 			fileType = archive.ar;
 			path = libRCTVibration.a;
 			remoteRef = 00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04A664842004983800179875 /* libRCTJCoreModule.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTJCoreModule.a;
+			remoteRef = 04A664832004983800179875 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04A664872004983800179875 /* libRCTJPushModule.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTJPushModule.a;
+			remoteRef = 04A664862004983800179875 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		04E620331FF4F2BF008BFFCA /* libRCTCamera.a */ = {
@@ -1041,12 +1164,16 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
+					"$(SRCROOT)/../node_modules/jcore-react-native/ios/RCTJCoreModule",
+					"$(SRCROOT)/../node_modules/jpush-react-native/ios/RCTJPushModule",
 				);
 				INFOPLIST_FILE = cnodeRNTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1067,12 +1194,16 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
+					"$(SRCROOT)/../node_modules/jcore-react-native/ios/RCTJCoreModule",
+					"$(SRCROOT)/../node_modules/jpush-react-native/ios/RCTJPushModule",
 				);
 				INFOPLIST_FILE = cnodeRNTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1088,6 +1219,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = cnodeRN/cnodeRN.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1096,6 +1228,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
+					"$(SRCROOT)/../node_modules/jcore-react-native/ios/RCTJCoreModule",
+					"$(SRCROOT)/../node_modules/jpush-react-native/ios/RCTJPushModule",
 				);
 				INFOPLIST_FILE = cnodeRN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1116,6 +1250,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = cnodeRN/cnodeRN.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1123,6 +1258,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
+					"$(SRCROOT)/../node_modules/jcore-react-native/ios/RCTJCoreModule",
+					"$(SRCROOT)/../node_modules/jpush-react-native/ios/RCTJPushModule",
 				);
 				INFOPLIST_FILE = cnodeRN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1154,11 +1291,15 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
+					"$(SRCROOT)/../node_modules/jcore-react-native/ios/RCTJCoreModule",
+					"$(SRCROOT)/../node_modules/jpush-react-native/ios/RCTJPushModule",
 				);
 				INFOPLIST_FILE = "cnodeRN-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1188,11 +1329,15 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
+					"$(SRCROOT)/../node_modules/jcore-react-native/ios/RCTJCoreModule",
+					"$(SRCROOT)/../node_modules/jpush-react-native/ios/RCTJPushModule",
 				);
 				INFOPLIST_FILE = "cnodeRN-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1224,6 +1369,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.cnodeRN-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1249,6 +1396,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.cnodeRN-tvOSTests";

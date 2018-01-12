@@ -19,34 +19,52 @@ class Notice extends Component {
     const { params } = navigation.state;
     console.log(params)
     return {
+      headerRight: <Text onPress={() => navigation.state.params.onPress()}>测试</Text>,
+      tabBarLabel: '通知',
+      tabBarIcon: ({ focused, tintColor }) => {
+        return <Image
+          resizeMode="contain"
+          style={{ height: 24, width: 24 }}
+          source={
+            !focused
+              ? require("../../resource/images/notice_normal.png")
+              : require("../../resource/images/notice_selected.png")
+          }
+        />
+      },
       tabBarOnPress: (params) => {
         const { previousScene, scene, jumpToIndex } = params
         console.log(params)
         jumpToIndex(scene.index)
         // StatusBar.setBarStyle('default', false)
-        // if (navigation.state.params) {
-        // navigation.state.params.onPress()
-
-        // }
+        if (navigation.state.params) {
+          navigation.state.params.onPress()
+          console.log(navigation.state.params)
+        }
       }
     };
   };
   constructor(props) {
     super(props);
     this.state = {
-      refreshing: true
+      refreshing: true,
+      ceshi: ''
     };
   }
   componentWillMount() {
-
+    console.log('this.props.navigation')
+    console.log(this.props.navigation)
+    this.props.navigation.setParams({ onPress: this._onPress.bind(this) })
   }
   componentDidMount() {
     console.log('componentDidMount')
-    this.props.navigation.setParams({ onPress: this._onPress.bind(this) })
+
   }
   _onPress() {
-    console.log(this._statusBar)
-    StatusBar.setBarStyle('light-content')
+    console.log('this._statusBar')
+    this.setState({ ceshi11: '123' })
+    console.log(this.state.ceshi11)
+    // StatusBar.setBarStyle('light-content')
   }
   _onPressItem(info) {
     // alert(info.item);

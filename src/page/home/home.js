@@ -11,6 +11,10 @@ import {
   StyleSheet,
   StatusBar,
   Image,
+  DeviceEventEmitter,
+  NativeAppEventEmitter,
+  Alert,
+  Platform
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -182,6 +186,17 @@ class Home extends Component {
           break;
       }
     })
+  }
+  componentDidMount() {
+
+  }
+  componentWillUnmount() {
+    // DeviceEventEmitter.removeAllListeners();
+    // NativeAppEventEmitter.removeAllListeners();
+    // JPushModule.removeReceiveNotificationListener(receiveNotificationEvent);
+    // JPushModule.removeReceiveOpenNotificationListener(openNotificationEvent)
+    //   ; console.log("Will clear all notifications");
+    // JPushModule.clearAllNotifications();
   }
   render() {
     const { navigate } = this.props.navigation;

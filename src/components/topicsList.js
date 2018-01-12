@@ -70,7 +70,10 @@ class List extends Component {
   }
   _navToDetail(index) {
     const { payload } = this.props;
+    console.log(this.props.navigate)
     this.props.navigate("Detail", { topicId: payload[index].id });
+    // console.log(this.text.props.children = 'asdasd')
+
   }
   render() {
     const { payload, loading } = this.props;
@@ -97,7 +100,7 @@ class List extends Component {
                   {/* {_renderItemComponent(item)} */}
                   <TopicType item={item} />
                   <View style={styles.titleBack}>
-                    <Text style={styles.title} numberOfLines={1}>
+                    <Text ref={t => this.text = t} style={styles.title} numberOfLines={1}>
                       {item.title}
                     </Text>
                   </View>
@@ -158,7 +161,7 @@ const styles = StyleSheet.create({
     color: "#fff"
   },
   titleBack: {
-    marginRight: 30
+    marginRight: 30,
   },
   title: {
     fontSize: 15,

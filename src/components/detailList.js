@@ -75,11 +75,35 @@ class DetailList extends Component {
     if (typeof (htmlAttribs.src) == 'undefined') {
       return null
     }
+    console.log(htmlAttribs)
     return (
       <ImageViewer
         source={{ uri: 'http:' + htmlAttribs.src }}
       />)
   }
+  _renderPView(htmlAttribs, children, convertedCSSStyles, passProps) {
+    console.log('htmlAttribs')
+    console.log(htmlAttribs)
+    console.log(children)
+    return (
+      <Text>234</Text>
+    )
+  }
+  _renderNode(node, index, siblings, parent, defaultRenderer) {
+    console.log(node)
+    if (node.name == 'img') {
+
+      console.log('node.attribs')
+      console.log(node.attribs)
+      return (
+        <ImageViewer
+          source={{ uri: 'http:' + node.attribs.src }}
+        />)
+    } else if (node.name == 'p') {
+      console.log(node.attribs)
+    }
+  }
+
   render() {
     var author = this.props.data.author;
     if (typeof (author) == "undefined") {
@@ -122,16 +146,18 @@ class DetailList extends Component {
             imagesMaxWidth={Dimensions.get('window').width}
             onLinkPress={this._onLinkPress.bind(this)}
             renderers={{
-              img: this._renderImageView.bind(this)
+              img: this._renderImageView.bind(this),
             }}
           />
           {/* <HTMLView
             value={content}
+            style={{ width: 375, height: 200 }}
             onLinkPress={(url) => console.log('navigating to: ', url)}
-            stylesheet={htmlStyles}
+            // stylesheet={htmlStyles}
             nodeComponentProps={{ selectable: true }}
-            renderNode={(node) => this._renderNode(node)}
+            renderNode={this._renderNode.bind(this)}
           /> */}
+
           {/* <WebView
             ref={'webview'}
             // style={{ height: 100 }}

@@ -27,7 +27,19 @@ class Find extends Component {
   static navigationOptions = ({ navigation }) => {
     const { state, setParams } = navigation;
     return {
-      header: null
+      header: null,
+      tabBarLabel: '发现',
+      tabBarIcon: ({ focused, tintColor }) => {
+        return <Image
+          resizeMode="contain"
+          style={{ height: 28, width: 28 }}
+          source={
+            !focused
+              ? require("../../resource/images/find_normal.png")
+              : require("../../resource/images/find_selected.png")
+          }
+        />
+      }
       // headerLeft: (<Image source={req}></Image>),
     };
   };

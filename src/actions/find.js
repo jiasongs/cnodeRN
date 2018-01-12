@@ -8,6 +8,7 @@ export const loading = (loading) => {
   }
 }
 
+
 export const searchTopics = (payload) => {
   return {
     type: types.GET_SEARCH_TOPICS,

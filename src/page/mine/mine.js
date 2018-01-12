@@ -8,7 +8,9 @@ import {
   StatusBar,
   Image,
   SectionList,
-  TouchableHighlight
+  TouchableHighlight,
+  Modal,
+  Button
 } from "react-native";
 import Separator from "../../components/separator";
 import * as types from '../../constants/actionTypes'
@@ -27,7 +29,7 @@ class Mine extends Component {
   }
   _onLoginPress(info) {
     const { user, isLogin } = this.props;
-    console.log(user.loginname)
+    console.log(this.props.navigation)
     if (isLogin) {
       this.props.navigation.navigate("UserInfo", { userName: user.loginname });
     } else {
@@ -158,6 +160,22 @@ class Mine extends Component {
     ];
     return (
       <View style={styles.container}>
+        {/* <Modal
+          visible={true}
+          animationType={'slide'}
+          onRequestClose={() => this.closeModal()}
+        >
+          <View style={styles.modalContainer}>
+            <View style={styles.innerContainer}>
+              <Text>This is content inside of modal component</Text>
+              <Button
+                onPress={() => this.closeModal()}
+                title="Close modal"
+              >
+              </Button>
+            </View>
+          </View>
+        </Modal> */}
         <StatusBar barStyle="light-content" />
         <SectionList
           // removeClippedSubviews={false}
@@ -181,6 +199,14 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
     // alignItems: 'center',
     // backgroundColor: '#2c3e50',
+  },
+  modalContainer: {
+    // flex: 1,
+    justifyContent: 'flex-end',
+    // backgroundColor: 'grey',
+  },
+  innerContainer: {
+    alignItems: 'center',
   },
   headerBack: {
     flexDirection: "row",

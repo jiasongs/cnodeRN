@@ -41,6 +41,7 @@ class Detail extends Component {
   };
   componentWillMount() {
     const { params } = this.props.navigation.state;
+    console.log(this.props.navigation)
     this.replyId = params.replyId ? params.replyId : ''
     this.props.getDetail(params.topicId, {}, (success) => {
       if (success) {
