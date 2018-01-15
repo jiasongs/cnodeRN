@@ -8,7 +8,7 @@ const initialState = {
   test: [],
   job: [],
   loading: {
-    all: false,
+    all: true,
     good: false,
     share: false,
     ask: false,

@@ -75,8 +75,57 @@ class List extends Component {
     // console.log(this.text.props.children = 'asdasd')
 
   }
+  _renderItem(info) {
+    let item = info.item
+    let index = info.index
+    return (
+      <TouchableHighlight
+        underlayColor="#f0f0f0"
+        onPress={() => this._navToDetail(index)}
+      >
+        <View style={styles.listItem}>
+          <View style={styles.topicBack}>
+            {/* {_renderItemComponent(item)} */}
+            <TopicType item={item} />
+            <View style={styles.titleBack}>
+              <Text ref={t => this.text = t} style={styles.title} numberOfLines={1}>
+                {item.title}
+              </Text>
+            </View>
+          </View>
+          <View style={styles.contentBack}>
+            <View style={styles.headBack}>
+              <Image
+                style={styles.head}
+                source={{ uri: item.author.avatar_url }}
+              />
+            </View>
+            <View style={styles.authorBack}>
+              <Text style={styles.loginName}>
+                {item.author.loginname}
+              </Text>
+              <Text style={styles.createAt}>
+                {moment(item.create_at)
+                  .startOf("minute")
+                  .fromNow()}
+              </Text>
+            </View>
+            <View style={styles.readCountBack}>
+              <Text style={styles.readCount}>
+                {`${item.reply_count} / ${item.visit_count}`}
+              </Text>
+              <Text style={styles.lastReplyAt}>
+                {moment(item.last_reply_at).startOf("minute").fromNow()}
+              </Text>
+            </View>
+          </View>
+        </View>
+      </TouchableHighlight>
+    )
+  }
   render() {
     const { payload, loading } = this.props;
+    console.log(loading)
     return (
       <View style={styles.container}>
         <FlatList
@@ -90,50 +139,7 @@ class List extends Component {
           onRefresh={this._onRefresh.bind(this)}
           onEndReachedThreshold={0.1}
           onEndReached={this._onEndReached.bind(this)}
-          renderItem={({ item, index }) => (
-            <TouchableHighlight
-              underlayColor="#f0f0f0"
-              onPress={() => this._navToDetail(index)}
-            >
-              <View style={styles.listItem}>
-                <View style={styles.topicBack}>
-                  {/* {_renderItemComponent(item)} */}
-                  <TopicType item={item} />
-                  <View style={styles.titleBack}>
-                    <Text ref={t => this.text = t} style={styles.title} numberOfLines={1}>
-                      {item.title}
-                    </Text>
-                  </View>
-                </View>
-                <View style={styles.contentBack}>
-                  <View style={styles.headBack}>
-                    <Image
-                      style={styles.head}
-                      source={{ uri: item.author.avatar_url }}
-                    />
-                  </View>
-                  <View style={styles.authorBack}>
-                    <Text style={styles.loginName}>
-                      {item.author.loginname}
-                    </Text>
-                    <Text style={styles.createAt}>
-                      {moment(item.create_at)
-                        .startOf("minute")
-                        .fromNow()}
-                    </Text>
-                  </View>
-                  <View style={styles.readCountBack}>
-                    <Text style={styles.readCount}>
-                      {item.reply_count + " / " + item.visit_count}
-                    </Text>
-                    <Text style={styles.lastReplyAt}>
-                      {moment(item.last_reply_at).startOf("minute").fromNow()}
-                    </Text>
-                  </View>
-                </View>
-              </View>
-            </TouchableHighlight>
-          )}
+          renderItem={this._renderItem.bind(this)}
         />
       </View>
     );

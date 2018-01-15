@@ -28,7 +28,7 @@ JPushModule.addnetworkDidLoginListener(() => {
   // })
 })
 JPushModule.addOpenNotificationLaunchAppListener((result) => {
-// 
+  // 
   Alert.alert('addOpenNotificationLaunchAppListener', 'the notification is :' + JSON.stringify(result))
 })
 

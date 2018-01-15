@@ -52,20 +52,25 @@ class Find extends Component {
     var index = info.index;
     console.log(hosts);
     return (
-      <View style={styles.hots}>
-        <View style={styles.hotsRow}>
-          {hosts.map((item, index) => {
-            return (
-              <TouchableOpacity
-                key={index}
-                style={styles.hotsBtn}
-                onPress={this._hotSearchPress.bind(this, item)}
-              >
-                <Text style={styles.hotsText}>{item}</Text>
-              </TouchableOpacity>
-            );
-          })}
-        </View>
+      <View style={styles.hotsRow}>
+        <TouchableOpacity
+          key={index}
+          style={styles.hotsBtn}
+          onPress={this._hotSearchPress.bind(this, info.item)}
+        >
+          <Text style={styles.hotsText}>{info.item}</Text>
+        </TouchableOpacity>
+        {/* {hosts.map((item, index) => {
+        return (
+          <TouchableOpacity
+            key={index}
+            style={styles.hotsBtn}
+            onPress={this._hotSearchPress.bind(this, item)}
+          >
+            <Text style={styles.hotsText}>{item}</Text>
+          </TouchableOpacity>
+        );
+      })} */}
       </View>
     );
   }
@@ -140,7 +145,7 @@ class Find extends Component {
     var sections = [
       {
         key: "热门搜索",
-        data: [{ host: hosts }],
+        data: hosts,
         renderItem: this._renderHotSearch.bind(this)
       },
       {
@@ -162,6 +167,9 @@ class Find extends Component {
           />
         </View>
         <SectionList
+          // horizontal={false}
+          // numColumns={10}
+          contentContainerStyle={styles.contentContainerStyle}
           // removeClippedSubviews={false}
           keyExtractor={(item, index) => index}
           stickySectionHeadersEnabled={false}
@@ -206,10 +214,6 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
     justifyContent: Platform.OS == 'android' ? 'center' : 'flex-start'
   },
-  hots: {
-    marginLeft: 15,
-    marginTop: 5
-  },
   titleView: {
     marginBottom: 15
   },
@@ -217,10 +221,20 @@ const styles = StyleSheet.create({
     color: "#999999",
     fontSize: 12
   },
+  contentContainerStyle: {
+    flexDirection: 'row',//设置横向布局
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    // backgroundColor: 'blue'
+  },
   hotsRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between"
+    // flexDirection: "row",
+    // flexWrap: "wrap",
+    // paddingRight: 15,
+    // backgroundColor: 'red',
+    marginRight: 10,
+    marginLeft: 10,
+    marginTop: 10,
   },
   hotsBtn: {
     paddingTop: 5,
@@ -228,14 +242,13 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     paddingLeft: 12,
     borderRadius: 3,
-    marginRight: 15,
-    marginBottom: 15,
     backgroundColor: "#3c5e91"
   },
   hotsText: {
     color: "#FFFFFF"
   },
   sectionView: {
+    width: width,
     marginLeft: 15,
     height: 40,
     justifyContent: "center"

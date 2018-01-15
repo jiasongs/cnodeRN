@@ -71,7 +71,8 @@ class Mine extends Component {
     var conunt = ''
     const { recently, isLogin } = this.props;
     console.log('recently')
-    console.log(recently)
+    console.log(info)
+    console.log(`section:${info.section},index:${info.index}`)
     switch (info.item.name) {
       case "最近回复":
         image = require("../../resource/images/mine_message.png");

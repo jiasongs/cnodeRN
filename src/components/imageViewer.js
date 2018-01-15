@@ -61,7 +61,7 @@ class ImageViewer extends Component {
   }
 
   render() {
-    console.log(this.props.source.uri)
+    // console.log(this.props.source.uri)
     return (
       <View>
         <TouchableOpacity

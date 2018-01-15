@@ -7,7 +7,7 @@ export const sendLogin = (body, func) => {
     requestService
       .post("/accesstoken", body)
       .then(data => {
-        console.log(data)
+        // console.log(data)
         dispatch(login.gotoLogin(data, body, func));
       })
       .catch(err => {

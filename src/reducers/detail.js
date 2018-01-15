@@ -3,12 +3,12 @@ import * as types from '../constants/actionTypes'
 const initialState = {
   data: {},
   comment: [],
-  loading: false
+  loading: true
 }
 const getDetail = (state = initialState, action) => {
   switch (action.type) {
     case types.GET_TOPIC_BY_ID:
-      if (action.payload) {
+      if (action.payload && typeof (eval(action.func)) == "function") {
         action.func(true)
       } else {
         action.func(false)

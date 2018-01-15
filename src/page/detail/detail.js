@@ -70,7 +70,9 @@ class Detail extends Component {
   }
   _onRefresh() {
     const { params } = this.props.navigation.state;
-    this.props.getDetail(params.topicId)
+    this.props.getDetail(params.topicId, {}, () => {
+
+    })
   }
   _onEndReached() {
 

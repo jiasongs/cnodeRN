@@ -23,7 +23,7 @@ export const get = (url, params) => {
     }
     url = url + query
   }
-  console.log('url:' + url)
+  // console.log('url:' + url)
   return fetch(url)
     .then((response) => response.json())
     .then((responseJSON) => { return responseJSON })
@@ -32,8 +32,8 @@ export const get = (url, params) => {
 
 export const post = (url, body) => {
   url = urlPrefix + url
-  console.log('POST: ', url)
-  console.log('Body: ', body)
+  // console.log('POST: ', url)
+  // console.log('Body: ', body)
   return fetch(url, {
     method: 'POST',
     headers: {
