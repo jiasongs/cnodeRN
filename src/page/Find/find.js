@@ -14,7 +14,8 @@ import {
   FlatList,
   ActivityIndicator,
   TouchableHighlight,
-  Platform
+  Platform,
+  ScrollView
 } from "react-native";
 import {
   getSearchTopics,
@@ -110,9 +111,12 @@ class Find extends Component {
     if (typeof text == "undefined") {
       return;
     }
-    this.setState({ text: text });
+    this.setState(() => {
+      return { text: text }
+    });
     var params = { pn: 10, usm: 1, word: "site%3Acnodejs.org+" + text };
     this.props.getSearchTopics(params);
+
   }
   _onSubmitSearch(text) {
     if (typeof text == "undefined") {
@@ -129,6 +133,34 @@ class Find extends Component {
   componentWillReceiveProps(nextProps) {
 
   }
+  _rederHeader() {
+    return (<View style={styles.headerContainer}
+      ref={view => this.headerView = view}
+    >
+      <View style={styles.headerView}
+
+      >
+        <Text>我是Header</Text>
+      </View>
+
+    </View>)
+  }
+
+  _onScroll(info) {
+    let critical = 88
+    let contentOffsetY = info.nativeEvent.contentOffset.y
+    console.log(info.nativeEvent.contentOffset)
+    if (contentOffsetY > 0 && contentOffsetY <= critical) {
+      let alpha = contentOffsetY / critical > 1.0 ? 0.0 : 1 - contentOffsetY / critical;
+      this.searchBarView.setNativeProps({ style: { opacity: alpha, marginTop: -contentOffsetY, top: 0, position: 'relative' } })
+    } else if (contentOffsetY === 0) {
+      this.searchBarView.setNativeProps({ style: { opacity: 1, marginTop: 0 } })
+    } else if (contentOffsetY < 0) {
+      this.headerView.setNativeProps({ style: { position: 'relative', transform: [{ translateY: contentOffsetY - 10 }] } })
+    } else if (contentOffsetY > critical) {
+      this.headerView.setNativeProps({ style: { transform: [{ translateY: contentOffsetY }], zIndex: 999 } })
+    }
+  }
   render() {
     const { navigate } = this.props.navigation;
     const { payload, loading } = this.props;
@@ -140,7 +172,7 @@ class Find extends Component {
       "Mysql",
       "JavaScript",
       "Express",
-      "ES6"
+      // "ES6"
     ];
     var sections = [
       {
@@ -159,23 +191,35 @@ class Find extends Component {
     return (
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
-        <View style={styles.searchBarView}>
+        <View style={styles.searchBarView}
+          ref={view => this.searchBarView = view}
+        >
           <SearchBar
             value={this.state.text}
             onCancelPress={this._onCancelPress.bind(this)}
             onSubmitSearch={this._onSubmitSearch.bind(this)}
           />
         </View>
+        {/* <ScrollView
+          stickyHeaderIndices={[0]}
+        >
+          {this._rederHeader()}
+          
+        </ScrollView> */}
         <SectionList
+          ListHeaderComponent={this._rederHeader.bind(this)}
+          ref={sectionList => this.sectionList = sectionList}
           // horizontal={false}
           // numColumns={10}
           contentContainerStyle={styles.contentContainerStyle}
           // removeClippedSubviews={false}
           keyExtractor={(item, index) => index}
-          stickySectionHeadersEnabled={false}
+          // stickySectionHeadersEnabled={false}
           //  ItemSeparatorComponent={Separator}
           renderSectionHeader={this._renderSection.bind(this)}
           sections={sections}
+          onScroll={this._onScroll.bind(this)}
+          scrollEventThrottle={20}
         />
         {loading && <ActivityIndicator
           style={{
@@ -207,12 +251,30 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     // backgroundColor: '#2c3e50',
   },
+  headerContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'red',
+    height: 100,
+    width: 375,
+    zIndex: 999
+  },
+  headerView: {
+    flex: 1,
+    width: 375,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#3c5e91',
+    marginTop: 0,
+    zIndex: 999
+  },
   searchBarView: {
     backgroundColor: "#2D2D2D",
     height: searchBarHeight,
     paddingTop: Platform.OS == 'android' ? 0 : (height == 815 ? 37 : 27),
     paddingLeft: 15,
-    justifyContent: Platform.OS == 'android' ? 'center' : 'flex-start'
+    justifyContent: Platform.OS == 'android' ? 'center' : 'flex-start',
+    // opacity: 0.5,
   },
   titleView: {
     marginBottom: 15

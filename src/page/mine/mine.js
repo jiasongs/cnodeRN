@@ -27,6 +27,9 @@ class Mine extends Component {
   componentWillMount() {
 
   }
+  shouldComponentUpdate() {
+    return true;
+  }
   _onLoginPress(info) {
     const { user, isLogin } = this.props;
     console.log(this.props.navigation)
@@ -180,6 +183,7 @@ class Mine extends Component {
         <StatusBar barStyle="light-content" />
         <SectionList
           // removeClippedSubviews={false}
+
           stickySectionHeadersEnabled={false}
           keyExtractor={(item, index) => index}
           ItemSeparatorComponent={Separator}

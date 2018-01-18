@@ -9,7 +9,7 @@ import Detail from "../page/detail/detail";
 import Login from "../page/login/login";
 import QRCode from "../page/login/qrcode";
 import UserInfo from "../page/mine/userInfo";
-import Recently from '../page/mine/recently';
+import { Recently } from '../page/mine/recently';
 import SysMessage from '../page/notice/sysMessage';
 import ToastExample from '../page/ToastExample';
 import {

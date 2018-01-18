@@ -14,7 +14,7 @@ import { moment } from "../../utils/tools";
 import Separator from "../../components/separator";
 const { width } = Dimensions.get('window')
 // create a component
-class Recently extends Component {
+export class Recently extends Component {
   static navigationOptions = ({ navigation }) => {
     const { state, setParams, navigate } = navigation;
     const { params } = navigation.state;
@@ -139,5 +139,5 @@ export const mapDispatchToProps = (dispatch, ownProps) => {
   }
 }
 //make this component available to the app
-export default Recently;
+// export default Recently;
 //make this component available to the app

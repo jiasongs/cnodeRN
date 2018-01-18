@@ -283,9 +283,10 @@ const fontSize = 14
 const titleMargin = 5
 const htmlStyles = {
   // p: { // 解析失败
-  //   // lineHeight: fontSize * 1.4,
-  //   fontSize: fontSize,
-  //   color: 'red'
+  //   lineHeight: fontSize * 1.4,
+  //   fontSize: 14,
+  //   marginBottom: 10,
+  //   // color: 'red'
   // },
   pwrapper: {
     marginTop: 5,

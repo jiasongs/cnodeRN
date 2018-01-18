@@ -241,11 +241,12 @@ const styles = StyleSheet.create({
 const fontSize = 14
 const titleMargin = 5
 const htmlStyles = {
-  p: { // 解析失败
-    // lineHeight: fontSize * 1.4,
-    // fontSize: 14,
-    // color: 'red'
-  },
+  // p: { // 解析失败
+  //   lineHeight: fontSize * 1.4,
+  //   fontSize: 14,
+  //   marginBottom: 10,
+  //   // color: 'red'
+  // },
   pwrapper: {
     marginTop: 5,
     marginBottom: 5
@@ -316,10 +317,15 @@ const htmlStyles = {
     marginBottom: titleMargin - 3,
     marginTop: titleMargin - 3
   },
-  // li: {
-  //   fontSize: fontSize * 0.9,
-  //   color: 'rgba(0,0,0,0.7)'
-  // }, // 解析失败
+  ul: {
+    paddingTop: 20
+  },
+  li: {
+    // fontSize: fontSize * 0.9,
+    // lineHeight: 25,
+    // // paddingTop: 5,
+    // paddingBottom: 5
+  }, // 解析失败
   liwrapper: {
     paddingLeft: 20,
     marginBottom: 10
