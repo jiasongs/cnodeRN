@@ -22,6 +22,7 @@ import { moment } from '../../utils/tools';
 import HTML from 'react-native-render-html';
 import ImageViewer from '../../components/imageViewer';
 import separator from '../../components/separator';
+
 const { width } = Dimensions.get('window')
 const defaultMaxImageWidth = width - 30 - 20
 // create a component
@@ -223,7 +224,7 @@ const styles = StyleSheet.create({
     height: 40,
   },
   replyCount: {
-    fontSize: 15,
+    fontSize: FONT_SIZE(15),
   },
   authorInfoBack: {
     flexDirection: 'row',
@@ -234,12 +235,12 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   author: {
-    fontSize: 12,
+    fontSize: FONT_SIZE(12),
     height: 22,
     color: '#626262'
   },
   createAt: {
-    fontSize: 12,
+    fontSize: FONT_SIZE(12),
     color: '#626262'
   },
   praiseBack: {
@@ -279,7 +280,7 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
 });
-const fontSize = 14
+const fontSize = FONT_SIZE(14)
 const titleMargin = 5
 const htmlStyles = {
   // p: { // 解析失败

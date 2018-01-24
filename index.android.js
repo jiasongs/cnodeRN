@@ -3,8 +3,8 @@ import { AppRegistry, Platform, Alert } from "react-native";
 import Navigation from "./src/navigation/navigation";
 import { Provider } from "react-redux";
 import configureStore from "./src/store/configureStore";
-import storage from './src/utils/asyncStorage';
 import JPushModule from 'jpush-react-native';
+import './src/utils/global'
 if (!__DEV__) {
   global.console = {
     info: () => { },
@@ -38,8 +38,7 @@ JPushModule.addReceiveOpenNotificationListener((map) => {
 JPushModule.addGetRegistrationIdListener((registrationId) => {
   console.log("Device register succeed, registrationId " + registrationId);
 });
-console.log(storage);
-global.storage = storage
+
 const store = configureStore();
 export default class cnodeRN extends Component {
   render() {

@@ -10,6 +10,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 import PropTypes from 'prop-types';
+import moduleName from '../utils/global';
 const { width } = Dimensions.get('window')
 const defalutInputW = width - 40 - 20 - 20
 const defalutInputH = 27
@@ -127,7 +128,7 @@ const styles = StyleSheet.create({
   input: {
     marginLeft: 2,
     padding: 0,
-    fontSize: 14,
+    fontSize: FONT_SIZE(14),
     width: defalutInputW - 20 - 10,
     height: defalutInputH,
   },
@@ -140,7 +141,7 @@ const styles = StyleSheet.create({
   },
   rightText: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: FONT_SIZE(16),
   },
   leftViewStyle: {
 

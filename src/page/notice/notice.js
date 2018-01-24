@@ -173,7 +173,8 @@ const styles = StyleSheet.create({
     height: 26
   },
   sys: {
-    marginLeft: 10
+    marginLeft: 10,
+    fontSize: FONT_SIZE(13)
   },
   noContactMessageBack: {
     justifyContent: "center",

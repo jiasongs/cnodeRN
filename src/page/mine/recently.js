@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
   },
   itemTitle: {
     width: width - 30 - 60,
-    fontSize: 17,
+    fontSize: FONT_SIZE(14),
     fontWeight: "bold",
   },
   itemHeaderView: {
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   },
   itemTime: {
     color: '#fff',
-    fontSize: 13,
+    fontSize: FONT_SIZE(12),
   },
   itemHeader: {
     width: 30,

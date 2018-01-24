@@ -55,7 +55,7 @@ const TabNavs = TabNavigator({
         height: 2
       },
       labelStyle: {
-        fontSize: 14,
+        fontSize: FONT_SIZE(13),
         textAlignVertical: 'center',
         textAlign: 'center'
       },

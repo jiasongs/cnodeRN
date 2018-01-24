@@ -98,16 +98,17 @@ const styles = StyleSheet.create({
     paddingLeft: 25,
     paddingTop: 30,
     paddingBottom: 30,
-    fontSize: 16,
+    fontSize: FONT_SIZE(13),
   },
   itemValueView: {
     marginRight: 20,
+    height: 20
   },
   itemValue: {
     paddingLeft: 15,
-    fontSize: 14,
+    fontSize: FONT_SIZE(13),
     color: '#a8a8a8',
-    lineHeight: 15,
+    lineHeight: 20,
     // textAlign: 'right',
   },
   itemHeaderView: {

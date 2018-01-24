@@ -232,7 +232,7 @@ const styles = StyleSheet.create({
     marginLeft: 25
   },
   headerText: {
-    fontSize: 17
+    fontSize: FONT_SIZE(17)
   },
   itemBack: {
     flexDirection: "row",
@@ -256,7 +256,7 @@ const styles = StyleSheet.create({
     marginLeft: 20
   },
   itemText: {
-    fontSize: 14
+    fontSize: FONT_SIZE(13)
   },
   itemCountBack: {
     position: "absolute",

@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: "#999999",
-    fontSize: 12
+    fontSize: FONT_SIZE(12)
   },
   contentContainerStyle: {
     flexDirection: 'row',//设置横向布局
@@ -325,12 +325,12 @@ const styles = StyleSheet.create({
   },
   searchResultTitle: {
     padding: 10,
-    fontSize: 15
+    fontSize: FONT_SIZE(15)
     // color: '#a3a3a3'
   },
   searchResultContent: {
     padding: 10,
-    fontSize: 14,
+    fontSize: FONT_SIZE(14),
     // color: '#a3a3a3',
     lineHeight: 20
   }

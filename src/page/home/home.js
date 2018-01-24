@@ -126,7 +126,7 @@ const TabNavs = TabNavigator({
         height: 1.5
       },
       labelStyle: {
-        fontSize: 14,
+        fontSize: FONT_SIZE(12),
         textAlignVertical: 'center',
         textAlign: 'center'
       },
@@ -160,7 +160,7 @@ class Home extends Component {
     };
   };
   componentWillMount() {
-    global.storage.load({
+    storage.load({
       key: types.LOGIN_STATE,
       autoSync: true,
       syncInBackground: true,
@@ -176,7 +176,7 @@ class Home extends Component {
         })
       }
     }).catch(err => {
-      console.warn(err.message);
+      console.log(err.message);
       switch (err.name) {
         case 'NotFoundError':
           // TODO;

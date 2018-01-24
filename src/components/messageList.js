@@ -12,6 +12,7 @@ import {
 import { moment } from '../utils/tools';
 import Separator from './separator';
 import PropTypes from 'prop-types';
+import moduleName from '../utils/global';
 const { width } = Dimensions.get('window')
 // create a component
 class MessageList extends Component {
@@ -93,11 +94,11 @@ const styles = StyleSheet.create({
 
   contentInfo: {
     marginTop: 8,
-    fontSize: 13,
+    fontSize: FONT_SIZE(12),
   },
   contentDetail: {
     marginTop: 5,
-    fontSize: 14,
+    fontSize: FONT_SIZE(13),
   },
   contentTitleContainer: {
     flexDirection: 'row',
@@ -110,7 +111,7 @@ const styles = StyleSheet.create({
   },
   contentTitle: {
     paddingRight: 30,
-    fontSize: 13,
+    fontSize: FONT_SIZE(12),
     color: '#43454a'
   }
 });

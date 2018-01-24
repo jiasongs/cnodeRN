@@ -17,6 +17,7 @@ import HTMLView from "react-native-htmlview";
 import { moment } from '../utils/tools';
 import TopicType from './topicType'
 import ImageViewer from './imageViewer';
+import { } from '../utils/global';
 const { width } = Dimensions.get('window')
 const defaultMaxImageWidth = width - 30 - 20
 
@@ -189,7 +190,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: '#2c3e50',
-    fontSize: 18,
+    fontSize: FONT_SIZE(17),
     lineHeight: 1.5 * 18,
     fontWeight: 'bold',
   },
@@ -212,11 +213,11 @@ const styles = StyleSheet.create({
     marginLeft: 15,
   },
   author: {
-    fontSize: 12,
+    fontSize: FONT_SIZE(11),
     height: 20,
   },
   createAt: {
-    fontSize: 13,
+    fontSize: FONT_SIZE(12),
   },
   otherBack: {
     flexDirection: 'column',
@@ -228,17 +229,17 @@ const styles = StyleSheet.create({
   },
   browserCount: {
     marginTop: 5,
-    fontSize: 12,
+    fontSize: FONT_SIZE(11),
   },
   contentBack: {
     margin: 15,
   },
   content: {
-    fontSize: 17,
+    fontSize: FONT_SIZE(16),
     lineHeight: 40,
   },
 });
-const fontSize = 14
+const fontSize = FONT_SIZE(13)
 const titleMargin = 5
 const htmlStyles = {
   // p: { // 解析失败

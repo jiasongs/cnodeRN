@@ -16,7 +16,7 @@ import index from "react-native-htmlview";
 import { connect } from "react-redux";
 import { getTopicsByTab, updateTopicsByTab } from "../actions/topic";
 import { get } from "../services/request";
-
+import { } from '../utils/global';
 class List extends Component {
   constructor(props) {
     super(props);
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     alignItems: "center"
   },
   type: {
-    fontSize: 12,
+    fontSize: FONT_SIZE(11),
     fontWeight: "bold",
     color: "#fff"
   },
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
     marginRight: 30,
   },
   title: {
-    fontSize: 15,
+    fontSize: FONT_SIZE(13),
     marginTop: 10,
     marginLeft: 15,
     marginRight: 30,
@@ -184,11 +184,11 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   loginName: {
-    fontSize: 12,
+    fontSize: FONT_SIZE(11),
     height: 20
   },
   createAt: {
-    fontSize: 13
+    fontSize: FONT_SIZE(12)
   },
   contentBack: {
     flexDirection: "row",
@@ -202,11 +202,11 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   readCount: {
-    fontSize: 12,
+    fontSize: FONT_SIZE(11),
     height: 20
   },
   lastReplyAt: {
-    fontSize: 13
+    fontSize: FONT_SIZE(12)
   },
   headBack: {
     marginTop: 10,

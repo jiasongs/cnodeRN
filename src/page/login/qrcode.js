@@ -11,6 +11,7 @@ import {
   TextInput
 } from 'react-native';
 import Camera from 'react-native-camera';
+import FONT_SIZE from '../../utils/fontSize';
 import { sendLogin } from '../../actions/login';
 import { getUserRecently, getUserFavorites } from "../../actions/user";
 const { height, width } = Dimensions.get('window')
@@ -158,7 +159,7 @@ const styles = StyleSheet.create({
     color: 'rgba(255,255,255,0.7)',
     textAlign: 'center',
     marginTop: 40,
-    fontSize: 24
+    fontSize: FONT_SIZE(24)
   },
   iconWrapper: {
     flex: 1,

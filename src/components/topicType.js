@@ -1,7 +1,7 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-
+import FONT_SIZE from '../utils/fontSize';
 
 // create a component
 class TopicType extends Component {
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'red',
   },
   type: {
-    fontSize: 12,
+    fontSize: FONT_SIZE(11),
     fontWeight: 'bold',
     color: '#fff',
   },

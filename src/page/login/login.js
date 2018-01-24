@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   input: {
     width: defalutInputW,
     height: defalutInputH,
-    fontSize: 14,
+    fontSize: FONT_SIZE(12),
     paddingLeft: 15,
     paddingRight: 15,
   },
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
 
   login: {
     color: '#FFF',
-    fontSize: 16,
+    fontSize: FONT_SIZE(14),
     fontWeight: 'bold',
   }
 });

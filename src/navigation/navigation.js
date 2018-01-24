@@ -1,6 +1,7 @@
 import { StackNavigator, TabNavigator, TabBarBottom } from "react-navigation";
 import CardStackStyleInterpolator from "react-navigation/src/views/CardStack/CardStackStyleInterpolator";
 import React, { Component } from "react";
+import { } from '../utils/global'
 import Home from "../page/home/home";
 import Find from "../page/Find/find";
 import Notice from "../page/notice/notice";
@@ -98,7 +99,10 @@ const Tabs = TabNavigator(
       },
       tabStyle: {
         margin: 2,
-      }
+      },
+      labelStyle: {
+        fontSize: FONT_SIZE(9),
+      },
     },
     lazy: true, //懒加载
     swipeEnabled: false,
@@ -132,6 +136,7 @@ const Navigation = StackNavigator(
       },
       headerTitleStyle: {
         alignSelf: "center",
+        fontSize: FONT_SIZE(15),
       },
       // headerBackTitle: null,
       headerTintColor: "#FFFFFF",
