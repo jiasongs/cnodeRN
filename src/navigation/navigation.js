@@ -1,7 +1,6 @@
 import { StackNavigator, TabNavigator, TabBarBottom } from "react-navigation";
 import CardStackStyleInterpolator from "react-navigation/src/views/CardStack/CardStackStyleInterpolator";
 import React, { Component } from "react";
-import { } from '../utils/global'
 import Home from "../page/home/home";
 import Find from "../page/Find/find";
 import Notice from "../page/notice/notice";

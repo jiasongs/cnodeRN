@@ -37,13 +37,14 @@ class Detail extends Component {
     const { params } = navigation.state;
     return {
       headerTitle: '话题',
-      headerRight: <View />
+      headerRight: <View />,
     };
   };
   componentWillMount() {
     const { params } = this.props.navigation.state;
     console.log(this.props.navigation)
     this.replyId = params.replyId ? params.replyId : ''
+
     this.props.getDetail(params.topicId, {}, (success) => {
       if (success) {
         if (this.replyId.length > 0) {

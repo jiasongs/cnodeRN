@@ -17,7 +17,7 @@ import HTMLView from "react-native-htmlview";
 import { moment } from '../utils/tools';
 import TopicType from './topicType'
 import ImageViewer from './imageViewer';
-import { } from '../utils/global';
+// import { } from '../utils/global';
 const { width } = Dimensions.get('window')
 const defaultMaxImageWidth = width - 30 - 20
 
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: '#2c3e50',
-    fontSize: FONT_SIZE(17),
+    fontSize: FONT_SIZE(16),
     lineHeight: 1.5 * 18,
     fontWeight: 'bold',
   },

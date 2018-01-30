@@ -325,12 +325,12 @@ const styles = StyleSheet.create({
   },
   searchResultTitle: {
     padding: 10,
-    fontSize: FONT_SIZE(15)
+    fontSize: FONT_SIZE(13)
     // color: '#a3a3a3'
   },
   searchResultContent: {
     padding: 10,
-    fontSize: FONT_SIZE(14),
+    fontSize: FONT_SIZE(12),
     // color: '#a3a3a3',
     lineHeight: 20
   }

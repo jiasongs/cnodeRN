@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
   input: {
     marginLeft: 2,
     padding: 0,
-    fontSize: FONT_SIZE(14),
+    fontSize: FONT_SIZE(12),
     width: defalutInputW - 20 - 10,
     height: defalutInputH,
   },
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
   },
   rightText: {
     color: '#fff',
-    fontSize: FONT_SIZE(16),
+    fontSize: FONT_SIZE(14),
   },
   leftViewStyle: {
 

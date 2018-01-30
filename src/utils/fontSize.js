@@ -1,10 +1,11 @@
 
+import { Dimensions, PixelRatio, Platform } from 'react-native';
+console.log(PixelRatio.get())
 const FontSize = (size) => {
-  if (PixelRatio === 2) {
+  if (PixelRatio.get() === 2) {
     if (SCREEN_WIDTH < 360) {
       return size * 0.95;
     }
-
     if (SCREEN_HEIGHT < 667) {
       return size;
 
@@ -13,11 +14,10 @@ const FontSize = (size) => {
     }
     return size * 1.25;
   }
-  if (PixelRatio === 3) {
+  if (PixelRatio.get() === 3) {
     if (SCREEN_WIDTH <= 360) {
       return size;
     }
-
     if (SCREEN_HEIGHT < 667) {
       return size * 1.15;
     }
@@ -26,7 +26,7 @@ const FontSize = (size) => {
     }
     return size * 1.27;
   }
-  if (PixelRatio === 3.5) {
+  if (PixelRatio.get() === 3.5) {
     if (SCREEN_WIDTH <= 360) {
       return size;
     }
@@ -41,4 +41,4 @@ const FontSize = (size) => {
   return size;
 };
 
-export default FontSize
+module.exports = FontSize

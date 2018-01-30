@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { AppRegistry, View, Alert, Platform } from "react-native";
+import './src/utils/global'
 import ModalNavigation from "./src/navigation/navigation";
 import { Provider } from "react-redux";
-
 import configureStore from "./src/store/configureStore";
 import JPushModule from 'jpush-react-native';
 if (!__DEV__) {

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { AppRegistry, Platform, Alert } from "react-native";
+import './src/utils/global'
 import Navigation from "./src/navigation/navigation";
 import { Provider } from "react-redux";
 import configureStore from "./src/store/configureStore";
 import JPushModule from 'jpush-react-native';
-import './src/utils/global'
+
 if (!__DEV__) {
   global.console = {
     info: () => { },
