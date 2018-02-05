@@ -156,7 +156,7 @@ class Home extends Component {
     const { params } = navigation.state;
     return {
       headerTitle: '话题',
-      headerRight: <Text onPress={() => navigation.navigate('ToastExample')}>测试</Text>
+      // headerRight: <Text onPress={() => navigation.navigate('ToastExample')}>测试</Text>
     };
   };
   componentWillMount() {

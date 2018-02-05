@@ -150,16 +150,16 @@ class Find extends Component {
     let critical = 88
     let contentOffsetY = info.nativeEvent.contentOffset.y
     console.log(info.nativeEvent.contentOffset)
-    if (contentOffsetY > 0 && contentOffsetY <= critical) {
-      let alpha = contentOffsetY / critical > 1.0 ? 0.0 : 1 - contentOffsetY / critical;
-      this.searchBarView.setNativeProps({ style: { opacity: alpha, marginTop: -contentOffsetY, top: 0, position: 'relative' } })
-    } else if (contentOffsetY === 0) {
-      this.searchBarView.setNativeProps({ style: { opacity: 1, marginTop: 0 } })
-    } else if (contentOffsetY < 0) {
-      this.headerView.setNativeProps({ style: { position: 'relative', transform: [{ translateY: contentOffsetY - 10 }] } })
-    } else if (contentOffsetY > critical) {
-      this.headerView.setNativeProps({ style: { transform: [{ translateY: contentOffsetY }], zIndex: 999 } })
-    }
+    // if (contentOffsetY > 0 && contentOffsetY <= critical) {
+    //   let alpha = contentOffsetY / critical > 1.0 ? 0.0 : 1 - contentOffsetY / critical;
+    //   this.searchBarView.setNativeProps({ style: { opacity: alpha, marginTop: -contentOffsetY, top: 0, position: 'relative' } })
+    // } else if (contentOffsetY === 0) {
+    //   this.searchBarView.setNativeProps({ style: { opacity: 1, marginTop: 0 } })
+    // } else if (contentOffsetY < 0) {
+    //   this.headerView.setNativeProps({ style: { position: 'relative', transform: [{ translateY: contentOffsetY - 10 }] } })
+    // } else if (contentOffsetY > critical) {
+    //   this.headerView.setNativeProps({ style: { transform: [{ translateY: contentOffsetY }], zIndex: 999 } })
+    // }
   }
   render() {
     const { navigate } = this.props.navigation;
@@ -205,9 +205,10 @@ class Find extends Component {
         >
           {this._rederHeader()}
           
+  
         </ScrollView> */}
         <SectionList
-          ListHeaderComponent={this._rederHeader.bind(this)}
+          // ListHeaderComponent={this._rederHeader.bind(this)}
           ref={sectionList => this.sectionList = sectionList}
           // horizontal={false}
           // numColumns={10}

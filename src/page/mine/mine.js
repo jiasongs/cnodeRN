@@ -18,6 +18,21 @@ import { sendLogin, exitLogin } from "../../actions/login";
 import { getUserRecently, getUserFavorites } from "../../actions/user";
 // create a component
 class Mine extends Component {
+  constructor(props) {
+    super(props);
+    const sections = [
+      {
+        key: "1",
+        data: [{ name: "最近回复" }, { name: "最新发布" }, { name: "话题收藏" }]
+      },
+      {
+        key: "2",
+        data: [{ name: "退出登录" }]
+      }
+    ];
+    this.state = { sections }
+  }
+
   static navigationOptions = ({ navigation }) => {
     const { state, setParams, navigate } = navigation;
     const { params } = navigation.state;
@@ -47,6 +62,10 @@ class Mine extends Component {
       alert('请先登录！')
       return;
     }
+    if (info.section.key === '2') {
+      this.props.exitLogin()
+      return;
+    }
     switch (info.item.name) {
       case "最近回复":
         this.props.navigation.navigate("Recently", { recently: recently.recent_replies, type: '最近回复' });
@@ -59,7 +78,6 @@ class Mine extends Component {
         break;
       case "设置":
         console.log('设置')
-        this.props.exitLogin()
         break;
       default:
         break;
@@ -74,8 +92,8 @@ class Mine extends Component {
     var conunt = ''
     const { recently, isLogin } = this.props;
     console.log('recently')
-    console.log(info)
-    console.log(`section:${info.section},index:${info.index}`)
+    console.log(`isLogin:${isLogin}`)
+    console.log(`section:${info.section.key},index:${info.index}`)
     switch (info.item.name) {
       case "最近回复":
         image = require("../../resource/images/mine_message.png");
@@ -91,12 +109,16 @@ class Mine extends Component {
         image = require("../../resource/images/mine_collection.png");
         style = { width: 30, height: 30 };
         break;
-      case "设置":
-        image = require("../../resource/images/mine_setting.png");
-        style = { width: 30, height: 30 };
-        break;
+      // case "设置":
+      //   image = require("../../resource/images/mine_setting.png");
+      //   style = { width: 30, height: 30 };
+      //   break;
       default:
         break;
+    }
+    let view = null;
+    if (info.section.key === '2' && !isLogin) {
+      return null;
     }
     return (
       <TouchableHighlight
@@ -104,19 +126,24 @@ class Mine extends Component {
         onPress={this._onPressItem.bind(this, info)}
       >
         <View style={styles.itemBack}>
-          <View style={styles.itemImageBack}>
-            <Image style={style} source={image} />
-          </View>
-          <View style={styles.itemTextBack}>
-            <Text style={styles.itemText}>{info.item.name}</Text>
-          </View>
-          <View style={styles.itemCountBack}>
+          {info.section.key === '2' ? null :
+            <View style={styles.itemImageBack}>
+              <Image style={style} source={image} />
+            </View>}
+          {info.section.key === '2' ?
+            <View style={styles.itemLoginOut}>
+              <Text style={[styles.itemText, { color: 'red' }]}>{info.item.name}</Text>
+            </View> :
+            <View style={[styles.itemTextBack]}>
+              <Text style={styles.itemText}>{info.item.name}</Text>
+            </View>}
+          {isLogin ? <View style={styles.itemCountBack}>
             <Text style={styles.itemCount}>
               {info.item.name != "设置" && info.item.name != "话题收藏"
                 ? conunt
                 : ""}
             </Text>
-          </View>
+          </View> : null}
         </View>
       </TouchableHighlight>
     );
@@ -152,44 +179,18 @@ class Mine extends Component {
     );
   }
   render() {
-    var sections = [
-      {
-        key: "1",
-        data: [{ name: "最近回复" }, { name: "最新发布" }, { name: "话题收藏" }]
-      },
-      {
-        key: "2",
-        data: [{ name: "设置" }]
-      }
-    ];
+
     return (
       <View style={styles.container}>
-        {/* <Modal
-          visible={true}
-          animationType={'slide'}
-          onRequestClose={() => this.closeModal()}
-        >
-          <View style={styles.modalContainer}>
-            <View style={styles.innerContainer}>
-              <Text>This is content inside of modal component</Text>
-              <Button
-                onPress={() => this.closeModal()}
-                title="Close modal"
-              >
-              </Button>
-            </View>
-          </View>
-        </Modal> */}
         <StatusBar barStyle="light-content" />
         <SectionList
           // removeClippedSubviews={false}
-
           stickySectionHeadersEnabled={false}
           keyExtractor={(item, index) => index}
           ItemSeparatorComponent={Separator}
           renderSectionHeader={this._renderSection.bind(this)}
           renderItem={this._renderItem.bind(this)}
-          sections={sections}
+          sections={this.state.sections}
           ListHeaderComponent={this._renderListHeader.bind(this)} // 头部
         />
       </View>
@@ -264,6 +265,11 @@ const styles = StyleSheet.create({
   },
   itemCount: {
     color: "#aaaaaa"
+  },
+  itemLoginOut: {
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1
   }
 });
 
