@@ -83,7 +83,7 @@ class Find extends Component {
         underlayColor="#f0f0f0"
         onPress={this._onPressItem.bind(this, info)} >
         <View style={styles.searchResultView} key={info.item.id}>
-          <Text style={styles.searchResultTitle} numberOfLines={1}>
+          <Text style={styles.searchResultTitle} numberOfLines={0}>
             {info.item.title}
           </Text>
           <Text numberOfLines={3} style={styles.searchResultContent}>
@@ -208,19 +208,16 @@ class Find extends Component {
   
         </ScrollView> */}
         <SectionList
-          // ListHeaderComponent={this._rederHeader.bind(this)}
           ref={sectionList => this.sectionList = sectionList}
-          // horizontal={false}
-          // numColumns={10}
           contentContainerStyle={styles.contentContainerStyle}
           // removeClippedSubviews={false}
           keyExtractor={(item, index) => index}
-          // stickySectionHeadersEnabled={false}
+          stickySectionHeadersEnabled={false}
           //  ItemSeparatorComponent={Separator}
           renderSectionHeader={this._renderSection.bind(this)}
           sections={sections}
           onScroll={this._onScroll.bind(this)}
-          scrollEventThrottle={20}
+        // scrollEventThrottle={20}
         />
         {loading && <ActivityIndicator
           style={{
@@ -308,7 +305,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#3c5e91"
   },
   hotsText: {
-    color: "#FFFFFF"
+    color: "#FFFFFF",
+    fontSize: FONT_SIZE(12)
   },
   sectionView: {
     width: width,
@@ -322,6 +320,7 @@ const styles = StyleSheet.create({
   searchResultView: {
     backgroundColor: "#ffffff",
     margin: 8,
+    width: width - 16,
     borderRadius: 3
   },
   searchResultTitle: {

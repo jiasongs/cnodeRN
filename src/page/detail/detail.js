@@ -48,17 +48,17 @@ class Detail extends Component {
     this.props.getDetail(params.topicId, {}, (success) => {
       if (success) {
         if (this.replyId.length > 0) {
-          setTimeout(() => {
-            console.log(this.replyIndex)
-            console.log(this._flatList)
-            if (this.replyIndex != -1) {
-              if (this._flatList.props.data.length - 1 == this.replyIndex) {
-                this._flatList.scrollToEnd({ animated: false })
-              } else {
-                this._flatList.scrollToIndex({ animated: false, viewPosition: 1, index: this.replyIndex })
-              }
-            }
-          }, 1000);
+          // setTimeout(() => {
+          //   console.log(this.replyIndex)
+          //   console.log(this._flatList)
+          // if (this.replyIndex != -1) {
+          //   if (this._flatList.props.data.length - 1 == this.replyIndex) {
+          //     this._flatList.scrollToEnd({ animated: false })
+          //   } else {
+          //     this._flatList.scrollToIndex({ animated: false, viewPosition: 1, index: this.replyIndex })
+          //   }
+          // }
+          // }, 1000);
         }
       }
     })

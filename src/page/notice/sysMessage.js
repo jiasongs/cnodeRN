@@ -1,4 +1,4 @@
-//import liraries
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {
@@ -111,7 +111,6 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 export const mapDispatchToProps = (dispatch, ownProps) => {
-  const { } = ownProps
   return {
     getMessage: (parms) => {
       dispatch(getMessage(parms))

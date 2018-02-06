@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cnodern.test">
 
-    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="18" />
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="22" />
 
-    <application android:debuggable="true" >
+    <application>
         <uses-library android:name="android.test.runner" />
     </application>
 

@@ -19,7 +19,7 @@ class Notice extends Component {
     const { params } = navigation.state;
     console.log(params)
     return {
-      headerRight: <Text onPress={() => navigation.state.params.onPress()}>测试</Text>,
+      // headerRight: <Text onPress={() => navigation.state.params.onPress()}>测试</Text>,
       tabBarLabel: '通知',
       tabBarIcon: ({ focused, tintColor }) => {
         return <Image

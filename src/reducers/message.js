@@ -6,6 +6,7 @@ const initialState = {
   unreadMessage: [],
 }
 const messageState = (state = initialState, action) => {
+  console.log(action)
   switch (action.type) {
     case types.MESSAGE:
       return {

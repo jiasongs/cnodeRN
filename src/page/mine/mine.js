@@ -132,7 +132,7 @@ class Mine extends Component {
             </View>}
           {info.section.key === '2' ?
             <View style={styles.itemLoginOut}>
-              <Text style={[styles.itemText, { color: 'red' }]}>{info.item.name}</Text>
+              <Text style={[styles.itemText, { color: '#cc3536' }]}>{info.item.name}</Text>
             </View> :
             <View style={[styles.itemTextBack]}>
               <Text style={styles.itemText}>{info.item.name}</Text>

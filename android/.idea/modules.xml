@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/CNode.iml" filepath="$PROJECT_DIR$/CNode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/cnodeRN.iml" filepath="$PROJECT_DIR$/cnodeRN.iml" />
       <module fileurl="file://$PROJECT_DIR$/../node_modules/jcore-react-native/android/jcore-react-native.iml" filepath="$PROJECT_DIR$/../node_modules/jcore-react-native/android/jcore-react-native.iml" />

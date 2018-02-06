@@ -1,6 +1,5 @@
 //import liraries
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import {
   View,
   Text,
@@ -14,7 +13,7 @@ import { moment } from "../../utils/tools";
 import Separator from "../../components/separator";
 const { width } = Dimensions.get('window')
 // create a component
-export class Recently extends Component {
+class Recently extends Component {
   static navigationOptions = ({ navigation }) => {
     const { state, setParams, navigate } = navigation;
     const { params } = navigation.state;
@@ -118,26 +117,5 @@ const styles = StyleSheet.create({
     paddingTop: 5,
   },
 });
-const mapStateToProps = (state, ownProps) => {
-  const { user } = state;
-  return {
-    user: user.user,
-  };
-};
-export const mapDispatchToProps = (dispatch, ownProps) => {
-  // const { loginName } = ownProps
-  return {
-    getUser: (query) => {
-      dispatch(getUser(query));
-    },
-    // removeDeatil: () => {
-    //   dispatch(removeTopic())
-    // }
-    // moreTopics: (page) => {
-    //   dispatch(updateTopicsByTab(name, { page: page, limit: 20 }));
-    // },
-  }
-}
-//make this component available to the app
-// export default Recently;
-//make this component available to the app
+export default Recently;
+

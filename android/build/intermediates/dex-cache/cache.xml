@@ -3,263 +3,264 @@
 
     <item
         is-multidex="false"
-        jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-ws/3.4.1/8ace66ef7002d98f633377c9e67daeeb196d8c3b/okhttp-ws-3.4.1.jar"
+        jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
         jumboMode="false"
-        min-sdk-version="16"
         optimize="true"
-        revision="27.0.3"
-        sha1="8ace66ef7002d98f633377c9e67daeeb196d8c3b">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/17.jar" />
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_0a6b128861e7781a2bf4f70049616c364a95eb97.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/mac/.gradle/caches/transforms-1/files-1.1/react-native-0.44.3.aar/5fdc6fc54f4062266be7b8e4ebc5f7e2/jars/classes.jar"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/cnodeRN/react-native-camera/unspecified/jars/classes.jar"
         jumboMode="false"
-        min-sdk-version="16"
         optimize="true"
-        revision="27.0.3"
-        sha1="af9665a44df26b4098e24c934c1109507845ef5e">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/1.jar" />
+        revision="23.0.1"
+        sha1="144d8e22b449a2e255baf1a9001d5790913bef84">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/cnodeRN-react-native-camera-unspecified_262e5922d7863d337f2b1af23fe8b604fcd9a76d.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/mac/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.1.aar/27d061662b21526c9803889144fa52ad/jars/classes.jar"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
         jumboMode="false"
-        min-sdk-version="16"
         optimize="true"
-        revision="27.0.3"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/3.jar" />
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_6cd5f788ad9df404d10855f60a0430767c9c79fc.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/mac/Desktop/cnodeRN/node_modules/react-native-camera/android/build/intermediates/intermediate-jars/release/classes.jar"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
         jumboMode="false"
-        min-sdk-version="16"
         optimize="true"
-        revision="27.0.3"
-        sha1="eee33548e822015a4b2517b6fe4ac0cbd3d3bc4e">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/27.jar" />
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_6e34d1680070bc7e7698f5e2c42da9a8104ea329.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/mac/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.0.1.aar/0b6ffe0b0e0cb8926c5098b7abb3ed1f/jars/classes.jar"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
         jumboMode="false"
-        min-sdk-version="16"
         optimize="true"
-        revision="27.0.3"
-        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/13.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/mac/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.0.1.aar/529fb90d8b24822b72772555ddb1985f/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="27.0.3"
-        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/24.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="27.0.3"
-        sha1="63994437f62bc861bc20c605d12962f7246116d1">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/16.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="27.0.3"
-        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/18.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/mac/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/95e91c2ee6917a96b5938b18a5855a4b/jars/libs/internal_impl-23.0.1.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="27.0.3"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/mac/.gradle/caches/transforms-1/files-1.1/fbcore-1.0.1.aar/3276ace99fee4369aa8f6070d2b95ba0/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="27.0.3"
-        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/25.jar" />
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_a3b1a0256d26c4fd2bdb634c02860ad67a716ea1.jar" />
     </item>
     <item
         is-multidex="false"
         jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
         jumboMode="false"
-        min-sdk-version="16"
         optimize="true"
-        revision="27.0.3"
+        revision="23.0.1"
         sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/26.jar" />
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_3c50eeb440e9dd58845524e0d8c6f931a3ddc072.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/mac/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.0.1.aar/5c9dbbbbfaeddfdf7737a3da43c6b299/jars/classes.jar"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
         jumboMode="false"
-        min-sdk-version="16"
         optimize="true"
-        revision="27.0.3"
-        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/23.jar" />
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_6c36e262325339c349645670b97549f158e4cd59.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.0/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_ca6487867676509bfb031cc6ee1d3326fe4e7f03.jar" />
     </item>
     <item
         is-multidex="false"
         jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.1/2287494d4f5f9f3a9a2bb6980e3f32053721b315/core-3.2.1.jar"
         jumboMode="false"
-        min-sdk-version="16"
         optimize="true"
-        revision="27.0.3"
+        revision="23.0.1"
         sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/4.jar" />
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/core-3.2.1_a7bb450fdc8dd7ec75f29e628f2706c6bd5ca998.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/mac/.gradle/caches/transforms-1/files-1.1/fresco-1.0.1.aar/03e80253a5fd93058aa1b16bccc7a77d/jars/classes.jar"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/cnodeRN/jpush-react-native/unspecified/jars/libs/jpush-android-3.0.9.jar"
         jumboMode="false"
-        min-sdk-version="16"
         optimize="true"
-        revision="27.0.3"
-        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/12.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/mac/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.1.aar/95e91c2ee6917a96b5938b18a5855a4b/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="27.0.3"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="27.0.3"
-        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/21.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="27.0.3"
-        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/19.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.drewnoakes/metadata-extractor/2.9.1/53fdf22be10c9d426ec63431c7342895bc642261/metadata-extractor-2.9.1.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="27.0.3"
-        sha1="53fdf22be10c9d426ec63431c7342895bc642261">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/5.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.adobe.xmp/xmpcore/5.1.2/55615fa2582424e38705487d1d3969af8554f637/xmpcore-5.1.2.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="27.0.3"
-        sha1="55615fa2582424e38705487d1d3969af8554f637">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/mac/.gradle/caches/transforms-1/files-1.1/drawee-1.0.1.aar/7fb1e622bc2db6d3b04f0736b7587010/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="27.0.3"
-        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/22.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/mac/.gradle/caches/transforms-1/files-1.1/textlayoutbuilder-1.0.0.aar/586fd42f72d994dc3fa7aea8bc6644e9/jars/classes.jar"
-        jumboMode="false"
-        min-sdk-version="16"
-        optimize="true"
-        revision="27.0.3"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/11.jar" />
+        revision="23.0.1"
+        sha1="cf2cdfaa533441ae0faf4c1da12bd31f600815a7">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/jpush-android-3.0.9_2397c65cc51509bedc9dac8bb75675cb2a540f48.jar" />
     </item>
     <item
         is-multidex="false"
         jar="/Users/mac/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
         jumboMode="false"
-        min-sdk-version="16"
         optimize="true"
-        revision="27.0.3"
+        revision="23.0.1"
         sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/10.jar" />
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_81f63147293c80992186865712de6648b741fa96.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_b78fe933e3401b58dfa46a99bd56aeee3fe0c6a3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_912aedf677fea61545c26e16ef249fbf363359cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_c02d03f74531908d709b1d2e7e82034acbbe5a5b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/cnodeRN/jcore-react-native/unspecified/jars/libs/jcore-android-1.1.8.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1e35e311b68b4c8ad64328e68110d82dfabf719f">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/jcore-android-1.1.8_4c79d25ea614136b07a366c34af043b6cb920258.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_3c438cfdd68a7235c232eeb9bd6ac87e4fe956a8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.adobe.xmp/xmpcore/5.1.2/55615fa2582424e38705487d1d3969af8554f637/xmpcore-5.1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="55615fa2582424e38705487d1d3969af8554f637">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/xmpcore-5.1.2_b95b192c6a180acc91aa757d258e3a772ffa5900.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_92e0070dd5f20951d2352d838392a411efa3f296.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_4ca5442bd56f10dc90b7d70d884b0b448a91dd33.jar" />
     </item>
     <item
         is-multidex="false"
         jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
         jumboMode="false"
-        min-sdk-version="16"
         optimize="true"
-        revision="27.0.3"
+        revision="23.0.1"
         sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/15.jar" />
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_6237cb659935fe231c8d403264e04eddc286592a.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/mac/.gradle/caches/transforms-1/files-1.1/react-native-0.44.3.aar/5fdc6fc54f4062266be7b8e4ebc5f7e2/jars/libs/infer-annotations-1.5.jar"
+        jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
         jumboMode="false"
-        min-sdk-version="16"
         optimize="true"
-        revision="27.0.3"
-        sha1="dcac634e137395f79693ec760f081a86eb2bd84e">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/2.jar" />
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_d0460bbb868471577f9eb543de2348658531efbd.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/mac/.gradle/caches/transforms-1/files-1.1/soloader-0.1.0.aar/e02baf3ea19962cd404b6d518c3a3f36/jars/classes.jar"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
         jumboMode="false"
-        min-sdk-version="16"
         optimize="true"
-        revision="27.0.3"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/14.jar" />
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_1ba1b981d30944dbbd03035bc9dc02508ccf3bb2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/.gradle/caches/modules-2/files-2.1/com.drewnoakes/metadata-extractor/2.9.1/53fdf22be10c9d426ec63431c7342895bc642261/metadata-extractor-2.9.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="53fdf22be10c9d426ec63431c7342895bc642261">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/metadata-extractor-2.9.1_8ef698764cc4cbd32f914d0206fd2de0eb19758e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.52.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="af61eb11ffb4296cab0c93218248a3dfcec0a84c">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.52.0_90a1299bd718eaaa7fa3e02c968db3e2050258f2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_4f497a6faf2c980b1446249cd6d43a2150366273.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/cnodeRN/jpush-react-native/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d2796a2cc9a3b8992f06e8aa330db1c8c6d29fac">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/cnodeRN-jpush-react-native-unspecified_8e71a3441aaaf9cfc85eb612844227c7600e7c35.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/cnodeRN/jcore-react-native/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="98e7b1d6061b35a14c0306fcbd1362436201ab86">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/cnodeRN-jcore-react-native-unspecified_39115f191c051363999586d97f14efb8c9c0d1dd.jar" />
     </item>
     <item
         is-multidex="false"
         jar="/Users/mac/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
         jumboMode="false"
-        min-sdk-version="16"
         optimize="true"
-        revision="27.0.3"
+        revision="23.0.1"
         sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/transforms/preDex/release/9.jar" />
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_47c2cb1d030fe59780ce01046a2a48167134339e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/Users/mac/Desktop/cnodeRN/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_c3f78e88aee646473e910a16d4d3df1d5253ff04.jar" />
     </item>
 
 </items>
