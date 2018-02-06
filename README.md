@@ -1,6 +1,6 @@
 # cnodeRN 介绍
 
-CNode社区(https://cnodejs.org/)移动端的实现。
+CNode社区(https://cnodejs.org)移动端的实现。
 
 ## 效果
 
@@ -34,7 +34,6 @@ CNode社区(https://cnodejs.org/)移动端的实现。
 
 ### 1.0.0
 
-目前还是简单的展示界面。
 
 ## Contributing
 
