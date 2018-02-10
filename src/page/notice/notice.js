@@ -17,8 +17,9 @@ class Notice extends Component {
   static navigationOptions = ({ navigation }) => {
     const { state, setParams, navigate } = navigation;
     const { params } = navigation.state;
-    console.log(params)
+    console.log('Notice')
     return {
+      headerTitle: '通知',
       // headerRight: <Text onPress={() => navigation.state.params.onPress()}>测试</Text>,
       tabBarLabel: '通知',
       tabBarIcon: ({ focused, tintColor }) => {

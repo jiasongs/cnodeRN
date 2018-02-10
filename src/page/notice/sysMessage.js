@@ -76,10 +76,31 @@ const TabNavs = TabNavigator({
 // create a component
 class SysMessage extends Component {
   static navigationOptions = ({ navigation }) => {
+    const { state, setParams, navigate } = navigation;
+    const { params } = navigation.state;
+    let z = ''
+    if (typeof (navigation.state.params) != 'undefined') {
+      console.log(navigation.state.params)
+      if (Object.keys(navigation.state.params).length > 0) {
+        if (navigation.state.params.hasOwnProperty('header')) {
+          z = navigation.state.params.header
+        }
+      }
+    }
     return {
-      headerTitle: '系统通知',
-      headerRight: <View />,
+      headerTitle: z === '' ? '23' : z,
+      // headerRight: <View />,
+      headerRight: <Text onPress={() => navigation.state.params.navigatePress()}>测试</Text>,
     };
+  }
+  onPress = () => {
+    console.log('1')
+    this.props.navigation.setParams({ header: 'header' })
+    // this.props.navigation.goBack()
+    console.log(this.props.navigation.state.params)
+  }
+  componentDidMount() {
+    this.props.navigation.setParams({ navigatePress: this.onPress })
   }
   componentWillMount() {
     this.props.getMessage({ 'accesstoken': 'e2028045-5fa8-4a16-b75e-3d5d9b6ee714', 'mdrender': false })

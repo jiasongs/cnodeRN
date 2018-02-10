@@ -27,6 +27,7 @@ const { width, height } = Dimensions.get("window");
 class Find extends Component {
   static navigationOptions = ({ navigation }) => {
     const { state, setParams } = navigation;
+
     return {
       header: null,
       tabBarLabel: '发现',
@@ -44,6 +45,7 @@ class Find extends Component {
       // headerLeft: (<Image source={req}></Image>),
     };
   };
+  
   constructor(props) {
     super(props);
     this.state = { text: "" };

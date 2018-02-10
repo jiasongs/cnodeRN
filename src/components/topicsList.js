@@ -123,6 +123,7 @@ class List extends Component {
       </TouchableHighlight>
     )
   }
+
   render() {
     const { payload, loading } = this.props;
     console.log(loading)
