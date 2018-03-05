@@ -139,7 +139,8 @@ const Navigation = StackNavigator(
       },
       // headerBackTitle: null,
       headerTintColor: "#FFFFFF",
-      gesturesEnabled: true
+      gesturesEnabled: true,
+      
     },
   }
 );
