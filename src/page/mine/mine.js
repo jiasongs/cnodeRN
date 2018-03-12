@@ -201,7 +201,7 @@ class Mine extends Component {
 // define your styles
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
     // justifyContent: 'center',
     // alignItems: 'center',
     // backgroundColor: '#2c3e50',
@@ -217,7 +217,7 @@ const styles = StyleSheet.create({
   headerBack: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#fff",
+    backgroundColor: "#2c3e50",
     height: 80
   },
   headerImageBack: {
