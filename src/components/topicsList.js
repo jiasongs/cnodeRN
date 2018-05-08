@@ -35,6 +35,7 @@ class List extends Component {
     this.props.getTopics();
     // this.getDataSourceFromApiAsync();
   }
+  
   _onEndReached() {
     const { payload, loading } = this.props;
     console.log(payload);
