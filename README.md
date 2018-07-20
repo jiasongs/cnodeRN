@@ -1,5 +1,7 @@
 # cnodeRN 介绍
 
+即将进行重构
+
 CNode社区(https://cnodejs.org)移动端的实现。
 
 ## 效果
